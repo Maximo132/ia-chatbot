@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang='es'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>EmBot - Asistente Virtual</title>
+    <!-- Dependencias -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/VentanaPrincipal.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/1.ContratarServicio.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/chat.css') }}">
+   
+</head>
+<body>
+    <div class="app-container">
+        <!-- Barra de navegación -->
+        <nav class="navbar">
+            <div class="navbar-content">
+                <a href="/" class="logo">
+                    <img src="{{ url_for('static', filename='emenet-logo.png') }}" alt="EmBot" class="logo-img">
+                    <span class="logo-text">EmBot</span>
+                </a>
+                <div class="nav-links">
+                    <a href="#" class="nav-link">Inicio</a>
+                    <a href="#" class="nav-link">Servicios</a>
+                    <a href="#" class="nav-link">Contacto</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Contenido principal -->
+        <div class="main-content">
+            <!-- Panel lateral con menú -->
+            <div class="sidebar">
+                <div class="menu-title">Menú</div>
+                <div class="menu-item" id="contratar-servicio" data-template="1.ContratarServicio">
+                    <i class="fas fa-handshake"></i> 1. Contratar servicio
+                </div>
+                <div class="menu-item" data-template="2.PlanesDisponibles">
+                    <i class="fas fa-tags"></i> 2. Planes disponibles
+                </div>
+                <div class="menu-item" data-template="3.ReportarFalla">
+                    <i class="fas fa-exclamation-triangle"></i> 3. Reportar falla
+                </div>
+                <div class="menu-item" data-template="4.Comprobante">
+                    <i class="fas fa-file-invoice"></i> 4. Comprobante
+                </div>
+                <div class="menu-item" data-template="5.CambioContrasena">
+                    <i class="fas fa-key"></i> 5. Cambio de contraseña
+                </div>
+                <div class="menu-item" data-template="6.Soporte">
+                    <i class="fas fa-headset"></i> 6. Soporte
+                </div>
+                <div class="menu-item" data-template="7.HorariosAtencion">
+                    <i class="far fa-clock"></i> 7. Horarios de atención
+                </div>
+                <div class="menu-item" data-template="8.Sucursales">
+                    <i class="fas fa-map-marker-alt"></i> 8. Sucursales
+                </div>
+                <div class="menu-item" data-template="9.MetodosPago">
+                    <i class="fas fa-credit-card"></i> 9. Métodos de pago
+                </div>
+            </div>
+
+            <!-- Área del chat -->
+            <div class="chat-container">
+                <!-- Cabecera del chat -->
+                <div class="chat-header">
+                    <h2>Asistente Virtual</h2>
+                    <div class="status">
+                        <span class="status-indicator"></span>
+                        <span>En línea</span>
+                    </div>
+                </div>
+                
+                <!-- Área de mensajes -->
+                <div class="chat-messages" id="chat-messages">
+                    <!-- Los mensajes se insertarán aquí dinámicamente -->
+                </div>
+                
+                <!-- Área de entrada de mensajes -->
+                <div class="chat-input">
+                    <button class="image-button" id="image-button" type="button">
+                        <i class="fas fa-image"></i>
+                        <input type="file" id="image-upload" accept="image/*" style="display: none;">
+                    </button>
+                    <input type="text" class="message-input" id="user-input" 
+                           placeholder="Escribe tu mensaje aquí..." autofocus>
+                    <button class="send-button" id="send-button" type="button">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer removed to maximize chat space -->
+    </div>
+
+    <!-- Scripts -->
+    <!-- Flatpickr CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    
+    <!-- Flatpickr JS -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/es.js"></script>
+    
+    <script src="{{ url_for('static', filename='js/VentanaPrincipal.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/1.ContratarServicio.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/3.ReportarFalla.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/5.CambioContrasena.js') }}"></script>
+</body>
+</html>

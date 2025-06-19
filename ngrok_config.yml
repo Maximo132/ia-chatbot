@@ -1,0 +1,6 @@
+version: "2"
+authtoken: "" # Deja esto en blanco si ya has autenticado ngrok
+tunnels:
+  whatsapp-webhook:
+    proto: http
+    addr: 3000

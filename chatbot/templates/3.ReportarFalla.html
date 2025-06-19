@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reportar Falla - Asistente Virtual</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/3.ReportarFalla.css">
+    <link rel="stylesheet" href="/css/solucion-falla.css">
+    <!-- SweetAlert2 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <base href="/">
+</head>
+<body>
+    <div class="reporte-falla-container">
+        <div class="reporte-header">
+            <i class="fas fa-tools"></i>
+            <h1>Reportar Falla</h1>
+            <p>Por favor identifícate para reportar una falla en tu servicio</p>
+        </div>
+        
+        <div class="reporte-content">
+            <!-- Paso 1: Identificación -->
+            <div id="paso1" class="paso">
+                <form id="identificacionForm">
+                    <div class="form-group">
+                        <label for="numeroCliente">Número de cliente</label>
+                        <div class="input-group">
+                            <i class="fas fa-user-tag"></i>
+                            <input type="text" 
+                                   id="numeroCliente" 
+                                   class="form-control" 
+                                   placeholder="Ej: 12345"
+                                   pattern="\d{5,6}"
+                                   title="Por favor ingresa un número de 5 a 6 dígitos"
+                                   required>
+                            <div id="identificacionError" class="error-message" style="display: none;"></div>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-arrow-right"></i> Continuar
+                    </button>
+                    
+                    <div class="divider">o</div>
+                    
+                    <div class="button-group" style="display: flex; flex-direction: column; gap: 10px; width: 100%;">
+                        <button type="button" id="noTengoNumero" class="btn btn-outline">
+                            <i class="fas fa-question-circle"></i> No tengo mi número de cliente
+                        </button>
+                        
+                        <a href="#" class="help-link">
+                            <i class="fas fa-info-circle"></i> ¿Dónde encuentro mi número de cliente?
+                        </a>
+                    </div>
+                </form>
+            </div>
+            
+            <!-- Paso 2: Selección de falla -->
+            <div id="paso2" class="paso" style="display: none;">
+                <div class="opciones-falla" id="opcionesFalla">
+                    <!-- Las opciones de falla se generarán dinámicamente -->
+                </div>
+                
+                <!-- Los botones de asistencia se mostrarán en el paso de retroalimentación -->
+            </div>
+            
+            <!-- Paso 3: Programar visita -->
+            <div id="paso3" class="paso" style="display: none;">
+                <div class="form-container">
+                    <div class="formulario-visita" id="formularioVisita">
+                        <h3>Programar visita a domicilio</h3>
+                        <p class="text-muted">Selecciona una fecha y hora para la visita del técnico</p>
+                        
+                        <div class="calendar-container">
+                            <div class="calendar-header">
+                                <button id="prevMonth" class="btn-calendar-nav">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <h4 id="currentMonth">Junio 2025</h4>
+                                <button id="nextMonth" class="btn-calendar-nav">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                            </div>
+                            
+                            <div class="weekdays">
+                                <div>Dom</div>
+                                <div>Lun</div>
+                                <div>Mar</div>
+                                <div>Mié</div>
+                                <div>Jue</div>
+                                <div>Vie</div>
+                                <div>Sáb</div>
+                            </div>
+                            
+                            <div class="days" id="calendarDays">
+                                <!-- Los días se generarán dinámicamente con JavaScript -->
+                            </div>
+                        </div>
+                        
+                        <div class="time-slots-container">
+                            <h5>Horarios disponibles</h5>
+                            <div class="time-slots" id="timeSlots">
+                                <!-- Los horarios se generarán dinámicamente -->
+                                <div class="time-slot">09:00 - 11:00</div>
+                                <div class="time-slot">11:00 - 13:00</div>
+                                <div class="time-slot">13:00 - 15:00</div>
+                                <div class="time-slot">15:00 - 17:00</div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group mt-4">
+                            <label for="comentariosVisita">Comentarios adicionales (opcional)</label>
+                            <textarea id="comentariosVisita" class="form-control" rows="3" 
+                                placeholder="Describe brevemente el problema o alguna indicación especial para el técnico"></textarea>
+                            
+                            <div class="d-grid gap-2 mt-3">
+                                <button type="button" id="btnConcluir" class="btn btn-primary">
+                                    <i class="fas fa-calendar-check me-2"></i>Concluir
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="botones-navegacion mt-4">
+                            <button type="button" id="btnAtras3" class="btn btn-outline">
+                                <i class="fas fa-arrow-left"></i> Atrás
+                            </button>
+                            <button type="button" id="btnSiguiente3" class="btn btn-primary" disabled>
+                                Continuar <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Paso 4: Confirmación -->
+            <div id="paso4" class="paso" style="display: none;">
+                <div class="confirmacion-container">
+                    <div class="confirmacion-header">
+                        <i class="fas fa-check-circle"></i>
+                        <h2>¡Casi listo!</h2>
+                        <p>Revisa que la información sea correcta antes de enviar tu reporte.</p>
+                    </div>
+                    
+                    <div class="confirmacion-detalles">
+                        <div class="detalle-grupo">
+                            <h3>Datos del cliente</h3>
+                            <div id="resumenCliente" class="detalle-contenido"></div>
+                        </div>
+                        
+                        <div class="detalle-grupo">
+                            <h3>Detalles de la falla</h3>
+                            <div id="resumenFalla" class="detalle-contenido"></div>
+                        </div>
+                        
+                        <div class="detalle-grupo">
+                            <h3>Visita programada</h3>
+                            <div id="resumenFecha" class="detalle-contenido"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="botones-navegacion">
+                        <button type="button" id="btnAtras4" class="btn btn-outline">
+                            <i class="fas fa-arrow-left"></i> Atrás
+                        </button>
+                        <button type="button" id="btnEnviarReporte" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> Enviar reporte
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SweetAlert2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/js/3.ReportarFalla.js"></script>
+</body>
+</html>

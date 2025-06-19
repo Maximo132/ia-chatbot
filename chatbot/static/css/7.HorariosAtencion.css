@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500;700&display=swap');
+
+:root {
+  --system-blue: #007AFF;
+  --system-gray-6: #F2F2F7;
+  --system-gray-5: #E5E5EA;
+  --system-gray-4: #D1D1D6;
+  --system-gray-3: #C7C7CC;
+  --system-gray-2: #AEAEB2;
+  --system-gray: #8E8E93;
+  --label-primary: #1c1c1e;
+  --label-secondary: #3A3A3C;
+  --background-primary: #FFFFFF;
+  --background-secondary: #F2F2F7;
+  --shadow-color: rgba(0, 0, 0, 0.10);
+  --border-radius: 14px;
+}
+
+.chat-message.horarios-atencion {
+  max-width: 420px;
+  margin: 18px 0 18px 16px;
+  background: #fff;
+  border-radius: 22px 22px 22px 8px;
+  box-shadow: 0 8px 32px 0 rgba(60,60,67,0.09), 0 1.5px 8px rgba(0,0,0,0.04);
+  border: 1.5px solid #e5e5ea;
+  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+  padding: 0 0 18px 0;
+  color: var(--label-primary);
+  position: relative;
+  animation: chatBotPopIn 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+  align-self: flex-start;
+}
+
+/* Cola de burbuja tipo bot */
+.chat-message.horarios-atencion::before {
+  content: '';
+  position: absolute;
+  left: -18px;
+  bottom: 16px;
+  width: 18px;
+  height: 28px;
+  background: transparent;
+  z-index: 0;
+}
+.chat-message.horarios-atencion::after {
+  content: '';
+  position: absolute;
+  left: -8px;
+  bottom: 18px;
+  width: 18px;
+  height: 22px;
+  background: #fff;
+  border-bottom-left-radius: 18px 14px;
+  border-left: 1.5px solid #e5e5ea;
+  box-shadow: -2px 4px 8px rgba(60,60,67,0.07);
+  z-index: 1;
+}
+
+@keyframes chatBotPopIn {
+  from {
+    opacity: 0;
+    transform: translateX(-32px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+
+.bot-greeting {
+  display: flex;
+  align-items: center;
+  padding: 18px 24px 8px 24px;
+  font-size: 1.08rem;
+  font-weight: 500;
+  color: var(--system-blue);
+  letter-spacing: -0.01em;
+  gap: 10px;
+}
+
+.bot-avatar {
+  font-size: 1.5rem;
+  background: var(--system-blue);
+  color: #fff;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px #007aff22;
+}
+
+.horario-card {
+  background: #f9f9fb;
+  border-radius: 18px;
+  margin: 0 14px 12px 14px;
+  box-shadow: 0 1.5px 6px #e5e5ea33;
+  padding: 18px 24px 16px 24px;
+  border: 1px solid #e5e5ea;
+  transition: box-shadow 0.2s;
+  position: relative;
+}
+
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #f2f2f7;
+  padding-bottom: 6px;
+}
+
+
+.card-icon {
+  font-size: 1.3rem;
+  color: #007aff;
+  background: #e5f0ff;
+  border-radius: 8px;
+  padding: 6px 11px;
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+
+
+.card-title {
+  font-size: 1.12rem;
+  font-weight: 600;
+  color: #1c1c1e;
+  letter-spacing: 0.01em;
+  text-shadow: none;
+}
+
+
+.schedule-list {
+  margin: 0 0 12px 0;
+  border-radius: 7px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #f2f2f7;
+  box-shadow: none;
+}
+
+
+.schedule-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 9px 0 9px 0;
+  border-bottom: 1px solid #f2f2f7;
+  font-size: 1.04rem;
+  transition: background 0.18s;
+}
+.schedule-item:hover {
+  background: #f2f7ff;
+}
+
+.schedule-item:last-child {
+  border-bottom: none;
+}
+.day {
+  color: #3A3A3C;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.hours {
+  color: #007AFF;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  font-size: 1.01em;
+}
+
+.hours.closed {
+  color: #b0b0b8;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.note {
+  font-size: 0.98rem;
+  color: #007AFF;
+  margin: 9px 0 2px 0;
+  padding-left: 3px;
+  font-weight: 500;
+  background: #f2f8ff;
+  border-radius: 5px;
+  padding: 4px 9px;
+  display: inline-block;
+}
+
+.emergency-contact {
+  margin-top: 12px;
+  font-size: 1.01rem;
+  color: #d32f2f;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff6f6;
+  border-radius: 8px;
+  padding: 7px 10px;
+  border: 1px solid #ffdada;
+  box-shadow: 0 1px 4px #d32f2f13;
+  font-weight: 500;
+}
+
+.emergency-icon {
+  font-size: 1.13rem;
+}
+
+.small {
+  font-size: 0.90em;
+  color: #b0b0b8;
+  font-weight: 400;
+  margin-left: 5px;
+}
+
+
+@keyframes fadeInCard {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: none; }
+}
+
+@media (max-width: 600px) {
+  .chat-message.horarios-atencion {
+    max-width: 98vw;
+    margin: 10px 1vw;
+  }
+  .horario-card {
+    margin: 0 2vw;
+    padding: 12px 6vw 10px 6vw;
+  }
+  .bot-greeting {
+    padding: 12px 6vw 8px 6vw;
+  }
+}

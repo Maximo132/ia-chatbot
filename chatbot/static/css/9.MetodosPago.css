@@ -1,0 +1,1131 @@
+/* Modern Payment Methods Design */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Colors */
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --success: #10b981;
+  --error: #ef4444;
+  --warning: #f59e0b;
+  --text-primary: #1f2937;
+  --text-secondary: #4b5563;
+  --text-tertiary: #6b7280;
+  --border-light: #e5e7eb;
+  --background: #f9fafb;
+  --card-bg: #ffffff;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --transition: all 0.2s ease-in-out;
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-5: 1.25rem;
+  --spacing-6: 1.5rem;
+  --spacing-8: 2rem;
+}
+
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  color: var(--text-primary);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Payment Methods Container */
+.payment-methods-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: var(--spacing-6) var(--spacing-4);
+  background: var(--background);
+  min-height: 100vh;
+}
+
+.payment-header {
+  text-align: center;
+  margin-bottom: var(--spacing-8);
+}
+
+.payment-header h2 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: var(--spacing-2);
+  background: linear-gradient(90deg, #0073ff, hsl(175, 100%, 44%));
+  display: inline-block;
+  border-radius: 0.5rem;
+}
+
+.payment-header p {
+  color: var(--text-secondary);
+  font-size: 1.125rem;
+}
+
+/* Payment Methods List */
+.payment-methods {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+  margin-bottom: var(--spacing-8);
+}
+
+/* Payment Method Card */
+.payment-method {
+  background: var(--card-bg);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: var(--transition);
+  border: 1px solid var(--border-light);
+}
+
+.payment-method:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.payment-method[aria-expanded="true"] {
+  box-shadow: 0 0 0 2px var(--primary);
+}
+
+/* Method Header */
+.method-header {
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-5) var(--spacing-6);
+  cursor: pointer;
+  position: relative;
+  transition: var(--transition);
+}
+
+.method-header:hover {
+  background-color: rgba(243, 244, 246, 0.5);
+}
+
+.method-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #e0f2fe, #dbeafe);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: var(--spacing-4);
+  flex-shrink: 0;
+  color: var(--primary);
+  font-size: 1.25rem;
+}
+
+.payment-method:nth-child(2) .method-icon {
+  background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+  color: #10b981;
+}
+
+.payment-method:nth-child(3) .method-icon {
+  background: linear-gradient(135deg, #fef3c7, #fef9c3);
+  color: #f59e0b;
+}
+
+.method-info {
+  flex: 1;
+}
+
+.method-info h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-1);
+}
+
+.method-hint {
+  font-size: 0.875rem;
+  color: var(--text-tertiary);
+  margin: 0;
+}
+
+.method-arrow {
+  color: var(--text-tertiary);
+  transition: transform 0.3s ease;
+  margin-left: var(--spacing-4);
+}
+
+.payment-method[aria-expanded="true"] .method-arrow {
+  transform: rotate(180deg);
+}
+
+/* Method Details */
+.method-details {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+  padding: 0 var(--spacing-6);
+  border-top: 1px solid transparent;
+}
+
+.payment-method[aria-expanded="true"] .method-details {
+  max-height: 500px;
+  opacity: 1;
+  padding: var(--spacing-4) var(--spacing-6) var(--spacing-6);
+  border-top: 1px solid var(--border-light);
+  background-color: rgba(243, 244, 246, 0.3);
+}
+
+.detail-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: var(--spacing-4);
+}
+
+.detail-row:last-child {
+  margin-bottom: 0;
+}
+
+.detail-label {
+  flex: 0 0 160px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-2);
+}
+
+.detail-value {
+  flex: 1;
+  min-width: 0;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-2);
+}
+
+/* Copy Button */
+.copy-button {
+  background: none;
+  border: none;
+  color: var(--text-tertiary);
+  cursor: pointer;
+  padding: var(--spacing-1) var(--spacing-2);
+  border-radius: var(--radius-sm);
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: var(--spacing-2);
+}
+
+.copy-button:hover {
+  color: var(--primary);
+  background-color: rgba(37, 99, 235, 0.1);
+}
+
+.copy-button:active {
+  transform: scale(0.95);
+}
+
+.copy-button .fa-check {
+  color: var(--success);
+}
+
+/* Copyable Field */
+.detail-value.copyable {
+  background: var(--background);
+  padding: var(--spacing-2) var(--spacing-3);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-light);
+  font-family: 'SF Mono', 'Roboto Mono', monospace;
+  font-size: 0.9375rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.detail-value.copyable:hover {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 1px var(--primary);
+}
+
+.detail-value.copyable.copied {
+  border-color: var(--success);
+  background-color: rgba(16, 185, 129, 0.05);
+}
+
+.detail-value.copyable.copied .copy-button {
+  color: var(--success);
+}
+
+/* Payment Footer */
+.payment-footer {
+  text-align: center;
+  padding: var(--spacing-6) 0;
+  margin-top: var(--spacing-8);
+  border-top: 1px solid var(--border-light);
+}
+
+.disclaimer {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+.disclaimer i {
+  color: var(--success);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.payment-method {
+  animation: fadeIn 0.3s ease-out forwards;
+  opacity: 0;
+}
+
+.payment-method:nth-child(1) { animation-delay: 0.1s; }
+.payment-method:nth-child(2) { animation-delay: 0.2s; }
+.payment-method:nth-child(3) { animation-delay: 0.3s; }
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .payment-methods-container {
+    padding: var(--spacing-4) var(--spacing-3);
+  }
+  
+  .method-header {
+    padding: var(--spacing-4) var(--spacing-4);
+  }
+  
+  .method-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+  }
+  
+  .detail-label {
+    flex: 0 0 100%;
+    margin-bottom: var(--spacing-1);
+  }
+  
+  .detail-value {
+    flex: 0 0 100%;
+  }
+  
+  .payment-header h2 {
+    font-size: 1.5rem;
+  }
+  
+  .payment-header p {
+    font-size: 1rem;
+  }
+}
+
+.chat-message.metodos-pago {
+  background: var(--background-primary);
+  border-radius: var(--border-radius);
+  box-shadow: 0 0.5px 3px var(--shadow-color), 0 1px 1px rgba(0, 0, 0, 0.04);
+  padding: 0;
+  margin: 12px auto;
+  font-family: -apple-system, 'SF Pro Display', 'SF Pro', 'Helvetica Neue', Arial, sans-serif;
+  max-width: 480px;
+  width: 100%;
+  color: var(--label-primary);
+  animation: fadeInCard 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+  border: 1px solid var(--system-gray-5);
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-message.metodos-pago:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.chat-message.metodos-pago:hover {
+  box-shadow: 0 12px 32px rgba(24,119,242,0.18), 0 2px 12px rgba(44,62,80,0.13);
+  border-left: 5px solid #165fbe;
+  background: rgba(255,255,255,0.92);
+}
+
+
+
+.metodos-pago .metodo {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  margin: 8px 0;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 8px;
+  position: relative;
+  border: 2px solid transparent;
+  background: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  animation: metodoFadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+  transform: translateY(10px);
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 2;
+}
+
+/* Styling for the active method */
+.metodo.expanded {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom: none;
+  position: relative;
+  z-index: 3;
+  transform: translateY(0) scale(1.01);
+  margin-bottom: 0;
+  border-width: 2px;
+}
+
+/* Add a connector line between expanded method and its details */
+.metodo.expanded::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 20px;
+  right: 20px;
+  height: 1px;
+  background: var(--system-blue);
+  opacity: 0.3;
+}
+
+.metodos-pago .metodo:hover {
+  background-color: var(--system-gray-6);
+}
+
+.metodos-pago .metodo:active {
+  background-color: var(--system-gray-5);
+  transform: translateY(10px) scale(0.99);
+}
+
+.metodos-pago .metodo.expanded {
+  background: white;
+  border-color: var(--system-blue);
+  box-shadow: 0 4px 12px rgba(0, 122, 255, 0.15);
+  margin-bottom: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  z-index: 2;
+}
+
+.metodos-pago .metodo:active {
+  background-color: var(--active-color);
+}
+
+/* Add chevron to each payment method */
+.metodos-pago .metodo::after {
+  content: '';
+  position: absolute;
+  right: var(--spacing);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 14px;
+  background-image: url("data:image/svg+xml,%3Csvg width='8' height='14' viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L7 7L1 13' stroke='%23999999' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.6;
+}
+
+.metodos-pago .metodo:nth-child(1) { animation-delay: 0.15s; }
+.metodos-pago .metodo:nth-child(2) { animation-delay: 0.32s; }
+.metodos-pago .metodo:nth-child(3) { animation-delay: 0.49s; }
+
+.metodos-pago .metodo:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+
+.metodos-pago .metodo:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.metodos-pago .metodo-content {
+  flex: 1;
+}
+
+.metodos-pago h3 {
+  font-size: 1.05rem;
+  color: var(--label-primary);
+  margin: 0 0 4px 0;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+  display: flex;
+  align-items: center;
+}
+
+.metodos-pago .icono-metodo {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+/* Different colors for each payment method icon */
+/* Pago en ventanilla HSBC - Rojo */
+.metodo:nth-child(1) .icono-metodo { 
+  background-color: rgba(244, 67, 54, 0.1); 
+  color: #f44336; 
+}
+/* Transferencia electrónica - Amarillo */
+.metodo:nth-child(2) .icono-metodo { 
+  background-color: rgba(255, 235, 59, 0.15); 
+  color: #ffc107; 
+}
+/* Depósito en Oxxo y Farmacias del Ahorro - Amarillo */
+.metodo:nth-child(3) .icono-metodo { 
+  background-color: rgba(255, 235, 59, 0.15); 
+  color: #ffc107; 
+}
+
+.metodos-pago .metodo:active .icono-metodo {
+  transform: scale(0.96);
+}
+
+.metodos-pago .icono-metodo:hover {
+  background: linear-gradient(135deg, #fff 10%, #1877f2 100%);
+  color: #1877f2;
+  box-shadow: 0 0 16px 2px #1877f2cc, 0 2px 8px 0 #1877f2b0;
+}
+
+
+.metodos-pago ul {
+  list-style: none;
+  padding: 0;
+  margin: 6px 0 0 0;
+}
+
+
+.metodos-pago li {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: var(--label-secondary);
+  letter-spacing: -0.01em;
+  margin-bottom: 2px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.metodos-pago li:last-child {
+  margin-bottom: 0;
+}
+
+
+.metodos-pago strong {
+  color: var(--label-primary);
+  font-weight: 500;
+  margin-right: 6px;
+  letter-spacing: -0.01em;
+}
+
+/* Animation */
+@keyframes fadeInCard {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes metodoFadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Copy tooltip styles */
+.copy-tooltip {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.75);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(5px);
+  transition: all 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+  z-index: 100;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(5px);
+}
+
+.copy-tooltip::after {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -4px;
+  border-width: 4px;
+  border-style: solid;
+  border-color: transparent transparent rgba(0, 0, 0, 0.75) transparent;
+}
+
+/* Contenedor principal */
+.metodos-pago {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Estilos para los métodos de pago */
+.metodos-pago .metodo {
+  cursor: pointer;
+  padding: 16px;
+  margin: 0;
+  border: 1px solid #e5e5ea;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  background: #ffffff;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.metodos-pago .metodo:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 125, 250, 0.3);
+}
+
+.metodos-pago .metodo:hover {
+  background-color: #f8f8f8;
+}
+
+.metodos-pago .metodo.expanded {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  margin-bottom: 0;
+  border-bottom: 1px solid #e5e5ea;
+  background-color: #f8f8f8;
+}
+
+/* Estilos para los detalles del método de pago */
+.metodos-pago .metodo-details {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: none;
+  border-radius: 0 0 10px 10px;
+  background: #ffffff;
+  margin: 0 0 8px 0;
+  box-sizing: border-box;
+}
+
+/* Estilos cuando los detalles están visibles */
+.metodos-pago .metodo-details.visible {
+  max-height: 500px; /* Ajusta según sea necesario */
+  opacity: 1;
+  border: 1px solid #e5e5ea;
+  border-top: none;
+  padding: 16px;
+  margin-top: -1px; /* Para solapar con el borde del método */
+  display: block;
+}
+
+/* Estilos para los ítems de la lista de detalles */
+.metodos-pago .metodo-details li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.metodos-pago .metodo-details li:last-child {
+  margin-bottom: 0;
+}
+
+/* Estilos para el ícono del método de pago */
+.metodos-pago .icono-metodo {
+  margin-right: 12px;
+  color: #007AFF;
+  font-size: 20px;
+  width: 24px;
+  text-align: center;
+}
+
+/* Estilos para el título del método de pago */
+.metodos-pago .metodo h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: #000000;
+}
+
+/* Estilos para texto copiable */
+.metodos-pago .copyable {
+  background-color: #f0f0f0;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: monospace;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.metodos-pago .copyable:hover {
+  background-color: #e0e0e0;
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { 
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Estilo para el contenedor del método */
+.metodos-pago .metodo {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.metodos-pago .metodo:hover {
+  background-color: var(--system-gray-6);
+}
+
+.metodos-pago .metodo:active {
+  background-color: var(--system-gray-5);
+  transform: scale(0.99);
+}
+
+/* Asegura que el icono de flecha gire cuando está expandido */
+.metodos-pago .metodo i.fas.fa-chevron-right {
+  transition: transform 0.3s ease;
+}
+
+.metodos-pago .metodo.expanded i.fas.fa-chevron-right {
+  transform: rotate(90deg);
+}
+
+@keyframes detailsFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.metodos-pago .metodo.expanded + .metodo-details {
+  display: block; /* Mostrar cuando está expandido */
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Asegura que los elementos de la lista se vean bien */
+.metodos-pago .metodo-details li {
+  margin: 8px 0;
+  line-height: 1.5;
+  color: var(--label-primary);
+  font-size: 0.95em;
+  position: relative;
+  padding-left: 16px;
+}
+
+.metodos-pago .metodo-details li:before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--system-blue);
+  font-size: 1.2em;
+  line-height: 1;
+  top: 2px;
+}
+
+.metodo-details {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
+  background-color: var(--system-gray-6);
+  margin: 0;
+  padding: 0 16px;
+  border-left: 1px solid var(--system-gray-4);
+  border-right: 1px solid var(--system-gray-4);
+  border-bottom: 1px solid var(--system-gray-4);
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  transform-origin: top;
+  position: relative;
+  z-index: 1;
+}
+
+.metodo-details.visible {
+  max-height: none; /* Allow content to determine height */
+  opacity: 1;
+  padding: 18px 16px;
+  margin: 0 0 12px 0;
+  overflow: visible; /* Ensure content is not clipped */
+  transition: all 0.3s ease;
+  border-radius: 0 0 8px 8px;
+  border-left: 4px solid;
+}
+
+/* Color details panel border to match each method */
+.metodo:nth-child(1) + .metodo-details.visible {
+  background: linear-gradient(135deg, #ffebee 0%, #ffebee 100%);
+  border-color: #f44336;
+  box-shadow: 0 4px 12px rgba(244, 67, 54, 0.15);
+}
+
+.metodo:nth-child(2) + .metodo-details.visible {
+  background: linear-gradient(135deg, #fffde7 0%, #fffde7 100%);
+  border-color: #ffc107;
+  box-shadow: 0 4px 12px rgba(255, 193, 7, 0.15);
+}
+
+.metodo:nth-child(3) + .metodo-details.visible {
+  background: linear-gradient(135deg, #fffde7 0%, #fff9c4 100%);
+  border-color: #ffc107;
+  box-shadow: 0 4px 12px rgba(255, 193, 7, 0.2);
+}
+
+/* Different background colors for each payment method when expanded */
+/* Pago en ventanilla HSBC - Rojo */
+.metodo:nth-child(1).expanded {
+  background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);
+  border-color: #f44336;
+  box-shadow: 0 4px 12px rgba(244, 67, 54, 0.2);
+}
+
+/* Transferencia electrónica - Amarillo */
+.metodo:nth-child(2).expanded {
+  background: linear-gradient(135deg, #fffde7 0%, #fff9c4 100%);
+  border-color: #ffeb3b;
+  box-shadow: 0 4px 12px rgba(255, 235, 59, 0.25);
+}
+
+/* Depósito en Oxxo y Farmacias del Ahorro - Amarillo */
+.metodo:nth-child(3).expanded {
+  background: linear-gradient(135deg, #fffde7 0%, #fff9c4 100%);
+  border-color: #ffc107;
+  box-shadow: 0 4px 12px rgba(255, 193, 7, 0.25);
+}
+
+/* Hover states for expanded items */
+.metodo.expanded:hover {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.metodos-pago .metodo-details li {
+  padding: 8px 0;
+  border-bottom: 1px solid var(--system-gray-5);
+  margin: 0;
+  transition: all 0.2s ease;
+}
+
+.metodos-pago .metodo-details li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.metodos-pago .metodo-details li:first-child {
+  padding-top: 0;
+}
+
+.metodos-pago .metodo-details li:last-child {
+  margin-bottom: 0;
+}
+
+/* Estilo para los elementos copiables */
+.metodos-pago .copyable {
+  --copy-bg: var(--system-gray-6);
+  --copy-border: var(--system-gray-4);
+  --copy-color: var(--label-primary);
+  --copy-hover-bg: var(--system-gray-5);
+  --copy-hover-color: var(--system-blue);
+  --copy-active-bg: var(--system-blue);
+  --copy-active-color: white;
+  --copy-success-bg: var(--system-green);
+  --copy-success-color: white;
+  --copy-error-bg: #FF3B30;
+  --copy-error-color: white;
+  
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background-color: var(--copy-bg);
+  font-family: 'SF Mono', 'Roboto Mono', monospace;
+  font-size: 0.9em;
+  line-height: 1.3;
+  color: var(--copy-color);
+  border: 1px solid var(--copy-border);
+  margin: 0 4px;
+  user-select: none;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  min-width: 2.5em;
+  height: 2em;
+  box-sizing: border-box;
+}
+
+/* Estados de interacción */
+.metodos-pago .copyable:hover:not(.copied) {
+  background-color: var(--copy-hover-bg);
+  color: var(--copy-hover-color);
+  border-color: var(--copy-hover-color);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.metodos-pago .copyable:active:not(.copied) {
+  transform: translateY(0) scale(0.98);
+  background-color: var(--copy-active-bg);
+  color: var(--copy-active-color);
+  border-color: var(--copy-active-bg);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Focus visible para accesibilidad */
+.metodos-pago .copyable:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--system-blue);
+  z-index: 1;
+}
+
+/* Tooltip de copiado */
+.metodos-pago .copyable::after {
+  content: 'Copiar';
+  position: absolute;
+  top: -36px;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px) scale(0.9);
+  background: var(--system-gray-1);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.75em;
+  font-weight: 500;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  letter-spacing: 0.01em;
+}
+
+.metodos-pago .copyable:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0) scale(1);
+}
+
+/* Estado copiado */
+.metodos-pago .copyable.copied {
+  background-color: var(--copy-success-bg);
+  color: var(--copy-success-color);
+  border-color: var(--copy-success-bg);
+  transform: translateY(0) scale(0.98);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  cursor: default;
+}
+
+.metodos-pago .copyable.copied::after {
+  content: '¡Copiado!';
+  background-color: var(--copy-success-bg);
+  color: var(--copy-success-color);
+  opacity: 1;
+  transform: translateX(-50%) translateY(0) scale(1);
+  box-shadow: 0 4px 12px rgba(52, 199, 89, 0.3);
+}
+
+/* Estado de error */
+.metodos-pago .copyable.error {
+  background-color: var(--copy-error-bg);
+  color: var(--copy-error-color);
+  border-color: var(--copy-error-bg);
+  cursor: default;
+}
+
+/* Ajustes para modo oscuro */
+@media (prefers-color-scheme: dark) {
+  .metodos-pago .copyable {
+    --copy-bg: var(--system-gray-5);
+    --copy-border: var(--system-gray-4);
+    --copy-color: var(--label-primary);
+    --copy-hover-bg: var(--system-gray-4);
+  }
+  
+  .metodos-pago .copyable::after {
+    background: var(--system-gray-1);
+  }
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 480px) {
+  .metodos-pago .copyable {
+    padding: 3px 8px;
+    font-size: 0.85em;
+    height: 1.8em;
+    min-width: 2.2em;
+  }
+  
+  .metodos-pago .copyable::after {
+    font-size: 0.7em;
+    padding: 4px 8px;
+    top: -32px;
+  }
+}
+
+/* Focus styles for accessibility */
+.metodo:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--system-blue);
+  border-radius: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 500px) {
+  .chat-message.metodos-pago {
+    margin: 12px 8px;
+    max-width: calc(100% - 16px);
+  }
+  
+  .metodos-pago .metodo {
+    padding: 14px 12px;
+  }
+  
+  .metodos-pago .icono-metodo {
+    width: 30px;
+    height: 30px;
+    font-size: 0.9em;
+    margin-right: 10px;
+  }
+  
+  .metodos-pago h3 {
+    font-size: 1rem;
+  }
+  
+  .metodos-pago li {
+    font-size: 0.85rem;
+  }
+  
+  /* Adjust for smaller screens */
+  .metodos-pago .metodo::after {
+    right: 8px;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .chat-message.metodos-pago {
+    background: var(--system-gray-6);
+    border-color: var(--system-gray-4);
+  }
+  
+  .metodos-pago .metodo {
+    border-bottom-color: var(--system-gray-4);
+  }
+  
+  .metodos-pago .metodo.expanded {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+  
+  .copy-tooltip {
+    background: rgba(0, 0, 0, 0.9);
+  }
+  
+  .copy-tooltip::after {
+    border-color: transparent transparent rgba(0, 0, 0, 0.9) transparent;
+  }
+}
+
+
+@keyframes fadeInCard {
+  from { opacity: 0; transform: translateY(32px) scale(0.97); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes metodoFadeIn {
+  from { opacity: 0; transform: translateY(18px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes iconGlow {
+  0% { box-shadow: 0 2px 8px 0 #1877f2b0, 0 0 0 #1877f2b0; }
+  100% { box-shadow: 0 2px 8px 2px #1877f2cc, 0 0 8px 2px #fff; }
+}
+
+@media (max-width: 650px) {
+  .chat-message.metodos-pago {
+    padding: 8px 1vw 6px 1vw;
+    max-width: 99vw;
+    font-size: 0.96em;
+  }
+  .metodos-pago .metodo {
+    flex-direction: column;
+    gap: 6px;
+    padding-bottom: 7px;
+    border-radius: 8px;
+  }
+  .metodos-pago .icono-metodo {
+    width: 22px;
+    height: 22px;
+    font-size: 0.92em;
+    margin-right: 0;
+    margin-bottom: 4px;
+  }
+}
+
+
+.metodos-pago i {
+  color: #1877f2;
+  font-size: 1.05em;
+  transition: color 0.13s;
+  filter: drop-shadow(0 0 1px #fff) drop-shadow(0 0 2px #1877f2);
+}
+

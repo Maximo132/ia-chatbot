@@ -1,0 +1,588 @@
+/* Estilos para la ventana de cámara - Estilo Apple Face ID */
+@import url('https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #007AFF;
+    --success-color: #34C759;
+    --error-color: #FF3B30;
+    --warning-color: #FF9500;
+    --text-primary: #FFFFFF;
+    --text-secondary: rgba(255, 255, 255, 0.8);
+    --overlay-dark: rgba(0, 0, 0, 0.5);
+    --overlay-light: rgba(0, 0, 0, 0.2);
+    --border-radius: 12px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: var(--text-primary);
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    z-index: 1;
+}
+
+/* Contenedor del video */
+#videoContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+/* Video - Asegurar que ocupe toda la pantalla */
+#video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+/* Contenedor principal */
+.faceid-container {
+    width: 500px !important;  /* Aumentado de 300px a 900px */
+    height: 500px !important;  /* Aumentado de 300px a 900px */
+    position: relative !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    z-index: 10 !important;
+}
+
+.faceid-circle {
+    position: absolute !important;
+    width: 100% !important;
+    height: 100% !important;
+    border: 3px solid rgba(255, 255, 255, 0.8) !important;
+    border-radius: 50% !important;
+    box-sizing: border-box !important;
+    background: rgba(0, 0, 0, 0.3) !important;
+    box-shadow: 0 0 0 100vh rgba(0, 0, 0, 0.7) !important;
+    overflow: visible !important;
+    pointer-events: none !important;
+} /* Forzar visibilidad */
+
+/* Face ID Animation Container */
+#face-id-setup-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+#face-id-setup-container.hidden {
+    display: none;
+}
+
+#face-id-set-up {
+    width: 300px;
+    height: 300px;
+    max-width: 80vw;
+    max-height: 80vw;
+    margin: 0 auto 30px;
+    display: block;
+}
+
+#face-id-setup-container button {
+    padding: 15px 40px;
+    font-size: 18px;
+    border-radius: 25px;
+    background: #007AFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin: 30px 0 0;
+    font-weight: 600;
+    min-width: 200px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 122, 255, 0.3);
+}
+
+#face-id-setup-container button:hover {
+    background: #0062CC;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 122, 255, 0.4);
+}
+
+#start-face-id:active {
+    transform: translateY(0);
+}
+ 
+/* Text styles for Face ID container */
+#face-id-setup-container p {
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    margin: 15px 20px 0;
+    max-width: 80%;
+    line-height: 1.4;
+    font-weight: 500;
+}
+
+/* Animation Keyframes */
+@keyframes loading-rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+@keyframes faceScan {
+    0% { transform: translateY(0); opacity: 0.5; }
+    50% { transform: translateY(30px); opacity: 1; }
+    100% { transform: translateY(0); opacity: 0.5; }
+}
+
+#mouth {
+    animation: mouth-move 5s .5s;
+}
+
+@keyframes face-move {
+    15% { transform: rotateY(25deg); }
+    30% { transform: rotateY(25deg) rotateX(25deg); }
+    55% { transform: rotateY(-25deg) rotateX(25deg); }
+    75% { transform: rotateY(-25deg) rotateX(-25deg); }
+    100% { transform: rotateY(25deg) rotateX(-25deg); }
+}
+
+@keyframes nose-move {
+    15% { transform: rotateY(15deg) translateX(6px); }
+    30% { transform: rotateY(15deg) rotateX(15deg) translateX(1px); }
+    55% { transform: rotateY(-15deg) rotateX(15deg); }
+    75% { transform: rotateY(-15deg) rotateX(5deg) translateY(4px); }
+    100% { transform: rotateY(10deg) rotateX(10deg) translateX(2px) translateY(5px); }
+}
+
+@keyframes mouth-move {
+    15% { transform: rotateY(10deg); }
+    30% { transform: rotateY(10deg) rotateX(10deg); }
+    55% { transform: rotateY(-10deg) rotateX(10deg); }
+    75% { transform: rotateY(-10deg) rotateX(5deg) translateX(2px) translateY(2px); }
+    100% { transform: rotateY(10deg) rotateX(10deg) translateX(-3px) translateY(3px); }
+}
+
+@keyframes eyes-blink {
+    5% { transform: scaleY(0.05); }
+    6.5% { transform: scaleY(1); }
+}
+
+/* Efecto de escaneo */
+.faceid-scanline {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to bottom, 
+        rgba(0, 255, 255, 0) 0%, 
+        rgba(0, 255, 255, 0.8) 50%, 
+        rgba(0, 255, 255, 0) 100%);
+    animation: scan 2s ease-in-out infinite;
+    opacity: 0.8;
+}
+
+@keyframes scan {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(400%); }
+}
+
+/* Puntos de detección */
+.faceid-dot {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #007AFF;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.faceid-dot.active {
+    opacity: 1;
+    background: #34C759;
+    box-shadow: 0 0 10px #34C759;
+}
+
+@keyframes pulse {
+    0% {
+        border-color: rgba(255, 255, 255, 0.3);
+        transform: scale(0.98);
+    }
+    100% {
+        border-color: rgba(255, 255, 255, 0.7);
+        transform: scale(1.02);
+    }
+}
+
+/* Efecto de escaneo */
+.faceid-circle::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 122, 255, 0) 0%,
+        rgba(0, 122, 255, 0.2) 50%,
+        rgba(0, 122, 255, 0) 100%
+    );
+    transform: rotate(0deg);
+    animation: scan 3s linear infinite;
+    opacity: 0.7;
+}
+
+@keyframes scan {
+    0% {
+        transform: translateY(-100%) rotate(0deg);
+    }
+    100% {
+        transform: translateY(100%) rotate(0deg);
+    }
+}
+
+.faceid-status {
+    color: var(--text-primary);
+    font-size: 24px;
+    font-weight: 600;
+    margin: 20px 0 8px;
+    text-align: center;
+    letter-spacing: 0.35px;
+}
+
+.faceid-subtext {
+    color: var(--text-secondary);
+    font-size: 17px;
+    font-weight: 400;
+    margin-bottom: 24px;
+    text-align: center;
+    max-width: 80%;
+    line-height: 1.4;
+}
+
+.btn-tomar-foto {
+    background: #007AFF;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    font-size: 24px;
+    display: flex !important; /* Forzar visibilidad */
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: 20px 0;
+    z-index: 100;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+    position: fixed;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.btn-tomar-foto::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.btn-tomar-foto:active {
+    transform: scale(0.95);
+}
+
+.btn-tomar-foto:active::after {
+    opacity: 1;
+}
+
+/* Estados de reconocimiento */
+.faceid-success .faceid-circle {
+    border-color: var(--success-color);
+    animation: success-pulse 1.5s infinite alternate;
+}
+
+@keyframes success-pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(52, 199, 89, 0.4);
+    }
+    100% {
+        box-shadow: 0 0 0 20px rgba(52, 199, 89, 0);
+    }
+}
+
+.faceid-error .faceid-circle {
+    border-color: var(--error-color);
+}
+
+.faceid-warning .faceid-circle {
+    border-color: var(--warning-color);
+}
+
+.btn-cerrar {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 3;
+}
+
+#facePositionIndicator {
+    position: absolute;
+    border: 3px solid #4CAF50;
+    border-radius: 50%;
+    z-index: 2;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+
+.faceid-dots {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.faceid-dot {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #007AFF;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.3;
+    transition: all 0.3s ease;
+} 
+
+.faceid-dot.active {
+    background: #4CD964;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.2);
+}
+
+/* Estilos para notificaciones */
+@keyframes slideIn {
+    from { transform: translateY(-100px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; transform: translateY(0); }
+    to { opacity: 0; transform: translateY(-100px); }
+}
+
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 350px;
+    padding: 16px;
+    border-radius: 12px;
+    background: rgba(28, 28, 30, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-100px);
+    opacity: 0;
+    z-index: 9999;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #FFFFFF;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.notification.show {
+    animation: slideIn 0.5s forwards;
+}
+
+.notification.hide {
+    animation: fadeOut 0.5s forwards;
+}
+
+.notification-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.notification-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.notification-icon i {
+    font-size: 18px;
+    color: white;
+}
+
+.notification-text {
+    flex: 1;
+}
+
+.notification-text p {
+    margin: 0;
+    color: #F5F5F7;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.notification-title {
+    font-weight: 600;
+    margin-bottom: 2px;
+    font-size: 13px;
+    color: #FFFFFF;
+}
+
+.notification-message {
+    font-size: 13px;
+    color: #AEAEB2;
+}
+
+/* Estilos para diferentes tipos de notificaciones */
+.notification.success {
+    border-left: 4px solid #34C759;
+}
+
+.notification.success .notification-icon {
+    background-color: #34C759;
+}
+
+.notification.error {
+    border-left: 4px solid #FF3B30;
+}
+
+.notification.error .notification-icon {
+    background-color: #FF3B30;
+}
+
+.notification.warning {
+    border-left: 4px solid #FF9500;
+}
+
+.notification.warning .notification-icon {
+    background-color: #FF9500;
+}
+
+.notification.info {
+    border-left: 4px solid #007AFF;
+}
+
+.notification.info .notification-icon {
+    background-color: #007AFF;
+}
+
+/* Estilos para el botón de cierre */
+.notification-close {
+    background: none;
+    border: none;
+    color: #8E8E93;
+    cursor: pointer;
+    padding: 4px;
+    margin-left: 8px;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+
+.notification-close:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Estilos para el indicador de carga */
+.notification.loading .notification-icon {
+    background-color: #007AFF;
+    position: relative;
+    overflow: hidden;
+}
+
+.notification-spinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}

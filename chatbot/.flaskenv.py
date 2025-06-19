@@ -1,0 +1,3 @@
+FLASK_APP=chatbot_simple.py
+FLASK_ENV=development
+FLASK_DEBUG=1

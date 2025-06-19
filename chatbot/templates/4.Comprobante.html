@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Envío de Comprobante</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/4.Comprobante.css') }}">
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+</head>
+
+<body>
+    <div class="modulo-container">
+        <div class="modulo-header">
+            <i class="fas fa-receipt"></i>
+            <h1>Envío de Comprobante</h1>
+            <p>Envía tu comprobante de pago para su validación</p>
+            <div id="bienvenidaUsuario" class="bienvenida-usuario"></div>
+        </div>
+        
+        <div class="modulo-content">
+            <!-- Paso 1: Ingresar número de cliente -->
+            <div id="paso1" class="paso activo">
+                <div class="form-step">
+                    <div class="step-header">
+                        <span class="step-number">1</span>
+                        <h3>Identifícate</h3>
+                    </div>
+                    <p class="step-description">Ingresa tu número de cliente para continuar con el proceso de envío de comprobante.</p>
+                    <p class="step-description">
+                        Ingresa tu número de cliente (5-6 dígitos) que aparece en tu factura o ticket de pago para continuar con el envío de tu comprobante.
+                    </p>
+                    
+                    <form id="identificacionForm" class="form-vertical">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <i class="fas fa-user"></i>
+                                <input type="text" id="numeroCliente" class="form-control" 
+                                       placeholder="Ej: 123456" pattern="\d{5,6}" 
+                                       title="Por favor ingresa un número de cliente válido (5-6 dígitos)" required>
+                            </div>
+                            <div class="error-message" id="errorCliente"></div>
+                        </div>
+                        
+                        <div class="boton-contenedor">
+                            <button type="submit" class="btn">
+                                Continuar
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="ayuda-contenedor">
+                            <a href="#" id="mostrarAyuda" class="ayuda-link">
+                                <i class="fas fa-question-circle"></i> ¿No encuentras tu número de cliente?
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Paso 2: Subir comprobante -->
+            <div id="paso2" class="paso">
+                <div class="form-step">
+                    <div class="step-header">
+                        <span class="step-number">2</span>
+                        <h3>Subir Comprobante</h3>
+                    </div>
+                    <p class="step-description">Arrastra tu comprobante o haz clic para seleccionar un archivo.</p>
+                    
+                    <div class="verificacion-container">
+                        <div class="card-verificacion">
+                            <div class="card-icon">
+                                <i class="fas fa-file-invoice-dollar"></i>
+                            </div>
+                            <h4>Envío de Comprobante</h4>
+                            <p class="card-description">
+                                Sube una imagen o PDF de tu comprobante de pago para validar tu pago.
+                            </p>
+                            
+                            <div class="requisitos-section">
+                                <div class="section-title">Requisitos:</div>
+                                <ul class="requisitos-list">
+                                    <li><i class="fas fa-check-circle"></i> Comprobante legible</li>
+                                    <li><i class="fas fa-check-circle"></i> Datos del pago visibles</li>
+                                    <li><i class="fas fa-check-circle"></i> Archivo en formato JPG, PNG o PDF</li>
+                                    <li><i class="fas fa-check-circle"></i> Tamaño máximo: 8MB</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="instrucciones-upload">
+                                <div class="instrucciones-icon">
+                                    <i class="fas fa-file-upload"></i>
+                                </div>
+                                <h5>Sube tu comprobante de pago</h5>
+                                <p class="instrucciones-text">
+                                    El comprobante debe mostrar claramente:
+                                </p>
+                                <ul class="instrucciones-list">
+                                    <li><i class="fas fa-check"></i> Nombre o número de cliente</li>
+                                    <li><i class="fas fa-check"></i> Monto del pago</li>
+                                    <li><i class="fas fa-check"></i> Fecha de pago</li>
+                                    <li><i class="fas fa-check"></i> Referencia o folio de pago</li>
+                                </ul>
+                                
+                                <div id="zonaArrastre" class="zona-arrastre">
+                                    <input type="file" id="inputArchivo" accept=".jpg,.jpeg,.png,.pdf" style="display: none;">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    <h5>Arrastra tu archivo aquí o haz clic para seleccionar</h5>
+                                    <p>Formatos aceptados: JPG, PNG, PDF (máx. 8MB)</p>
+                                </div>
+                                
+                                <div id="vistaPrevia" class="vista-previa" style="display: none;">
+                                    <div class="vista-previa-contenido">
+                                        <i class="fas fa-file-alt"></i>
+                                        <div class="info-archivo">
+                                            <h6 id="nombreArchivo"></h6>
+                                            <span id="tamanoArchivo"></span>
+                                        </div>
+                                        <button type="button" class="btn-cambiar" id="btnCambiarArchivo">
+                                            <i class="fas fa-sync-alt"></i> Cambiar
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-actions" style="margin-top: 20px;">
+                                <button type="button" id="btnContinuarVerificacion" class="btn btn-primary" disabled>
+                                    Enviar Comprobante
+                                    <i class="fas fa-paper-plane" style="margin-left: 8px;"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Paso 3: Confirmación -->
+            <div id="paso3" class="paso">
+                <div class="form-step">
+                    <div class="confirmacion">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>¡Comprobante Recibido!</h3>
+                        <p>Hemos recibido tu comprobante correctamente.</p>
+                        <div class="detalles-envio">
+                            <div class="detalle">
+                                <span class="etiqueta">Número de cliente:</span>
+                                <span id="confirmacion-cliente" class="valor"></span>
+                            </div>
+                            <div class="detalle">
+                                <span class="etiqueta">Archivo:</span>
+                                <span id="confirmacion-archivo" class="valor"></span>
+                            </div>
+                            <div class="detalle">
+                                <span class="etiqueta">Fecha y hora:</span>
+                                <span id="confirmacion-fecha" class="valor"></span>
+                            </div>
+                        </div>
+                        <div class="acciones-adicionales">
+                            <p>¿Neitas hacer algo más?</p>
+                            <button id="btnNuevoComprobante" class="btn btn-secundario">
+                                <i class="fas fa-plus"></i> Enviar otro comprobante
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="confirmacion-exitosa">
+                        <div class="icono-exito">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h4>Gracias por enviar tu comprobante</h4>
+                        <p>Hemos recibido tu comprobante de pago y lo estamos procesando. Recibirás una notificación una vez que hayamos verificado la información.</p>
+                        
+                        <div class="detalles-envio">
+                            <div class="detalle">
+                                <span class="etiqueta">Número de cliente:</span>
+                                <span class="valor" id="clienteNumero">-</span>
+                            </div>
+                            <div class="detalle">
+                                <span class="etiqueta">Archivo:</span>
+                                <span class="valor" id="nombreArchivoConfirmacion">-</span>
+                            </div>
+                            <div class="detalle">
+                                <span class="etiqueta">Fecha y hora:</span>
+                                <span class="valor" id="fechaEnvio">-</span>
+                            </div>
+                        </div>
+                        
+                        <div class="acciones-adicionales">
+                            <p>¿Necesitas ayuda adicional?</p>
+                            <a href="#" class="btn btn-secundario">
+                                <i class="fas fa-headset"></i> Contactar a Soporte
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        // La base de datos de clientes se carga desde VentanaPrincipal.js
+        // Inicialización del módulo
+        document.addEventListener('DOMContentLoaded', function() {
+            // Verificar si el módulo de comprobante está disponible
+            if (typeof initComprobante === 'function') {
+                initComprobante();
+            } else {
+                console.error('Error: No se pudo inicializar el módulo de comprobante');
+                
+                // Mostrar mensaje de error al usuario
+                Swal.fire({
+                    title: 'Error',
+                    text: 'No se pudo cargar el módulo de envío de comprobantes. Por favor, inténtalo de nuevo más tarde.',
+                    icon: 'error',
+                    confirmButtonText: 'Entendido',
+                    confirmButtonColor: '#007AFF'
+                });
+            }
+        });
+    </script>
+    <script src="{{ url_for('static', filename='js/4.Comprobante.js') }}"></script>
+</body>
+</html>

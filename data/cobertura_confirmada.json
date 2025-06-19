@@ -1,0 +1,22 @@
+{
+  "plan pro": {
+    "confirmado": true,
+    "fecha_confirmacion": 1747503962.5251215,
+    "detalles": "Cobertura confirmada por cliente el 2025-05-17"
+  },
+  "plan premium": {
+    "confirmado": true,
+    "fecha_confirmacion": 1747504287.5300255,
+    "detalles": "Cobertura confirmada por cliente el 2025-05-17"
+  },
+  "santiago tinaguistenco": {
+    "confirmado": true,
+    "fecha_confirmacion": 1747510805.2355497,
+    "detalles": "Cobertura confirmada por cliente el 2025-05-17"
+  },
+  "santiago": {
+    "confirmado": true,
+    "fecha_confirmacion": 1747512661.4299538,
+    "detalles": "Cobertura confirmada por cliente el 2025-05-17"
+  }
+}

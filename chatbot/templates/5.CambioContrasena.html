@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Cambio de Contraseña</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/5.CambioContrasena.css') }}">
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+</head>
+
+<body>
+    <div class="modulo-container">
+        <div class="modulo-header">
+            <i class="fas fa-lock"></i>
+            <h1>Cambiar contraseña</h1>
+            <p>Protege tu cuenta actualizando tu contraseña de forma segura</p>
+            <div id="bienvenidaUsuario" class="bienvenida-usuario"></div>
+        </div>
+        
+        <div class="modulo-content">
+            <!-- Paso 1: Ingresar número de cliente -->
+            <div id="paso1" class="paso activo">
+                <div class="form-step">
+                    <div class="step-header">
+                        <span class="step-number">1</span>
+                        <h3>Identifícate</h3>
+                    </div>
+                    <p class="step-description">
+                        Ingresa tu número de cliente (5-6 dígitos) que aparece en tu factura o ticket de pago para continuar con el proceso de cambio de contraseña.
+                    </p>
+                    
+                    <form id="identificacionForm" class="form-vertical">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <i class="fas fa-user"></i>
+                                <input type="text" id="numeroCliente" class="form-control" 
+                                       placeholder="Ej: 123456" pattern="\d{5,6}" 
+                                       title="Por favor ingresa un número de cliente válido (5-6 dígitos)" required>
+                            </div>
+                            <div class="error-message" id="errorCliente"></div>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">
+                                Continuar
+                                <i class="fas fa-arrow-right" style="margin-left: 8px;"></i>
+                            </button>
+                        </div>
+                    </form>
+                    
+                    <div class="help-link">
+                        <a href="#" id="mostrarAyuda" class="text-link">
+                            <i class="fas fa-question-circle" style="margin-right: 8px;"></i> ¿No encuentras tu número de cliente?
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Paso 2: Verificación de identidad -->
+            <div id="paso2" class="paso">
+                <div class="form-step">
+                    <div class="step-header">
+                        <span class="step-number">2</span>
+                        <h3>Verificación de identidad</h3>
+                    </div>
+                    
+                    <div class="verificacion-container">
+                        <div class="card-verificacion">
+                            <div class="card-icon">
+                                <i class="fas fa-user-shield"></i>
+                            </div>
+                            <h4>Cambio de Contraseña</h4>
+                            <p class="card-description">
+                                Este proceso te permitirá solicitar un cambio de contraseña para tu servicio de internet.
+                            </p>
+                            
+                            <div class="requisitos-section">
+                                <div class="section-title">Requisitos:</div>
+                                <ul class="requisitos-list">
+                                    <li><i class="fas fa-check-circle"></i> Ser el titular del servicio</li>
+                                    <li><i class="fas fa-check-circle"></i> Proporcionar una identificación oficial (INE/IFE) del titular</li>
+                                    <li><i class="fas fa-check-circle"></i> La identificación debe ser legible y vigente</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="instrucciones-upload">
+                                <div class="instrucciones-icon">
+                                    <i class="fas fa-camera"></i>
+                                </div>
+                                <h5>Envía una fotografía de tu identificación oficial</h5>
+                                <p class="instrucciones-text">
+                                    La identificación debe ser:
+                                </p>
+                                <ul class="instrucciones-list">
+                                    <li><i class="fas fa-check"></i> Legible y vigente</li>
+                                    <li><i class="fas fa-check"></i> Mostrar claramente el nombre completo</li>
+                                    <li><i class="fas fa-check"></i> Sin reflejos ni sombras que dificulten su lectura</li>
+                                    <li><i class="fas fa-check"></i> Debe coincidir con tu rostro en la cámara</li>
+                                </ul>
+                            
+                                <div class="zona-arrastre" id="zonaArrastre">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    <h5>Arrastra tu identificación aquí</h5>
+                                    <p>o haz clic para seleccionar un archivo</p>
+                                    <input type="file" id="inputArchivo" accept="image/*,.pdf" style="display: none;">
+                                    <div class="formatos-aceptados">
+                                        Formatos aceptados: JPG, PNG, PDF
+                                    </div>
+                                </div>
+
+                </div>
+            </div>
+            
+            <!-- Los demás pasos se cargarán dinámicamente -->
+            <div id="paso3" class="paso"></div>
+            <div id="paso4" class="paso"></div>
+            <div id="paso5" class="paso"></div>
+        </div>
+    </div>
+
+    <!-- Modal para el reconocimiento facial -->
+    <div id="modalReconocimientoFacial" class="modal" style="display: none;">
+        <div class="modal-content" style="width: 100%; height: 100%; margin: 0; max-width: 100%; border-radius: 0; background-color: #000;">
+            <div class="modal-header" style="position: fixed; top: 0; left: 0; right: 0; z-index: 10; background-color: rgba(0,0,0,0.7); border-bottom: none; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center;">
+                <h4 style="margin: 0; font-size: 1.5rem; color: white;">
+                    <i class="fas fa-camera" style="margin-right: 10px; color: #4a6cf7;"></i>
+                    Verificación Facial
+                </h4>
+                <button id="btnCerrarModal" class="btn btn-icon" style="background: none; border: none; color: white; font-size: 24px; cursor: pointer; padding: 5px;">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        
+            <div class="modal-body" style="padding: 0; height: 100%; display: flex; flex-direction: column;">
+                <!-- Guía de posicionamiento -->
+                <div id="faceGuide" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 5; pointer-events: none; width: 300px; height: 400px; border: 3px solid rgba(74, 108, 247, 0.7); border-radius: 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px; box-sizing: border-box;">
+                    <div style="color: white; text-align: center; margin-bottom: 20px;">
+                        <i class="fas fa-user" style="font-size: 40px; margin-bottom: 10px; opacity: 0.7;"></i>
+                        <p style="margin: 10px 0; font-size: 16px;">Coloca tu rostro dentro del marco</p>
+                    </div>
+                </div>
+                
+                <!-- Contenedor de la cámara -->
+                <div id="cameraContainer" style="flex: 1; position: relative; overflow: hidden; width: 100%; height: 100%;">
+                    <video id="video" autoplay playsinline style="width: 100%; height: 100%; object-fit: contain; transform: scaleX(-1);"></video>
+                    
+                    <!-- Estado del reconocimiento -->
+                    <div id="estadoReconocimiento" style="position: absolute; bottom: 20px; left: 0; right: 0; text-align: center; color: white; background: rgba(0,0,0,0.6); padding: 15px 10px; font-size: 1.1rem; backdrop-filter: blur(5px);">
+                        <i class="fas fa-user-circle" style="font-size: 1.2em; margin-right: 8px;"></i>
+                        <span>Por favor, mire directamente a la cámara</span>
+                    </div>
+                    
+                    <!-- Tiempo restante -->
+                    <div id="tiempoRestante" style="position: absolute; top: 20px; right: 20px; color: white; background-color: rgba(0,0,0,0.8); padding: 10px 20px; border-radius: 30px; font-size: 1rem; font-weight: 500; display: flex; align-items: center;">
+                        <i class="far fa-clock" style="margin-right: 8px;"></i>
+                        <span>30s</span>
+                    </div>
+                    
+                    <!-- Guía de posición para el rostro -->
+                    <div id="faceGuide" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 2; pointer-events: none; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                        <div id="facePositionIndicator" style="width: 40vmin; height: 40vmin; min-width: 200px; min-height: 200px; max-width: 300px; max-height: 300px; border: 3px dashed #ff9800; border-radius: 50%; box-shadow: 0 0 15px rgba(255, 152, 0, 0.5); transition: all 0.3s ease;"></div>
+                        <div id="faceGuideText" style="color: white; text-align: center; margin-top: 15px; font-size: 1.1rem; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">Coloque su rostro dentro del círculo</div>
+                    </div>
+                </div>
+                
+                <!-- Acciones -->
+                <div class="modal-actions" style="position: fixed; bottom: 30px; left: 0; right: 0; display: flex; justify-content: center; gap: 20px; z-index: 10; padding: 0 20px;">
+                    <button id="btnCancelarReconocimiento" class="btn btn-secondary" style="padding: 12px 30px; font-size: 1.1rem; border-radius: 30px; background-color: rgba(255, 255, 255, 0.2); border: 2px solid white; color: white; cursor: pointer; transition: all 0.3s; backdrop-filter: blur(5px);">
+                        <i class="fas fa-times" style="margin-right: 8px;"></i> Cancelar
+                    </button>
+                    <button id="btnTomarFoto" class="btn btn-primary" style="padding: 12px 30px; font-size: 1.1rem; border-radius: 30px; background-color: #4a6cf7; border: none; color: white; cursor: pointer; transition: all 0.3s; box-shadow: 0 4px 15px rgba(74, 108, 247, 0.4);">
+                        <i class="fas fa-camera" style="margin-right: 8px;"></i> Tomar foto
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <style>
+        /* Estilos para el modal de reconocimiento facial */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            overflow: auto;
+        }
+        
+        .modal-content {
+            background-color: #fff;
+            margin: 5% auto;
+            border-radius: 10px;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+            animation: modalFadeIn 0.3s;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+        
+        @keyframes modalFadeIn {
+            from {opacity: 0; transform: translateY(-20px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+        
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 25px;
+            border-bottom: 1px solid #e5e5e5;
+        }
+        
+        .modal-header h4 {
+            margin: 0;
+            color: #333;
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+        
+        .modal-header .close {
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+        
+        .modal-header .close:hover {
+            color: #333;
+        }
+        
+        .modal-body {
+            padding: 25px;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 25px;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: none;
+        }
+        
+        .btn-primary {
+            background-color: #4a6cf7;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background-color: #3a5ce4;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(74, 108, 247, 0.3);
+        }
+        
+        .btn-secondary {
+            background-color: #6c757d;
+            color: white;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #5a6268;
+            transform: translateY(-2px);
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        /* Estilos para la zona de arrastre */
+        .zona-arrastre {
+            border: 2px dashed #ccc;
+            border-radius: 8px;
+            padding: 30px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 20px 0;
+            background-color: #f9f9f9;
+        }
+        
+        .zona-arrastre:hover, .zona-arrastre.dragover {
+            border-color: #007AFF;
+            background-color: #f0f7ff;
+        }
+        
+        .zona-arrastre .icono-camara {
+            font-size: 40px;
+            color: #007AFF;
+            margin-bottom: 15px;
+        }
+        
+        .zona-arrastre .texto-arrastre {
+            font-size: 16px;
+            font-weight: 500;
+            margin: 10px 0 5px;
+            color: #333;
+        }
+        
+        .zona-arrastre .texto-formato {
+            font-size: 12px;
+            color: #888;
+            margin: 0;
+        }
+        
+        .btn-eliminar-imagen {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 10;
+        }
+        
+        .loading-indicator {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.9);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+        
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid #007AFF;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: 15px;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+    <script>
+        // La base de datos de clientes se carga desde VentanaPrincipal.js
+        // Verificar que la base de datos de clientes esté disponible
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Verificando base de datos de clientes...');
+            
+            // Verificar si la base de datos de clientes está disponible
+            if (window.clientesDB) {
+                console.log('Base de datos de clientes cargada desde VentanaPrincipal.js:', window.clientesDB);
+                
+                // Asegurarse de que el cliente de prueba tenga los campos necesarios
+                if (window.clientesDB['12345']) {
+                    // Actualizar el cliente de prueba con los campos necesarios si no existen
+                    const cliente = window.clientesDB['12345'];
+                    if (!cliente.nombreCompleto && cliente.nombre) {
+                        cliente.nombreCompleto = cliente.nombre;
+                        console.log('Actualizado cliente de prueba con nombreCompleto:', cliente);
+                    }
+                }
+                
+                console.log('Clientes disponibles:', Object.keys(window.clientesDB));
+            } else {
+                console.error('Error: No se encontró la base de datos de clientes en window.clientesDB');
+                
+                // Crear una base de datos de respaldo mínima para evitar errores
+                window.clientesDB = {
+                    '12345': {
+                        nombre: 'Max',
+                        apellidoPaterno: 'Vargas',
+                        apellidoMaterno: 'Santiago',
+                        nombreCompleto: 'Max Vargas Santiago',
+                        telefono: '7292553437',
+                        correo: 'maxfriday16@gmail.com',
+                        direccion: 'Calle Heriberto Enríquez 69',
+                        servicio: 'Internet 200 Mbps'
+                    }
+                };
+                console.warn('Se ha creado una base de datos de respaldo:', window.clientesDB);
+            }
+        });
+    </script>
+    <script src="{{ url_for('static', filename='js/5.CambioContrasena.js') }}"></script>
+</body>
+</html>

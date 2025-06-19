@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang='es'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>EmBot - Planes Disponibles</title>
+    <!-- Dependencias -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    
+    <!-- Estilos -->
+    <link href="{{ url_for('static', filename='css/chat.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/2.PlanesDisponibles.css') }}">
+</head>
+<body>
+    <div class="chat-container">
+        <!-- Espacio reservado para el contenido del carrusel -->
+        
+        <!-- Contenido de Planes Disponibles -->
+        <div class="chat-messages" style="padding: 20px; overflow-y: auto;">
+            <div class="planes-container">
+
+                <div class="categorias-menu">
+                    <button class="categoria-btn" data-categoria="residencial">Internet Residencial</button>
+                    <button class="categoria-btn" data-categoria="empresarial">Internet Empresarial</button>
+                    <button class="categoria-btn" data-categoria="telefonia">Telefonía en la Nube</button>
+                    <button class="categoria-btn" data-categoria="videovigilancia">Videovigilancia</button>
+                </div>
+                <div id="categoria-residencial" class="categoria-content">
+                    <h2>Internet Residencial</h2>
+                    <div class="planes-carousel" data-categoria="residencial">
+
+                        <div class="carousel-track">
+                    <div class="plan-card carousel-item" data-plan="res-50">
+                        <div class="plan-inner">
+                            <div class="plan-front">
+                                <span class="plan-badge">Popular</span>
+                                <span class="plan-icon">🌐</span>
+                                <h3>50 megas</h3>
+                                <p class="precio">Desde: <span>$300</span> al mes</p>
+                                <button class="contratar-btn">Contratar</button>
+                            </div>
+                            <div class="plan-back">
+                             <h3>50 megas</h3>
+                                <ul class="recomendaciones">
+                                    <li>8-10 dispositivos conectados</li>
+                                    <li>3 personas trabajando/estudiando</li>
+                                    <li>Streaming HD y gaming</li>
+                                    <li>Internet ilimitado</li>
+                                </ul>
+                                <button class="contratar-btn">Contratar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="plan-card carousel-item" data-plan="res-75">
+                        <div class="plan-inner">
+                            <div class="plan-front">
+                                <span class="plan-icon">🌐</span>
+                                <h3>75 megas</h3>
+                                <p class="precio">Desde: <span>$400</span> al mes</p>
+                                <button class="contratar-btn">Contratar</button>
+                            </div>
+                            <div class="plan-back">
+                                <h3>75 megas</h3>
+                                <ul class="recomendaciones">
+                                    <li>Dispositivos conectados simultáneamente: 8 a 12</li>
+                                    <li>Estudio / trabajo en casa simultáneamente: 3</li>
+                                    <li>Reproducción de video: Alta calidad</li>
+                                    <li>Juego en línea: Sí</li>
+                                    <li>Transmisiones en vivo: Sí</li>
+                                    <li>Internet ilimitado</li>
+                                </ul>
+                                <button class="contratar-btn">Contratar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="plan-card carousel-item" data-plan="res-100">
+                        <div class="plan-inner">
+                            <div class="plan-front">
+                                <span class="plan-icon">🌐</span>
+                                <h3>100 megas</h3>
+                                <p class="precio">Desde: <span>$500</span> al mes</p>
+                                <button class="contratar-btn">Contratar</button>
+                            </div>
+                            <div class="plan-back">
+                                <h3>100 megas</h3>
+                                <ul class="recomendaciones">
+                                    <li>Dispositivos conectados simultáneamente: 11 a 15</li>
+                                    <li>Estudio / trabajo en casa simultáneamente: 5</li>
+                                    <li>Reproducción de video: Alta calidad</li>
+                                    <li>Juego en línea: Sí</li>
+                                    <li>Transmisiones en vivo: Sí</li>
+                                    <li>Internet ilimitado</li>
+                                </ul>
+                                <button class="contratar-btn">Contratar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="plan-card carousel-item" data-plan="res-200">
+                        <div class="plan-inner">
+                            <div class="plan-front">
+                                <span class="plan-badge">Recomendado</span>
+                                <span class="plan-icon">🌐</span>
+                                <h3>200 megas</h3>
+                                <p class="precio">Desde: <span>$600</span> al mes</p>
+                                <button class="contratar-btn">Contratar</button>
+                            </div>
+                            <div class="plan-back">
+                                <h3>200 megas</h3>
+                                <ul class="recomendaciones">
+                                    <li>Dispositivos conectados simultáneamente: 16 a 20</li>
+                                    <li>Estudio / trabajo en casa simultáneamente: 8</li>
+                                    <li>Reproducción de video: 4K</li>
+                                    <li>Juego en línea: Sí</li>
+                                    <li>Transmisiones en vivo: Sí</li>
+                                    <li>Internet ilimitado</li>
+                                </ul>
+                                <button class="contratar-btn">Contratar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="plan-card carousel-item" data-plan="res-500">
+                        <div class="plan-inner">
+                            <div class="plan-front">
+                                <span class="plan-icon">🌐</span>
+                                <h3>500 megas</h3>
+                                <p class="precio">Desde: <span>$800</span> al mes</p>
+                                <button class="contratar-btn">Contratar</button>
+                            </div>
+                            <div class="plan-back">
+                                <h3>500 megas</h3>
+                                <ul class="recomendaciones">
+                                    <li>Dispositivos conectados simultáneamente: 21 a 25</li>
+                                    <li>Estudio / trabajo en casa simultáneamente: 16</li>
+                                    <li>Reproducción de video: 4K</li>
+                                    <li>Juego en línea: Sí</li>
+                                    <li>Transmisiones en vivo: Sí</li>
+                                    <li>Internet ilimitado</li>
+                                </ul>
+                                <button class="contratar-btn">Contratar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="plan-card carousel-item" data-plan="res-1000">
+                        <div class="plan-inner">
+                            <div class="plan-front">
+                                <span class="plan-icon">🌐</span>
+                                <h3>1000 megas</h3>
+                                <p class="precio">Desde: <span>$1,400</span> al mes</p>
+                                <button class="contratar-btn">Contratar</button>
+                            </div>
+                            <div class="plan-back">
+                                <h3>1000 megas</h3>
+                                <ul class="recomendaciones">
+                                    <li>Dispositivos conectados simultáneamente: más de 25</li>
+                                    <li>Estudio / trabajo en casa simultáneamente: más de 16</li>
+                                    <li>Reproducción de video: 4K</li>
+                                    <li>Juego en línea: Sí</li>
+                                    <li>Transmisiones en vivo: Sí</li>
+                                    <li>Internet ilimitado</li>
+                                </ul>
+                                <button class="contratar-btn">Contratar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                        <button class="carousel-control prev" aria-label="Anterior">&#9664;</button>
+                        <button class="carousel-control next" aria-label="Siguiente">&#9654;</button>
+                    </div>
+                </div>
+        <div id="categoria-empresarial" class="categoria-content" style="display:none;">
+            <h2>Internet Empresarial</h2>
+            <div class="planes-carousel" data-categoria="empresarial">
+                <div class="carousel-track">
+                    <div class="plan-card carousel-item" data-plan="emp-100">
+                        <div class="plan-inner">
+                            <div class="plan-front">
+                                <span class="plan-icon">🏢</span>
+                                <h3>100 MB</h3>
+                                <p class="precio">Desde: <span>$1,500</span> al mes</p>
+                                <button class="contratar-btn">Contratar</button>
+                            </div>
+                            <div class="plan-back">
+                                <h3>100 MB</h3>
+                                <ul class="recomendaciones">
+                                    <li>Empresas pequeñas/medianas</li>
+                                    <li>Videollamadas HD simultáneas: 5</li>
+                                    <li>Internet simétrico</li>
+                                    <li>Soporte técnico prioritario</li>
+                                    <li>IP fija incluida</li>
+                                </ul>
+                                <button class="contratar-btn">Contratar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="plan-card carousel-item" data-plan="emp-200">
+                        <div class="plan-inner">
+                            <div class="plan-front">
+                                <span class="plan-icon">🏢</span>
+                                <h3>200 MB</h3>
+                                <p class="precio">Desde: <span>$2,000</span> al mes</p>
+                                <button class="contratar-btn">Contratar</button>
+                            </div>
+                            <div class="plan-back">
+                                <h3>200 MB</h3>
+                                <ul class="recomendaciones">
+                                    <li>Empresas medianas</li>
+                                    <li>Videollamadas HD simultáneas: 10+</li>
+                                    <li>Internet simétrico</li>
+                                    <li>Soporte técnico prioritario</li>
+                                    <li>IP fija incluida</li>
+                                </ul>
+                                <button class="contratar-btn">Contratar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="plan-card carousel-item" data-plan="emp-500">
+                        <div class="plan-inner">
+                            <div class="plan-front">
+                                <span class="plan-badge">Recomendado</span>
+                                <span class="plan-icon">🏢</span>
+                                <h3>500 MB</h3>
+                                <p class="precio">Desde: <span>$3,500</span> al mes</p>
+                                <button class="contratar-btn">Contratar</button>
+                            </div>
+                            <div class="plan-back">
+                                <h3>500 MB</h3>
+                                <ul class="recomendaciones">
+                                    <li>Empresas con alto tráfico de datos</li>
+                                    <li>Videollamadas HD simultáneas: 20+</li>
+                                    <li>Internet simétrico</li>
+                                    <li>Soporte técnico prioritario 24/7</li>
+                                    <li>IP fija incluida</li>
+                                    <li>Monitorización de red</li>
+                                </ul>
+                                <button class="contratar-btn">Contratar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="plan-card carousel-item" data-plan="emp-1000">
+                        <div class="plan-inner">
+                            <div class="plan-front">
+                                <span class="plan-icon">🏢</span>
+                                <h3>1 GB</h3>
+                                <p class="precio">Desde: <span>$5,000</span> al mes</p>
+                                <button class="contratar-btn">Contratar</button>
+                            </div>
+                            <div class="plan-back">
+                                <h3>1 GB</h3>
+                                <ul class="recomendaciones">
+                                    <li>Dispositivos: 40+</li>
+                                    <li>Soporte empresarial dedicado</li>
+                                    <li>IP fija incluida</li>
+                                    <li>Monitorización 24/7</li>
+                                    <li>Internet simétrico</li>
+                                    <li>Soporte técnico VIP</li>
+                                </ul>
+                                <button class="contratar-btn">Contratar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control prev" aria-label="Anterior">&#9664;</button>
+                <button class="carousel-control next" aria-label="Siguiente">&#9654;</button>
+            </div>
+        </div>
+        <div id="categoria-telefonia" class="categoria-content" style="display:none;">
+            <h2>Telefonía en la Nube</h2>
+            <div class="planes-carousel" data-categoria="telefonia">
+                <div class="carousel-track">
+                    <div class="plan-card carousel-item active" data-plan="tel-basico">
+                        <div class="plan-inner">
+                            <div class="plan-front">
+                                <span class="plan-icon">📞</span>
+                                <h3>Básico</h3>
+                                <p class="precio">Desde: <span>$300</span> al mes por extensión</p>
+                                <button class="contratar-btn">Contratar</button>
+                            </div>
+                            <div class="plan-back">
+                                <h3>Básico</h3>
+                                <ul class="recomendaciones">
+                                    <li>Llamadas ilimitadas MX/USA</li>
+                                    <li>Buzón de voz incluido</li>
+                                    <li>1 número virtual gratuito</li>
+                                    <li>Transferencia de llamadas</li>
+                                    <li>Mensajería de voz a correo</li>
+                                </ul>
+                                <button class="contratar-btn">Contratar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="plan-card carousel-item" data-plan="tel-premium">
+                        <div class="plan-inner">
+                            <div class="plan-front">
+                                <span class="plan-badge">Recomendado</span>
+                                <span class="plan-icon">📞</span>
+                                <h3>Premium</h3>
+                                <p class="precio">Desde: <span>$500</span> al mes</p>
+                                <button class="contratar-btn">Contratar</button>
+                            </div>
+                            <div class="plan-back">
+                                <h3>Premium</h3>
+                                <ul class="recomendaciones">
+                                    <li>Hasta 50 extensiones</li>
+                                    <li>Grabación de llamadas</li>
+                                    <li>Integración con CRM</li>
+                                    <li>Soporte VIP 24/7</li>
+                                    <li>IVR/Menú automático</li>
+                                    <li>Reportes detallados</li>
+                                </ul>
+                                <button class="contratar-btn">Contratar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control prev" aria-label="Anterior">&#9664;</button>
+                <button class="carousel-control next" aria-label="Siguiente">&#9654;</button>
+            </div>
+        </div>
+        <div id="categoria-videovigilancia" class="categoria-content" style="display:none;">
+            <h2>Videovigilancia</h2>
+            <div class="planes-carousel" data-categoria="videovigilancia">
+                <div class="carousel-track">
+                    <div class="plan-card carousel-item active" data-plan="vid-basico">
+                        <div class="plan-inner">
+                            <div class="plan-front">
+                                <span class="plan-icon">🎥</span>
+                                <h3>Básico</h3>
+                                <p class="precio">Desde: <span>$4,500</span> instalación</p>
+                                <button class="contratar-btn">Contratar</button>
+                            </div>
+                            <div class="plan-back">
+                                <h3>Básico</h3>
+                                <ul class="recomendaciones">
+                                    <li>4 cámaras HD 1080p</li>
+                                    <li>Grabación continua 24/7</li>
+                                    <li>App móvil para monitoreo</li>
+                                    <li>Almacenamiento 7 días</li>
+                                    <li>Soporte técnico incluido</li>
+                                </ul>
+                                <button class="contratar-btn">Contratar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="plan-card carousel-item" data-plan="vid-premium">
+                        <div class="plan-inner">
+                            <div class="plan-front">
+                                <span class="plan-badge">Recomendado</span>
+                                <span class="plan-icon">🎥</span>
+                                <h3>Premium</h3>
+                                <p class="precio">Desde: <span>$8,000</span> instalación</p>
+                                <button class="contratar-btn">Contratar</button>
+                            </div>
+                            <div class="plan-back">
+                                <h3>Premium</h3>
+                                <ul class="recomendaciones">
+                                    <li>8 cámaras HD 4K</li>
+                                    <li>Visión nocturna avanzada</li>
+                                    <li>Detección de movimiento</li>
+                                    <li>Almacenamiento 30 días</li>
+                                    <li>Soporte prioritario 24/7</li>
+                                    <li>Análisis de video con IA</li>
+                                </ul>
+                                <button class="contratar-btn">Contratar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control prev" aria-label="Anterior">&#9664;</button>
+                <button class="carousel-control next" aria-label="Siguiente">&#9654;</button>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/2.PlanesDisponibles.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/1.ContratarServicio.js') }}"></script>
+    <script>
+        // Manejador directo para los botones de contratar
+        document.addEventListener('click', function(e) {
+            const btn = e.target.closest('.contratar-btn');
+            if (!btn) return;
+            
+            e.preventDefault();
+            e.stopPropagation();
+            
+            console.log('Botón de contratar clickeado (manejador directo)');
+            
+            const planCard = btn.closest('.plan-card');
+            if (!planCard) return;
+            
+            const planName = planCard.querySelector('h3')?.textContent.trim() || 'Plan desconocido';
+            const categoriaContainer = planCard.closest('.categoria-content');
+            if (!categoriaContainer) return;
+            
+            // Determinar la categoría basada en el ID del contenedor
+            let categoria = '';
+            const categoriaId = categoriaContainer.id;
+            if (categoriaId.includes('residencial')) {
+                categoria = 'Internet Residencial';
+            } else if (categoriaId.includes('empresarial')) {
+                categoria = 'Internet Empresarial';
+            } else if (categoriaId.includes('telefonia')) {
+                categoria = 'Telefonía en la Nube';
+            } else if (categoriaId.includes('videovigilancia')) {
+                categoria = 'Videovigilancia';
+            }
+            
+            console.log('Llamando a contratarPlan directamente con:', categoria, planName);
+            if (typeof window.contratarPlan === 'function') {
+                window.contratarPlan(categoria, planName);
+            } else {
+                console.error('La función contratarPlan no está disponible');
+            }
+        });
+        
+        // Forzar la reinicialización de los carruseles al cambiar de categoría
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.categoria-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const categoria = this.getAttribute('data-categoria');
+                    const categoriaElement = document.getElementById('categoria-' + categoria);
+                    if (categoriaElement) {
+                        // Esperar un momento para que se complete la transición CSS
+                        setTimeout(() => {
+                            const carrusel = categoriaElement.querySelector('.planes-carousel');
+                            if (carrusel && window.initCarouselInstance) {
+                                window.initCarouselInstance(carrusel);
+                            }
+                        }, 50);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

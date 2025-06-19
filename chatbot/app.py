@@ -1,0 +1,1336 @@
+import sys
+import io
+import json
+import os
+import random
+import urllib.parse
+import logging
+from datetime import datetime, timedelta
+from functools import wraps
+from typing import List, Dict, Any
+
+from flask import Flask, request, jsonify, render_template, session, redirect, url_for, send_from_directory, make_response
+from werkzeug.utils import secure_filename
+from dotenv import load_dotenv
+from twilio.rest import Client
+import cv2
+import numpy as np
+import base64
+import shutil
+from logging.handlers import RotatingFileHandler
+from jinja2.exceptions import TemplateError
+
+# Cargar variables de entorno
+load_dotenv()
+
+# Importar el módulo LLM
+try:
+    from llm import get_chat_response, llm_handler
+    logger = logging.getLogger(__name__)
+    logger.info("Módulo LLM importado correctamente")
+except ImportError as e:
+    logger.error(f"Error al importar el módulo LLM: {e}")
+    # Definir una función de respaldo
+    def get_chat_response(message: str, intents: List[Dict[str, Any]]) -> str:
+        logger.warning("Usando función de respaldo para get_chat_response")
+        return "Lo siento, el sistema de respuestas avanzado no está disponible en este momento."
+
+# Forzar la codificación UTF-8
+if sys.stdout.encoding != 'utf-8':
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+if sys.stderr.encoding != 'utf-8':
+    sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8')
+
+# Configuración de logging
+class UnicodeStreamHandler(logging.StreamHandler):
+    def emit(self, record):
+        try:
+            msg = self.format(record)
+            stream = self.stream
+            stream.write(msg + self.terminator)
+            self.flush()
+        except UnicodeEncodeError:
+            # Si hay un error de codificación, intentamos con reemplazos seguros
+            msg = record.msg.encode('ascii', 'replace').decode('ascii')
+            record.msg = msg
+            msg = self.format(record)
+            stream = self.stream
+            stream.write(msg + self.terminator)
+            self.flush()
+        except Exception:
+            self.handleError(record)
+
+# Configurar el logger root
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    handlers=[
+        UnicodeStreamHandler(),
+        logging.FileHandler('chatbot.log', encoding='utf-8')
+    ]
+)
+logger = logging.getLogger(__name__)
+
+# Inicializar la aplicación Flask
+app = Flask(__name__, template_folder='templates')
+app.secret_key = 'tu_clave_secreta_aqui'  # Necesario para usar sesiones
+
+# Configuración de la carpeta de plantillas
+app.config['TEMPLATES_AUTO_RELOAD'] = True
+
+# Configuración para subida de archivos
+UPLOAD_FOLDER = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'uploads')
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16MB max-limit
+app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(hours=1)
+
+# Configuración de reconocimiento facial
+FACE_CASCADE = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
+SIMILARITY_THRESHOLD = 0.6  # Umbral de similitud para la comparación de rostros
+
+# Configuración de límite de tasa
+RATE_LIMIT = 10  # Máximo de solicitudes por minuto
+rate_limits = {}
+
+# Cargar intenciones
+def cargar_intenciones():   
+    """Carga las intenciones desde los archivos JSON"""
+    intents = []
+    archivos = ['intents.json']  # Solo cargamos intents.json por ahora
+    
+    for archivo in archivos:
+        try:
+            logger.info(f"Cargando archivo: {archivo}")
+            with open(archivo, 'r', encoding='utf-8') as f:
+                content = f.read()
+                try:
+                    data = json.loads(content)
+                except json.JSONDecodeError as e:
+                    logger.error(f"Error de sintaxis JSON en {archivo}: {e}")
+                    # Intentar limpiar el contenido
+                    content = content.encode('utf-8', 'ignore').decode('utf-8')
+                    data = json.loads(content)
+                
+                if 'intents' in data:
+                    intents.extend(data['intents'])
+                else:
+                    intents.append(data)
+            logger.info(f"Archivo cargado: {archivo} - {len(intents)} intenciones encontradas")
+        except Exception as e:
+            logger.error(f"Error al cargar {archivo}", exc_info=True)
+            continue
+    
+    # Crear un diccionario de etiquetas a respuestas para búsqueda más rápida
+    intents_dict = {}
+    for intent in intents:
+        if 'tag' in intent:
+            intents_dict[intent['tag']] = intent
+    
+    logger.info(f"Total de etiquetas cargadas: {len(intents_dict)}")
+    return intents, intents_dict
+
+# Cargar intenciones al inicio
+intents, intents_dict = cargar_intenciones()
+
+def rate_limit(f):
+    """Decorador para limitar la tasa de solicitudes"""
+    @wraps(f)
+    def decorated_function(*args, **kwargs):
+        ip = request.remote_addr
+        now = datetime.now()
+        
+        if ip not in rate_limits:
+            rate_limits[ip] = {'count': 0, 'reset_time': now + timedelta(minutes=1)}
+        
+        if now > rate_limits[ip]['reset_time']:
+            rate_limits[ip] = {'count': 0, 'reset_time': now + timedelta(minutes=1)}
+        
+        if rate_limits[ip]['count'] >= RATE_LIMIT:
+            return jsonify({
+                'response': 'Has excedido el límite de solicitudes. Por favor, espera un momento.',
+                'status': 'rate_limited'
+            }), 429
+        
+        rate_limits[ip]['count'] += 1
+        return f(*args, **kwargs)
+    return decorated_function
+
+def obtener_respuesta(mensaje: str) -> str:
+    """
+    Obtiene la mejor respuesta para el mensaje del usuario.
+    
+    Args:
+        mensaje (str): El mensaje del usuario a procesar.
+        
+    Returns:
+        str: La respuesta generada o un mensaje de error amigable.
+    """
+    if not mensaje or not isinstance(mensaje, str):
+        logger.warning("Mensaje vacío o inválido recibido")
+        return "Por favor, escribe un mensaje válido."
+    
+    logger.info(f"Obteniendo respuesta para: {mensaje}")
+    
+    try:
+        # Usar la función del módulo llm para obtener la respuesta
+        return get_chat_response(mensaje, intents)
+    except Exception as e:
+        logger.error(f"Error en obtener_respuesta: {str(e)}\n{traceback.format_exc()}")
+        return "Lo siento, ha ocurrido un error al procesar tu mensaje. Por favor, inténtalo de nuevo más tarde."
+
+# Rutas
+@app.route('/')
+def home():
+    """Ruta principal que muestra la interfaz del chat"""
+    return render_template('index.html')
+
+@app.route('/chat', methods=['POST'])
+@rate_limit
+def chat():
+    """
+    Endpoint para manejar los mensajes del chat.
+    
+    Maneja tanto mensajes normales como solicitudes de contratación.
+    
+    Returns:
+        JSON: Contiene la respuesta y el estado de la operación.
+    """
+    # Obtener la dirección IP del cliente para logs
+    client_ip = request.remote_addr
+    logger.info(f"Solicitud recibida de {client_ip}")
+    
+    # Validar que la solicitud es JSON
+    if not request.is_json:
+        logger.warning("Solicitud sin formato JSON")
+        return jsonify({
+            'response': 'Formato de solicitud no válido. Se espera JSON.',
+            'status': 'error',
+            'error': 'invalid_format'
+        }), 400
+    
+    try:
+        # Obtener y validar datos JSON
+        data = request.get_json()
+        if not data:
+            raise ValueError("Datos JSON vacíos")
+            
+        message = data.get('message', '').strip()
+        plan_seleccionado = data.get('planSeleccionado')
+        datos_contratacion = data.get('datosContratacion')
+        
+        logger.info(f"Mensaje recibido: {message[:100]}...")
+        
+        # Validar mensaje
+        if not message:
+            logger.warning("Mensaje vacío recibido")
+            return jsonify({
+                'response': 'Por favor, escribe un mensaje.',
+                'status': 'error',
+                'error': 'empty_message'
+            }), 400
+        
+        # 1. Manejar solicitud de contratación
+        if datos_contratacion:
+            try:
+                logger.info("Procesando datos de contratación")
+                
+                # Validar datos de contratación
+                required_fields = ['plan', 'nombreCompleto', 'telefono', 'email', 'direccion', 'fechaHora']
+                for field in required_fields:
+                    if field not in datos_contratacion or not datos_contratacion[field]:
+                        raise ValueError(f"Campo requerido faltante: {field}")
+                
+                # Registrar la solicitud (en producción, guardar en base de datos)
+                logger.info(f"Nueva solicitud de contratación: {datos_contratacion}")
+                
+                # Crear resumen de la contratación
+                plan = datos_contratacion['plan']
+                resumen = (
+                    f"✅ *Solicitud de contratación recibida*\n\n"
+                    f"📋 *Plan seleccionado:* {plan.get('nombre', 'No especificado')}\n"
+                    f"💲 *Precio:* ${plan.get('precio', '0')}\n"
+                    f"👤 *Cliente:* {datos_contratacion.get('nombreCompleto', 'No especificado')}\n"
+                    f"📞 *Teléfono:* {datos_contratacion.get('telefono', 'No especificado')}\n"
+                    f"📧 *Email:* {datos_contratacion.get('email', 'No especificado')}\n"
+                    f"🏠 *Dirección:* {datos_contratacion.get('direccion', 'No especificada')}\n"
+                    f"📅 *Fecha y hora preferidas:* {datos_contratacion.get('fechaHora', 'No especificada')}\n\n"
+                    f"Un asesor se pondrá en contacto contigo en breve para confirmar los detalles de tu instalación.\n"
+                    f"¡Gracias por elegirnos! 😊"
+                )
+                
+                # Aquí podrías agregar el envío de email o notificación
+                
+                return jsonify({
+                    'response': resumen,
+                    'status': 'success',
+                    'limpiarPlan': True
+                })
+                
+            except Exception as e:
+                logger.error(f"Error al procesar contratación: {str(e)}\n{traceback.format_exc()}")
+                return jsonify({
+                    'response': 'Hubo un error al procesar tu solicitud. Por favor, inténtalo de nuevo más tarde.',
+                    'status': 'error',
+                    'error': 'processing_error'
+                }), 500
+        
+        # 2. Manejar selección de plan
+        if plan_seleccionado and not datos_contratacion:
+            try:
+                logger.info(f"Plan seleccionado: {plan_seleccionado}")
+                
+                # Verificar si el mensaje es una respuesta al formulario
+                lineas = message.split('\n')
+                if len(lineas) < 5:  # No es una respuesta de formulario completa
+                    respuesta = obtener_respuesta('recordar_plan')
+                    if not respuesta:
+                        respuesta = "¡Perfecto! Veo que estás interesado en un plan. ¿Te gustaría que te ayude con el proceso de contratación?"
+                    
+                    respuesta = respuesta.replace('{plan}', plan_seleccionado.get('nombre', 'el plan seleccionado'))
+                    respuesta = respuesta.replace('{precio}', str(plan_seleccionado.get('precio', '')))
+                    
+                    return jsonify({
+                        'response': respuesta,
+                        'status': 'success',
+                        'solicitar_datos': True
+                    })
+                
+            except Exception as e:
+                logger.error(f"Error al procesar selección de plan: {str(e)}")
+                # Continuar con el flujo normal si hay un error
+        
+        # 3. Obtener respuesta del chatbot
+        try:
+            respuesta = obtener_respuesta(message)
+            if not respuesta:
+                raise ValueError("La función obtener_respuesta devolvió None")
+                
+            return jsonify({
+                'response': respuesta,
+                'status': 'success'
+            })
+            
+        except Exception as e:
+            logger.error(f"Error al generar respuesta: {str(e)}\n{traceback.format_exc()}")
+            return jsonify({
+                'response': 'Lo siento, estoy teniendo dificultades para procesar tu solicitud. Por favor, inténtalo de nuevo más tarde.',
+                'status': 'error',
+                'error': 'response_generation_failed'
+            }), 500
+            
+    except json.JSONDecodeError as e:
+        logger.error(f"Error al decodificar JSON: {str(e)}")
+        return jsonify({
+            'response': 'Error en el formato de la solicitud. Por favor, inténtalo de nuevo.',
+            'status': 'error',
+            'error': 'invalid_json'
+        }), 400
+        
+    except Exception as e:
+        logger.error(f"Error inesperado en /chat: {str(e)}\n{traceback.format_exc()}")
+        return jsonify({
+            'response': 'Ha ocurrido un error inesperado. Por favor, inténtalo de nuevo más tarde.',
+            'status': 'error',
+            'error': 'internal_server_error'
+        }), 500
+
+# Ruta para obtener el horario de atención
+@app.route('/horarios-atencion')
+def horarios_atencion():
+    """Devuelve el HTML del horario de atención desde el template modularizado"""
+    return render_template('HorariosAtencion.html')
+
+@app.route('/get_horario')
+def get_horario():
+    """Devuelve el HTML del horario de atención"""
+    horario_html = """
+    <div class='response-card'>
+      <div class='card-header'>
+        <span class='card-icon'>⏰</span>
+        <span class='card-title'>Horarios de Atención</span>
+      </div>
+      <div class='schedule-list'>
+        <div class='schedule-item'><span class='day'>Lunes a Viernes</span><span class='hours'>09:00 a.m. - 06:00 p.m.</span></div>
+        <div class='schedule-item'><span class='day'>Sábados</span><span class='hours'>09:00 a.m. - 03:00 p.m.</span></div>
+        <div class='schedule-item'><span class='day'>Domingos</span><span class='hours closed'>Cerrado</span></div>
+      </div>
+      <div class='note'>* Pagos disponibles 24/7 por transferencia o depósito</div>
+      <div class='emergency-contact'>
+        <span class='emergency-icon'>🚨</span> Emergencias técnicas: <b>55-9999-8888</b> (24/7 solo fallas graves)
+      </div>
+    </div>
+    """
+    return horario_html
+
+# Ruta para obtener la información de sucursales (redirige a la nueva página de sucursales)
+@app.route('/get_sucursales')
+def get_sucursales():
+    """Redirige a la nueva página de sucursales"""
+    from flask import redirect, url_for
+    return redirect(url_for('sucursales'))
+
+
+# Ruta para la página de sucursales
+@app.route('/sucursales')
+def sucursales():
+    return render_template('8.Sucursales.html')
+
+@app.route('/api/sucursales')
+def api_sucursales():
+    sucursales = [
+        {
+            "nombre": "Santiago Tianguistenco",
+            "direccion": [
+                "ANDADOR CARLOS HANK GONZALEZ #304, SANTIAGO TIANGUISTENCO, ESTADO DE MEXICO",
+                "JUNTO AL BANCO SANTANDER"
+            ],
+            "horario": ["L-V 9:00 AM - 6:00 PM", "Sábados: 9:00 AM - 3:00 PM"],
+            "mapa": "https://www.google.com/maps/place/M-net+Sistemas+Computadoras+e+Internet/@19.1816993,-99.4694112,764m/data=!3m2!1e3!4b1!4m6!3m5!1s0x85cdf3d2a5c1d91f:0x59b36638210c9c11!8m2!3d19.1816993!4d-99.4668363!16s%2Fg%2F11c6112plc?entry=ttu&g_ep=EgoyMDI1MDUyMS4wIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D",
+            "whatsapp": "https://wa.me/525587654321",
+            "imagen": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+        },
+        {
+            "nombre": "Santa Mónica",
+            "direccion": [
+                "GALEANA #27 CARR. MEXICO-CHALMA COL. EL PICACHO, OCUILAN DE ARTEAGA, ESTADO DE MEXICO",
+                "JUNTO A FEDEX"
+            ],
+            "horario": ["L-V 9:00 AM - 6:00 PM", "Sábados: 9:00 AM - 3:00 PM"],
+            "mapa": "https://maps.app.goo.gl/bw4Q7EGeADY1Z6xd7",
+            "whatsapp": "https://wa.me/525587654321",
+            "imagen": "https://images.unsplash.com/photo-1520333789090-1afc82db536a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80"
+        },
+        {
+            "nombre": "Cholula",
+            "direccion": [
+                "JOSE MA. MORELOS S/N, ESQUINA CON BENITO JUAREZ GARCIA COL. MORELOS, SAN PEDRO CHOLULA, ESTADO DE MEXICO",
+                "DEBAJO DEL HOTEL CHOLULA"
+            ],
+            "horario": ["L-V 9:00 AM - 6:00 PM", "Sábados: 9:00 AM - 3:00 PM"],
+            "mapa": "https://maps.app.goo.gl/9A7pdCtpqeEQzSnf6",
+            "whatsapp": "https://wa.me/525587654321",
+            "imagen": "https://images.unsplash.com/photo-1517502884422-41eaead166d4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+        }
+    ]
+    return jsonify(sucursales)
+
+
+# Ruta para obtener los métodos de pago
+@app.route('/get_metodos_pago')
+def get_metodos_pago():
+    """Devuelve el HTML de los métodos de pago"""
+    return render_template('9.MetodosPago.html')
+
+
+# Ruta para servir archivos estáticos
+@app.route('/static/<path:path>')
+def static_file(path):
+    return send_from_directory('static', path)
+
+# Ruta específica para el archivo de cascada Haar
+@app.route('/haarcascade_frontalface_default.xml')
+def serve_haar():
+    """Sirve el archivo de cascada Haar para la detección facial."""
+    try:
+        # Asegurarse de que la ruta al archivo sea correcta
+        haar_path = os.path.join(app.static_folder, 'haarcascade_frontalface_default.xml')
+        if not os.path.exists(haar_path):
+            app.logger.error(f'Archivo Haar Cascade no encontrado en: {haar_path}')
+            return 'Archivo Haar Cascade no encontrado', 404
+            
+        app.logger.info(f'Sirviendo archivo Haar Cascade desde: {haar_path}')
+        return send_file(haar_path, mimetype='application/xml')
+    except Exception as e:
+        app.logger.error(f'Error al servir el archivo Haar Cascade: {str(e)}')
+        return f'Error al cargar el clasificador: {str(e)}', 500
+    return send_from_directory('static', 'haarcascade_frontalface_default.xml')
+
+# Ruta para servir archivos estáticos de la cámara
+@app.route('/camera/static/<path:path>')
+def serve_camera_static(path):
+    return send_from_directory('static', path)
+
+# Ruta para servir archivos CSS
+@app.route('/css/<path:filename>')
+def serve_css(filename):
+    response = send_from_directory(os.path.join('static', 'css'), filename)
+    response.headers['Access-Control-Allow-Origin'] = '*'
+    response.headers['Cache-Control'] = 'no-cache, no-store, must-revalidate'
+    response.headers['Pragma'] = 'no-cache'
+    response.headers['Expires'] = '0'
+    return response
+
+# Ruta para servir archivos JS
+@app.route('/js/<path:filename>')
+def serve_js(filename):
+    response = send_from_directory(os.path.join('static', 'js'), filename)
+    response.headers['Access-Control-Allow-Origin'] = '*'
+    response.headers['Cache-Control'] = 'no-cache, no-store, must-revalidate'
+    response.headers['Pragma'] = 'no-cache'
+    response.headers['Expires'] = '0'
+    return response
+
+# Ruta para servir el template de contratación
+@app.route('/contratar')
+def contratar():
+    return render_template('1.ContratarServicio.html')
+
+# Ruta para servir el formulario de contratación vía AJAX
+@app.route('/contratar-servicio')
+def contratar_servicio():
+    # Renderizar contenido del área de chat con diseño estilo Apple
+    from flask import Response
+    html_content = """
+    <div class="message-container">
+        <div class="bot-message">
+            <div class="welcome-message">
+                <h2>Bienvenido</h2>
+                <p>Estoy aquí para ayudarte a contratar el servicio de internet perfecto para ti.</p>
+            </div>
+            <div class="message-content">
+                <p>Selecciona el tipo de servicio que mejor se adapte a tus necesidades:</p>
+                <div class="service-options">
+                    <button class="service-btn" data-service="residencial">
+                        <span>Internet Residencial</span>
+                    </button>
+                    <button class="service-btn" data-service="empresarial">
+                        <span>Internet Empresarial</span>
+                    </button>
+                    <button class="service-btn" data-service="telefonia">
+                        <span>Telefonía en la Nube</span>
+                    </button>
+                    <button class="service-btn" data-service="videovigilancia">
+                        <span>Videovigilancia</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    """
+    return Response(html_content, mimetype='text/html')
+
+# Ruta para subir INE
+UPLOAD_FOLDER = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'uploads')
+ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
+
+# Asegurarse de que la carpeta de subidas exista
+os.makedirs(UPLOAD_FOLDER, exist_ok=True)
+
+def allowed_file(filename):
+    return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
+def enviar_whatsapp(mensaje, media_urls=None):
+    """Guarda localmente el mensaje y las imágenes en lugar de enviar por WhatsApp"""
+    try:
+        # Crear directorio para los mensajes si no existe
+        mensajes_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'mensajes_whatsapp')
+        os.makedirs(mensajes_dir, exist_ok=True)
+        
+        # Crear un archivo con la información del mensaje
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        mensaje_file = os.path.join(mensajes_dir, f'mensaje_{timestamp}.txt')
+        
+        with open(mensaje_file, 'w', encoding='utf-8') as f:
+            f.write(f"Mensaje: {mensaje}\n\n")
+            f.write(f"Fecha: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
+            
+            if media_urls:
+                f.write("\nImágenes adjuntas:\n")
+                for i, url in enumerate(media_urls, 1):
+                    f.write(f"{i}. {url}\n")
+        
+        logger.info(f"Mensaje guardado en: {mensaje_file}")
+        
+        # Si hay URLs de medios, copiarlas al directorio de mensajes
+        if media_urls:
+            for i, url in enumerate(media_urls, 1):
+                try:
+                    # Extraer el nombre del archivo de la URL
+                    filename = os.path.basename(url)
+                    src_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+                    dst_path = os.path.join(mensajes_dir, f'imagen_{i}_{filename}')
+                    
+                    # Copiar el archivo
+                    import shutil
+                    shutil.copy2(src_path, dst_path)
+                    logger.info(f"Imagen guardada en: {dst_path}")
+                except Exception as e:
+                    logger.error(f"Error al copiar la imagen {url}: {str(e)}")
+        
+        return True
+    except Exception as e:
+        logger.error(f"Error al guardar el mensaje: {str(e)}")
+        return False
+
+@app.route('/upload-ine', methods=['POST'])
+def upload_ine():
+    if 'ine' not in request.files:
+        return jsonify({'error': 'No se encontró el archivo', 'success': False}), 400
+    
+    file = request.files['ine']
+    if file.filename == '':
+        return jsonify({'error': 'No se seleccionó ningún archivo', 'success': False}), 400
+    
+    if file and allowed_file(file.filename):
+        try:
+            # Asegurarse de que el directorio de subidas existe
+            os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
+            cliente_id = request.form.get('cliente_id', 'desconocido')
+            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+            
+            # Guardar el archivo de INE
+            ine_filename = f"{cliente_id}_ine_{timestamp}.jpg"
+            ine_filepath = os.path.join(app.config['UPLOAD_FOLDER'], ine_filename)
+            file.save(ine_filepath)
+            
+            # Crear URL accesible para la imagen
+            ine_url = url_for('uploaded_file', filename=ine_filename, _external=True)
+            
+            # Verificar que el archivo es una imagen válida
+            try:
+                img = cv2.imread(ine_filepath)
+                if img is None:
+                    raise ValueError('El archivo no es una imagen válida')
+                
+                # Verificar si hay un rostro en la imagen
+                gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+                faces = FACE_CASCADE.detectMultiScale(gray, 1.1, 4)
+                
+                if len(faces) == 0:
+                    # Eliminar el archivo si no hay rostros
+                    if os.path.exists(ine_filepath):
+                        os.remove(ine_filepath)
+                    return jsonify({
+                        'success': False,
+                        'error': 'No se detectó ningún rostro en la imagen. Por favor, suba una foto donde sea visible su rostro.'
+                    }), 400
+                
+                # Guardar la ruta del archivo en la sesión para usarla después
+                session['ine_filepath'] = ine_filepath
+                session['ine_url'] = ine_url
+                session['ine_filename'] = ine_filename
+                
+                # Si todo está bien, devolver éxito
+                return jsonify({
+                    'success': True,
+                    'message': 'INE cargada correctamente',
+                    'shouldStartFacialRecognition': True,
+                    'clienteId': cliente_id,
+                    'ine_url': ine_url
+                })
+                
+            except Exception as e:
+                logger.error(f'Error al procesar la imagen: {str(e)}')
+                # Eliminar el archivo si hubo un error
+                if os.path.exists(ine_filepath):
+                    os.remove(ine_filepath)
+                return jsonify({
+                    'success': False,
+                    'error': f'Error al procesar la imagen: {str(e)}'
+                }), 400
+                
+        except Exception as e:
+            logger.error(f'Error al guardar el archivo: {str(e)}')
+            return jsonify({
+                'success': False,
+                'error': f'Error al guardar el archivo: {str(e)}'
+            }), 500
+    
+    return jsonify({
+        'success': False,
+        'error': 'Tipo de archivo no permitido. Por favor, suba una imagen (JPG, PNG, JPEG, GIF).'
+    }), 400
+
+@app.route('/upload-selfie', methods=['POST'])
+def upload_selfie():
+    """Endpoint para subir la selfie y guardar ambas imágenes localmente"""
+    if 'selfie' not in request.files:
+        return jsonify({'error': 'No se encontró la selfie', 'success': False}), 400
+    
+    file = request.files['selfie']
+    if file.filename == '':
+        return jsonify({'error': 'No se capturó ninguna selfie', 'success': False}), 400
+    
+    try:
+        # Asegurarse de que el directorio de subidas existe
+        os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
+        
+        # Obtener datos de la sesión
+        ine_filepath = session.get('ine_filepath')
+        ine_url = session.get('ine_url')
+        cliente_id = request.form.get('cliente_id', 'desconocido')
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        
+        if not ine_filepath or not os.path.exists(ine_filepath):
+            return jsonify({
+                'success': False,
+                'error': 'No se encontró el archivo de INE. Por favor, intente de nuevo.'
+            }), 400
+        
+        # Guardar la selfie
+        selfie_filename = f"{cliente_id}_selfie_{timestamp}.jpg"
+        selfie_filepath = os.path.join(app.config['UPLOAD_FOLDER'], selfie_filename)
+        file.save(selfie_filepath)
+        
+        # Crear URL accesible para la selfie
+        selfie_url = url_for('uploaded_file', filename=selfie_filename, _external=True)
+        
+        # Crear mensaje con la información de las imágenes
+        mensaje = f"Nueva verificación de identidad\nCliente: {cliente_id}\nFecha: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
+        
+        # Guardar localmente el mensaje y copiar las imágenes
+        mensajes_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'mensajes_whatsapp')
+        os.makedirs(mensajes_dir, exist_ok=True)
+        
+        # Crear un archivo con la información del mensaje
+        mensaje_file = os.path.join(mensajes_dir, f'mensaje_{timestamp}.txt')
+        with open(mensaje_file, 'w', encoding='utf-8') as f:
+            f.write(f"Mensaje: {mensaje}\n\n")
+            f.write(f"Cliente: {cliente_id}\n")
+            f.write(f"Fecha: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
+            f.write("\nArchivos guardados:\n")
+            f.write(f"1. INE: {ine_url}\n")
+            f.write(f"2. Selfie: {selfie_url}\n")
+        
+        # Copiar las imágenes al directorio de mensajes
+        try:
+            import shutil
+            # Copiar INE
+            ine_filename = os.path.basename(ine_filepath)
+            shutil.copy2(ine_filepath, os.path.join(mensajes_dir, f'ine_{ine_filename}'))
+            # Copiar selfie
+            shutil.copy2(selfie_filepath, os.path.join(mensajes_dir, f'selfie_{selfie_filename}'))
+        except Exception as e:
+            logger.error(f"Error al copiar archivos: {str(e)}")
+        
+        # Limpiar la sesión
+        session.pop('ine_filepath', None)
+        session.pop('ine_url', None)
+        
+        # Crear enlace de WhatsApp con las imágenes
+        mensaje_whatsapp = f"Verificación de identidad completada para el cliente {cliente_id}"
+        mensaje_whatsapp += f"\nINE: {ine_url}"
+        mensaje_whatsapp += f"\nSelfie: {selfie_url}"
+        
+        # Codificar el mensaje para la URL
+        mensaje_codificado = urllib.parse.quote(mensaje_whatsapp)
+        
+        # Crear URL de WhatsApp Web
+        whatsapp_url = f"https://web.whatsapp.com/send?text={mensaje_codificado}"
+        
+        return jsonify({
+            'success': True,
+            'message': 'Verificación completada exitosamente. Redirigiendo a WhatsApp...',
+            'whatsapp_url': whatsapp_url,
+            'ine_url': ine_url,
+            'selfie_url': selfie_url,
+            'local_path': os.path.abspath(mensajes_dir)
+        })
+        
+    except Exception as e:
+        logger.error(f'Error en upload-selfie: {str(e)}')
+        return jsonify({
+            'success': False,
+            'error': f'Error al procesar la solicitud: {str(e)}'
+        }), 500
+
+@app.route('/delete-ine', methods=['POST'])
+def delete_ine():
+    filepath = os.path.join(UPLOAD_FOLDER, 'ine.jpg')
+    if os.path.exists(filepath):
+        os.remove(filepath)
+        return jsonify({'message': 'Archivo eliminado correctamente'})
+    return jsonify({'message': 'No se encontró el archivo para eliminar'})
+
+@app.route('/start-facial-recognition', methods=['POST'])
+def start_facial_recognition():
+    try:
+        # Obtener los datos de la solicitud
+        data = request.get_json()
+        if not data or 'foto' not in data:
+            return jsonify({'success': False, 'error': 'No se proporcionó la foto'}), 400
+            
+        cliente_id = data.get('clienteId', 'desconocido')
+        
+        # Ruta al archivo de INE subido
+        ine_path = os.path.join(UPLOAD_FOLDER, 'ine.jpg')
+        
+        if not os.path.exists(ine_path):
+            return jsonify({'success': False, 'error': 'No se encontró la imagen de INE'}), 400
+        
+        try:
+            # Cargar la imagen de INE
+            ine_image = cv2.imread(ine_path)
+            if ine_image is None:
+                raise ValueError('No se pudo cargar la imagen de INE')
+            
+            # Procesar la imagen de la cámara (en base64)
+            header, encoded = data['foto'].split(',', 1)
+            binary_data = base64.b64decode(encoded)
+            nparr = np.frombuffer(binary_data, np.uint8)
+            cam_image = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
+            
+            if cam_image is None:
+                raise ValueError('No se pudo procesar la imagen de la cámara')
+            
+            # Convertir a escala de grises para detección de rostros
+            gray_ine = cv2.cvtColor(ine_image, cv2.COLOR_BGR2GRAY)
+            gray_cam = cv2.cvtColor(cam_image, cv2.COLOR_BGR2GRAY)
+            
+            # Detectar rostros en ambas imágenes
+            faces_ine = FACE_CASCADE.detectMultiScale(gray_ine, 1.1, 4)
+            faces_cam = FACE_CASCADE.detectMultiScale(gray_cam, 1.1, 4)
+            
+            if len(faces_ine) == 0:
+                return jsonify({
+                    'success': False,
+                    'error': 'No se detectó ningún rostro en la imagen de INE. Por favor, suba una foto donde sea visible su rostro.'
+                })
+                
+            if len(faces_cam) == 0:
+                return jsonify({
+                    'success': False,
+                    'error': 'No se detectó ningún rostro en la imagen de la cámara. Asegúrese de que su rostro sea claramente visible.'
+                })
+            
+            # Tomar la primera cara detectada en cada imagen
+            x_ine, y_ine, w_ine, h_ine = faces_ine[0]
+            x_cam, y_cam, w_cam, h_cam = faces_cam[0]
+            
+            # Recortar las caras
+            face_ine = ine_image[y_ine:y_ine+h_ine, x_ine:x_ine+w_ine]
+            face_cam = cam_image[y_cam:y_cam+h_cam, x_cam:x_cam+w_cam]
+            
+            # Redimensionar las imágenes al mismo tamaño para comparación
+            face_ine = cv2.resize(face_ine, (200, 200))
+            face_cam = cv2.resize(face_cam, (200, 200))
+            
+            # Convertir a escala de grises para el reconocimiento
+            face_ine_gray = cv2.cvtColor(face_ine, cv2.COLOR_BGR2GRAY)
+            face_cam_gray = cv2.cvtColor(face_cam, cv2.COLOR_BGR2GRAY)
+            
+            # Calcular el error cuadrático medio (MSE) entre las imágenes
+            mse = np.mean((face_ine_gray - face_cam_gray) ** 2)
+            
+            # Convertir MSE a un porcentaje de similitud (menor MSE = más similar)
+            max_mse = 10000  # Valor máximo esperado para MSE
+            similitud = max(0, 100 - (mse / max_mse * 100))
+            
+            # Determinar si las caras coinciden basado en el umbral
+            coincide = similitud >= (SIMILARITY_THRESHOLD * 100)
+            
+            # Registrar el resultado
+            logger.info(f'Comparación de rostros - Cliente: {cliente_id}, Similitud: {similitud:.2f}%, Coincide: {coincide}')
+            
+            return jsonify({
+                'success': True,
+                'coincide': coincide,
+                'similitud': round(similitud, 2),
+                'mensaje': 'Comparación completada exitosamente',
+                'puedeContinuar': coincide
+            })
+            
+        except Exception as e:
+            logger.error(f'Error al comparar rostros: {str(e)}')
+            return jsonify({
+                'success': False,
+                'error': f'Error al comparar los rostros: {str(e)}',
+                'puedeContinuar': False
+            }), 500
+            
+    except Exception as e:
+        logger.error(f'Error en el proceso de reconocimiento facial: {str(e)}')
+        return jsonify({
+            'success': False,
+            'error': f'Error en el proceso de reconocimiento facial: {str(e)}',
+            'puedeContinuar': False
+        }), 500
+
+# Ruta para servir archivos de plantillas
+@app.route('/templates/<path:template_name>')
+def serve_template(template_name):
+    return render_template(template_name)
+
+# Ruta para servir archivos CSS de módulos
+@app.route('/static/css/<path:filename>')
+def serve_module_css(filename):
+    return send_from_directory('static/css', filename)
+
+# Ruta para servir archivos JS de módulos
+@app.route('/static/js/<path:filename>')
+def serve_module_js(filename):
+    return send_from_directory('static/js', filename)
+
+# Ruta para comparar rostros
+@app.route('/comparar_rostros', methods=['POST'])
+def comparar_rostros():
+    try:
+        data = request.get_json()
+        
+        # Verificar que se hayan proporcionado ambas imágenes
+        if 'imagen1' not in data or 'imagen2' not in data:
+            return jsonify({
+                'error': 'Se requieren ambas imágenes para la comparación',
+                'coinciden': False,
+                'porcentaje': 0.0
+            }), 400
+        
+        # Decodificar las imágenes base64
+        try:
+            # Decodificar la primera imagen
+            img1_data = base64.b64decode(data['imagen1'])
+            nparr1 = np.frombuffer(img1_data, np.uint8)
+            img1 = cv2.imdecode(nparr1, cv2.IMREAD_COLOR)
+            
+            # Decodificar la segunda imagen
+            img2_data = base64.b64decode(data['imagen2'])
+            nparr2 = np.frombuffer(img2_data, np.uint8)
+            img2 = cv2.imdecode(nparr2, cv2.IMREAD_COLOR)
+            
+            # Verificar que las imágenes se cargaron correctamente
+            if img1 is None or img2 is None:
+                raise ValueError("No se pudieron cargar una o ambas imágenes")
+                
+        except Exception as e:
+            logger.error(f"Error al decodificar las imágenes: {str(e)}")
+            return jsonify({
+                'error': 'Error al procesar las imágenes',
+                'coinciden': False,
+                'porcentaje': 0.0
+            }), 400
+        
+        # Redimensionar imágenes al mismo tamaño
+        img1 = cv2.resize(img1, (200, 200))
+        img2 = cv2.resize(img2, (200, 200))
+        
+        # Convertir a escala de grises
+        gray1 = cv2.cvtColor(img1, cv2.COLOR_BGR2GRAY)
+        gray2 = cv2.cvtColor(img2, cv2.COLOR_BGR2GRAY)
+        
+        # Calcular histogramas de color
+        hist1 = cv2.calcHist([img1], [0, 1, 2], None, [8, 8, 8], [0, 256, 0, 256, 0, 256])
+        hist2 = cv2.calcHist([img2], [0, 1, 2], None, [8, 8, 8], [0, 256, 0, 256, 0, 256])
+        
+        # Normalizar los histogramas
+        hist1 = cv2.normalize(hist1, hist1).flatten()
+        hist2 = cv2.normalize(hist2, hist2).flatten()
+        
+        # Calcular la correlación entre los histogramas
+        correlacion = cv2.compareHist(hist1, hist2, cv2.HISTCMP_CORREL)
+        
+        # Usar el clasificador LBPH para comparar rasgos faciales
+        recognizer = cv2.face.LBPHFaceRecognizer_create()
+        
+        # Crear etiquetas para el entrenamiento
+        labels = np.array([1, 2])
+        
+        try:
+            # Entrenar con las dos imágenes
+            recognizer.train([gray1, gray2], labels)
+            
+            # Predecir la similitud
+            label1, confidence1 = recognizer.predict(gray1)
+            label2, confidence2 = recognizer.predict(gray2)
+            
+            # Calcular la confianza promedio (invertir porque menor es mejor en LBPH)
+            conf_promedio = 100 - ((confidence1 + confidence2) / 2)
+            
+            # Combinar ambas métricas (peso mayor al LBPH)
+            similitud = (correlacion * 30 + conf_promedio * 70) / 100
+            
+            # Ajustar umbral de coincidencia (40% de similitud mínima)
+            coinciden = similitud > 40
+            
+            return jsonify({
+                'coinciden': coinciden,
+                'porcentaje': similitud,
+                'mensaje': 'Comparación completada correctamente'
+            })
+            
+        except Exception as e:
+            logger.error(f"Error en reconocimiento facial: {str(e)}")
+            # Si falla el reconocimiento, usar solo la correlación de histogramas
+            return jsonify({
+                'coinciden': correlacion > 0.4,
+                'porcentaje': correlacion * 100,
+                'mensaje': 'Comparación básica completada'
+            })
+        
+    except Exception as e:
+        logger.error(f"Error en el servidor: {str(e)}", exc_info=True)
+        return jsonify({
+            'error': 'Error interno del servidor al comparar rostros',
+            'coinciden': False,
+            'porcentaje': 0.0
+        }), 500
+
+# Ruta para servir archivos de datos
+@app.route('/data/<path:filename>')
+def serve_data(filename):
+    return send_from_directory('data', filename)
+
+# Ruta para servir el template de planes disponibles
+@app.route('/planes-disponibles')
+def planes_disponibles():
+    try:
+        logger.info("Sirviendo el template de Planes Disponibles")
+        # Verificar si el archivo de plantilla existe
+        template_path = os.path.join(app.template_folder, '2.PlanesDisponibles.html')
+        logger.info(f"Buscando plantilla en: {template_path}")
+        
+        if not os.path.exists(template_path):
+            logger.error(f"Archivo de plantilla no encontrado: {template_path}")
+            return "Error: Archivo de plantilla no encontrado", 404
+            
+        # Leer el contenido del archivo directamente para verificar que sea accesible
+        try:
+            with open(template_path, 'r', encoding='utf-8') as f:
+                content = f.read()
+                logger.info(f"Plantilla leída correctamente, tamaño: {len(content)} bytes")
+        except Exception as file_error:
+            logger.error(f"Error al leer el archivo de plantilla: {str(file_error)}")
+            return f"Error al leer el archivo de plantilla: {str(file_error)}", 500
+            
+        # Intentar renderizar la plantilla
+        try:
+            rendered = render_template('2.PlanesDisponibles.html')
+            response = make_response(rendered)
+            response.headers['Content-Type'] = 'text/html; charset=utf-8'
+            return response
+        except TemplateNotFound as tnf:
+            logger.error(f"Plantilla no encontrada: {str(tnf)}")
+            return f"Error: Plantilla no encontrada - {str(tnf)}", 404
+        except TemplateError as te:
+            logger.error(f"Error en la plantilla: {str(te)}")
+            return f"Error en la plantilla: {str(te)}", 500
+            
+    except Exception as e:
+        logger.error(f"Error inesperado al cargar el template de Planes Disponibles: {str(e)}", exc_info=True)
+        return f"Error inesperado al cargar el template: {str(e)}", 500
+
+# Ruta para la cámara de reconocimiento facial
+@app.route('/camera')
+def camera():
+    """
+    Ruta que muestra la interfaz de la cámara para reconocimiento facial
+    """
+    try:
+        return render_template('camera.html')
+    except TemplateNotFound:
+        return "La funcionalidad de cámara no está disponible en este momento.", 404
+    except Exception as e:
+        app.logger.error(f"Error al cargar la cámara: {str(e)}")
+        return "Ocurrió un error al cargar la cámara. Por favor, intente más tarde.", 500
+
+# Ruta para el reporte de falla
+@app.route('/reportar-falla')
+def reportar_falla():
+    """
+    Ruta para mostrar el formulario de reporte de fallas.
+    """
+    try:
+        # Registrar la solicitud
+        logger.info("Sirviendo formulario de reporte de falla")
+        
+        # Renderizar la plantilla HTML del formulario de reporte de falla
+        return render_template('3.ReportarFalla.html')
+    except TemplateError as e:
+        logger.error(f"Error al cargar la plantilla de reporte de falla: {str(e)}")
+        return jsonify({
+            'status': 'error',
+            'message': 'Error al cargar el formulario de reporte de falla'
+        }), 500
+
+# Ruta para el cambio de contraseña WiFi
+@app.route('/cambio-contrasena')
+def cambio_contrasena():
+    """
+    Ruta para mostrar el formulario de cambio de contraseña WiFi.
+    """
+    logger.info("Acceso a la ruta /cambio_contrasena")
+    try:
+        # Verificar si el archivo de plantilla existe
+        template_path = os.path.join(app.template_folder, '5.CambioContrasena.html')
+        if not os.path.exists(template_path):
+            return f"Error: No se encontró el archivo de plantilla en {template_path}", 404
+            
+        # Verificar si el archivo CSS existe
+        css_path = os.path.join(app.static_folder, 'css', '5.CambioContrasena.css')
+        if not os.path.exists(css_path):
+            return f"Error: No se encontró el archivo CSS en {css_path}", 404
+            
+        logger.info(f"Archivos encontrados. Renderizando plantilla...")
+        return render_template('5.CambioContrasena.html')
+    except Exception as e:
+        logger.error(f"Error al cargar el template de cambio de contraseña: {str(e)}")
+        return f"Error al cargar el formulario: {str(e)}", 500
+
+# Ruta de prueba para ver el contenido del CSS
+@app.route('/test_css')
+def test_css():
+    try:
+        css_path = os.path.join(app.static_folder, 'css', '5.CambioContrasena.css')
+        with open(css_path, 'r', encoding='utf-8') as f:
+            css_content = f.read()
+        return f"<pre style='white-space: pre-wrap;'>{css_content}</pre>"
+    except Exception as e:
+        return f"Error al leer el archivo CSS: {str(e)}", 500
+
+@app.route('/validar-ine', methods=['POST'])
+def validar_ine():
+    """
+    Endpoint para validar un INE/IFE subido por el usuario
+    """
+    try:
+        # Verificar que se haya enviado un archivo
+        if 'ine' not in request.files:
+            return jsonify({
+                'exito': False,
+                'mensaje': 'No se ha proporcionado ningún archivo',
+                'errores': ['No se proporcionó ningún archivo']
+            }), 400
+        
+        file = request.files['ine']
+        
+        # Verificar que el archivo tenga un nombre
+        if file.filename == '':
+            return jsonify({
+                'exito': False,
+                'mensaje': 'No se ha seleccionado ningún archivo',
+                'errores': ['No se seleccionó ningún archivo']
+            }), 400
+        
+        # Verificar la extensión del archivo
+        if not (file.filename.lower().endswith(('.png', '.jpg', '.jpeg', '.pdf'))):
+            return jsonify({
+                'exito': False,
+                'mensaje': 'Formato de archivo no soportado',
+                'errores': ['El formato de archivo debe ser PNG, JPG o PDF']
+            }), 400
+        
+        # Obtener el ID del cliente (obligatorio)
+        cliente_id = request.form.get('cliente_id')
+        if not cliente_id:
+            return jsonify({
+                'exito': False,
+                'mensaje': 'Se requiere el ID del cliente',
+                'errores': ['No se proporcionó el ID del cliente']
+            }), 400
+        
+        # Procesar el INE
+        resultado = ine_processor.process_ine(file)
+        
+        # Si hubo un error en el procesamiento, devolverlo
+        if not resultado.get('success', False):
+            return jsonify({
+                'exito': False,
+                'mensaje': 'Error al procesar el documento',
+                'errores': [resultado.get('error', 'Error desconocido al procesar el INE')]
+            }), 400
+        
+        # Validar contra la base de datos (obligatorio)
+        validacion = ine_processor.validate_against_database(
+            resultado['data'], 
+            cliente_id
+        )
+        
+        if not validacion.get('valid', False):
+            return jsonify({
+                'exito': False,
+                'mensaje': validacion.get('message', 'Error en la validación del documento'),
+                'errores': validacion.get('errores', ['No se pudo validar el documento']),
+                'score': validacion.get('score', 0),
+                'datos_extraidos': resultado['data']
+            }), 400
+        
+        # Si todo salió bien, devolver los datos validados
+        return jsonify({
+            'exito': True,
+            'mensaje': 'Documento validado correctamente',
+            'score': validacion.get('score', 100),
+            'datos': resultado['data']
+        })
+        
+    except Exception as e:
+        logger.error(f"Error en validar_ine: {str(e)}", exc_info=True)
+        return jsonify({
+            'exito': False,
+            'mensaje': 'Error al procesar la solicitud',
+            'errores': [f'Error interno: {str(e)}']
+        }), 500
+
+@app.route('/uploads/<filename>')
+def uploaded_file(filename):
+    """
+    Sirve archivos subidos desde el directorio de uploads.
+    """
+    try:
+        # Asegurarse de que el archivo existe
+        filepath = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+        if not os.path.exists(filepath):
+            return jsonify({'error': 'Archivo no encontrado'}), 404
+            
+        return send_from_directory(
+            app.config['UPLOAD_FOLDER'], 
+            filename, 
+            as_attachment=False,
+            mimetype='image/jpeg'  # Ajustar según el tipo de archivo si es necesario
+        )
+    except Exception as e:
+        logger.error(f'Error al servir el archivo {filename}: {str(e)}')
+        return jsonify({'error': 'Error al procesar la solicitud'}), 500
+
+@app.route('/comprobante')
+def comprobante():
+    """
+    Ruta para mostrar el formulario de envío de comprobante de pago.
+    """
+    try:
+        logger.info('=== INICIO DE LA SOLICITUD /comprobante ===')
+        logger.info(f'Directorio de trabajo: {os.getcwd()}')
+        logger.info(f'Ruta de plantillas: {app.template_folder}')
+        
+        # Verificar si la plantilla existe
+        template_path = os.path.join(app.template_folder, '4.Comprobante.html')
+        logger.info(f'Buscando plantilla en: {template_path}')
+        
+        if not os.path.exists(template_path):
+            error_msg = f'No se encontró la plantilla en: {template_path}'
+            logger.error(error_msg)
+            return jsonify({'error': error_msg}), 404
+            
+        logger.info('Plantilla encontrada, intentando renderizar...')
+        
+        # Añadir parámetro de versión para evitar caché
+        response = make_response(render_template('4.Comprobante.html', version=datetime.now().timestamp()))
+        
+        # Configurar encabezados para permitir la carga en iframe
+        response.headers['X-Frame-Options'] = 'SAMEORIGIN'
+        response.headers['Content-Security-Policy'] = "frame-ancestors 'self'"
+        
+        logger.info('Plantilla renderizada con éxito')
+        return response
+        
+    except TemplateError as e:
+        error_msg = f'Error en la plantilla: {str(e)}'
+        logger.error(error_msg)
+        logger.error(traceback.format_exc())
+        return jsonify({'error': error_msg, 'type': 'template_error'}), 500
+        
+    except Exception as e:
+        error_msg = f'Error al cargar el formulario de comprobante: {str(e)}'
+        error_type = type(e).__name__
+        logger.error(f'{error_msg} (Tipo: {error_type})')
+        logger.error(traceback.format_exc())
+        return jsonify({
+            'error': 'No se pudo cargar el formulario de comprobante',
+            'type': error_type,
+            'details': str(e)
+        }), 500
+
+@app.route('/llm/status', methods=['GET'])
+def llm_status():
+    """
+    Verifica el estado del modelo de lenguaje y su capacidad para generar respuestas.
+    
+    Returns:
+        JSON: Estado del modelo, información de configuración y resultado de prueba.
+    """
+    try:
+        # Verificar si el manejador LLM está disponible
+        if llm_handler is None:
+            return jsonify({
+                'status': 'error',
+                'message': 'Módulo LLM no disponible',
+                'model_loaded': False,
+                'model_path': 'No disponible'
+            }), 500
+            
+        # Obtener información básica del modelo
+        model_info = {
+            'model_path': getattr(llm_handler, 'model_path', 'No especificado'),
+            'context_window': getattr(llm_handler, 'context_window', 'Desconocido'),
+            'max_tokens': getattr(llm_handler, 'max_tokens', 'Desconocido'),
+            'temperature': getattr(llm_handler, 'temperature', 'Desconocido')
+        }
+        
+        # Verificar si el modelo está cargado
+        model_loaded = getattr(llm_handler, 'model', None) is not None
+        
+        # Si el modelo no está cargado, intentar cargarlo
+        if not model_loaded and hasattr(llm_handler, 'load_model'):
+            try:
+                model_loaded = llm_handler.load_model()
+            except Exception as load_error:
+                logger.error(f"Error al cargar el modelo: {str(load_error)}\n{traceback.format_exc()}")
+                model_loaded = False
+        
+        # Probar el modelo con un mensaje de prueba si está cargado
+        test_result = None
+        if model_loaded and hasattr(llm_handler, 'get_response'):
+            try:
+                test_prompt = "Hola, ¿puedes confirmar que estás funcionando correctamente?"
+                system_prompt = "Eres un asistente útil. Responde brevemente confirmando que todo está bien."
+                
+                response = llm_handler.get_response(test_prompt, system_prompt)
+                if not response or len(response.strip()) == 0:
+                    raise ValueError("El modelo devolvió una respuesta vacía")
+                    
+                test_result = {
+                    'status': 'success',
+                    'test_prompt': test_prompt,
+                    'response': response[:200] + '...' if len(response) > 200 else response,
+                    'response_length': len(response)
+                }
+            except Exception as test_error:
+                logger.error(f"Error al probar el modelo: {str(test_error)}\n{traceback.format_exc()}")
+                test_result = {
+                    'status': 'test_failed',
+                    'error': str(test_error),
+                    'error_type': type(test_error).__name__
+                }
+        
+        # Construir la respuesta
+        result = {
+            'status': 'ok' if model_loaded else 'error',
+            'model_loaded': model_loaded,
+            'model_info': model_info,
+            'test_result': test_result if test_result is not None else 'No se realizó prueba (modelo no cargado o sin método get_response)',
+            'timestamp': datetime.now().isoformat()
+        }
+        
+        return jsonify(result)
+        
+    except Exception as e:
+        logger.error(f"Error en llm_status: {str(e)}\n{traceback.format_exc()}")
+        return jsonify({
+            'status': 'error',
+            'message': f'Error al verificar el estado del modelo: {str(e)}',
+            'model_loaded': False,
+            'error_type': type(e).__name__,
+            'timestamp': datetime.now().isoformat()
+        }), 500
+
+if __name__ == '__main__':
+    # Configuración del servidor
+    host = '0.0.0.0'
+    port = int(os.environ.get('PORT', 5000))
+    debug = os.environ.get('FLASK_DEBUG', 'True') == 'True'
+    
+    # Configuración adicional para el servidor de desarrollo
+    options = {
+        'host': host,
+        'port': port,
+        'debug': debug,
+        'use_reloader': True,
+        'use_debugger': debug,
+        'passthrough_errors': True
+    }
+    
+    logger.info(f"Iniciando servidor en http://{host}:{port}")
+    logger.info(f"Modo debug: {debug}")
+    logger.info(f"Python version: {sys.version}")
+    logger.info(f"Encoding - stdout: {sys.stdout.encoding}, stderr: {sys.stderr.encoding}, default: {sys.getdefaultencoding()}")
+    
+    # Iniciar el servidor
+    app.run(**options)

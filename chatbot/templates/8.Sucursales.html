@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestras Sucursales</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/branches.css') }}">
+</head>
+<body>
+    <div class='branches-container' id='branches-container'>
+        <div class='branches-header'>
+            <h2>Nuestras Sucursales</h2>
+            <p>Visítanos en cualquiera de nuestras ubicaciones. Estamos para atenderte.</p>
+            <button id="btn-sucursales-chat" class="btn-chat">Ver sucursales en chat</button>
+        </div>
+        <div id="chat-sucursales" style="display:none;"></div>
+        
+        <div class='branches-grid' id='branches-grid'>
+            <!-- Las sucursales se llenarán dinámicamente por JS -->
+                <div class='branch-image' style='background-image: url(https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80);'>
+                    <div class='branch-overlay'>
+                        <h3 class='branch-name'>Santiago Tianguistenco</h3>
+                    </div>
+                </div>
+                <div class='branch-content'>
+                    <div class='branch-address'>
+                        <div class='branch-icon'>📍</div>
+                        <div class='branch-details'>
+                            <p>ANDADOR CARLOS HANK GONZALEZ #304, SANTIAGO TIANGUISTENCO, ESTADO DE MEXICO</p>
+                            <p>JUNTO AL BANCO SANTANDER</p>
+                        </div>
+                    </div>
+                    
+                    <div class='branch-schedule'>
+                        <div class='schedule-icon'>🕒</div>
+                        <div class='schedule-text'>
+                            <strong>Horario:</strong> L-V 9:00 AM - 6:00 PM<br>
+                            Sábados: 9:00 AM - 3:00 PM
+                        </div>
+                    </div>
+                    
+                    <div class='branch-actions'>
+                        <a href='https://www.google.com/maps/place/M-net+Sistemas+Computadoras+e+Internet/@19.1816993,-99.4694112,764m/data=!3m2!1e3!4b1!4m6!3m5!1s0x85cdf3d2a5c1d91f:0x59b36638210c9c11!8m2!3d19.1816993!4d-99.4668363!16s%2Fg%2F11c6112plc?entry=ttu&g_ep=EgoyMDI1MDUyMS4wIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D' target='_blank' class='btn-map'>
+                            <span class='btn-icon'>🗺️</span> Ver Mapa
+                        </a>
+                        <a href='https://wa.me/525587654321' target='_blank' class='btn-whatsapp'>
+                            <span class='btn-icon'>💬</span> WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Sucursal 2 -->
+            <div class='branch-card'>
+                <div class='branch-image' style='background-image: url(https://images.unsplash.com/photo-1520333789090-1afc82db536a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80);'>
+                    <div class='branch-overlay'>
+                        <h3 class='branch-name'>Santa Mónica</h3>
+                    </div>
+                </div>
+                <div class='branch-content'>
+                    <div class='branch-address'>
+                        <div class='branch-icon'>📍</div>
+                        <div class='branch-details'>
+                            <p>GALEANA #27 CARR. MEXICO-CHALMA COL. EL PICACHO, OCUILAN DE ARTEAGA, ESTADO DE MEXICO</p>
+                            <p>JUNTO A FEDEX</p>
+                        </div>
+                    </div>
+                    
+                    <div class='branch-schedule'>
+                        <div class='schedule-icon'>🕒</div>
+                        <div class='schedule-text'>
+                            <strong>Horario:</strong> L-V 9:00 AM - 6:00 PM<br>
+                            Sábados: 9:00 AM - 3:00 PM
+                        </div>
+                    </div>
+                    
+                    <div class='branch-actions'>
+                        <a href='https://maps.app.goo.gl/bw4Q7EGeADY1Z6xd7' target='_blank' class='btn-map'>
+                            <span class='btn-icon'>🗺️</span> Ver Mapa
+                        </a>
+                        <a href='https://wa.me/525587654321' target='_blank' class='btn-whatsapp'>
+                            <span class='btn-icon'>💬</span> WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Sucursal 3 -->
+            <div class='branch-card'>
+                <div class='branch-image' style='background-image: url(https://images.unsplash.com/photo-1517502884422-41eaead166d4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80);'>
+                    <div class='branch-overlay'>
+                        <h3 class='branch-name'>Cholula</h3>
+                    </div>
+                </div>
+                <div class='branch-content'>
+                    <div class='branch-address'>
+                        <div class='branch-icon'>📍</div>
+                        <div class='branch-details'>
+                            <p>JOSE MA. MORELOS S/N, ESQUINA CON BENITO JUAREZ GARCIA COL. MORELOS, SAN PEDRO CHOLULA, ESTADO DE MEXICO</p>
+                            <p>DEBAJO DEL HOTEL CHOLULA</p>
+                        </div>
+                    </div>
+                    
+                    <div class='branch-schedule'>
+                        <div class='schedule-icon'>🕒</div>
+                        <div class='schedule-text'>
+                            <strong>Horario:</strong> L-V 9:00 AM - 6:00 PM<br>
+                            Sábados: 9:00 AM - 3:00 PM
+                        </div>
+                    </div>
+                    
+                    <div class='branch-actions'>
+                        <a href='https://maps.app.goo.gl/9A7pdCtpqeEQzSnf6' target='_blank' class='btn-map'>
+                            <span class='btn-icon'>🗺️</span> Ver Mapa
+                        </a>
+                        <a href='https://wa.me/525587654321' target='_blank' class='btn-whatsapp'>
+                            <span class='btn-icon'>💬</span> WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class='branches-features'>
+            <div class='feature-item'>
+                <div class='feature-icon'>🏢</div>
+                <div class='feature-text'>Oficinas profesionales</div>
+            </div>
+            <div class='feature-item'>
+                <div class='feature-icon'>🅿️</div>
+                <div class='feature-text'>Estacionamiento disponible</div>
+            </div>
+            <div class='feature-item'>
+                <div class='feature-icon'>💳</div>
+                <div class='feature-text'>Pago con tarjeta debito o credito</div>
+            </div>
+            <div class='feature-item'> <div class='feature-icon'>🌐</div> 
+            <div class='feature-text'>Accesible para todo publico</div> </div>
+        </div>
+        
+        <div class='branches-footer'>
+            <div class='contact-info'>
+                <div class='contact-item'>
+                    <span class='contact-icon'>📱</span>
+                    <a href='https://wa.me/525587654321' target='_blank'>55-8765-4321</a>
+                </div>
+                <div class='contact-item'>
+                    <span class='contact-icon'>📞</span>
+                    <a href='tel:5512345678'>55-1234-5678</a>
+                </div>
+                <div class='contact-item'>
+                    <span class='contact-icon'>✉️</span>
+                    <a href='mailto:contacto@ejemplo.com'>contacto@ejemplo.com</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    // Hacer scroll al inicio del contenedor de sucursales
+    document.addEventListener('DOMContentLoaded', function() {
+        const branchesContainer = document.getElementById('branches-container');
+        if (branchesContainer) {
+            branchesContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    });
+    </script>
+<script src="{{ url_for('static', filename='js/8.Sucursales.js') }}"></script>
+</body>
+</html>

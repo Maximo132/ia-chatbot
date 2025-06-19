@@ -1,0 +1,10 @@
+Mensaje: Nueva verificación de identidad
+Cliente: 12345
+Fecha: 2025-06-17 12:24:26
+
+Cliente: 12345
+Fecha: 2025-06-17 12:24:26
+
+Archivos guardados:
+1. INE: http://localhost:5000/uploads/12345_ine_20250617_122351.jpg
+2. Selfie: http://localhost:5000/uploads/12345_selfie_20250617_122426.jpg

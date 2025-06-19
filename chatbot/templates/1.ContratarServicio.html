@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Contratar Servicio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/1.ContratarServicio.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h1>Contratación de Servicios</h1>
+        </div>
+        
+        <div class="chat-messages" id="chat-messages">
+            <!-- Mensaje de bienvenida -->
+            <div class="message-container bot-message-container">
+                <div class="bot-avatar">🤖</div>
+                <div class="bot-message">
+                    <div class="message-content">
+                        <p>¡Hola! Estoy aquí para ayudarte a contratar el servicio que mejor se adapte a tus necesidades.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Opciones de servicio -->
+            <div class="message-container bot-message-container">
+                <div class="bot-avatar">🤖</div>
+                <div class="bot-message">
+                    <div class="message-content">
+                        <p>Por favor, selecciona el tipo de servicio que te interesa:</p>
+                        <div class="service-options">
+                            <button class="service-btn" data-service="residencial">
+                                <i class="fas fa-wifi"></i> Internet Residencial
+                            </button>
+                            <button class="service-btn" data-service="empresarial">
+                                <i class="fas fa-building"></i> Internet Empresarial
+                            </button>
+                            <button class="service-btn" data-service="telefonia">
+                                <i class="fas fa-phone-alt"></i> Telefonía en la Nube
+                            </button>
+                            <button class="service-btn" data-service="videovigilancia">
+                                <i class="fas fa-video"></i> Videovigilancia
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="chat-input">
+            <div class="chat-input-inner">
+                <input type="text" id="user-input" placeholder="Escribe un mensaje..." autocomplete="off">
+                <button id="send-btn">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Alertas y modales -->
+    <div id="alert-overlay" class="alert-overlay" style="display: none;">
+        <div class="alert-container">
+            <div class="alert-icon">
+                <i class="fas fa-exclamation-circle"></i>
+            </div>
+            <h2 class="alert-title">Título de la alerta</h2>
+            <p class="alert-message">Mensaje de la alerta</p>
+            <div class="alert-buttons">
+                <button id="alert-ok" class="alert-button">Aceptar</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/1.ContratarServicio.js') }}"></script>
+</body>
+</html>

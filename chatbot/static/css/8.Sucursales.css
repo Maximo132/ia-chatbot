@@ -1,0 +1,598 @@
+/* Elegant Sucursales Chat Message */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary-color: #3b82f6;
+  --primary-hover: #2563eb;
+  --secondary-color: #6366f1;
+  --accent-color: #8b5cf6;
+  --text-primary: #1e293b;
+  --text-secondary: #475569;
+  --border-color: rgba(203, 213, 225, 0.5);
+  --bg-hover: rgba(241, 245, 249, 0.6);
+  --success-color: #10b981;
+  --success-hover: #059669;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sucursales-message-container {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 100%;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  margin: 12px 0;
+  padding-right: 20px;
+}
+
+.sucursales-chat-message {
+  background: rgba(255, 255, 255, 0.98);
+  border-radius: 16px;
+  border-bottom-left-radius: 4px;
+  padding: 0;
+  box-shadow: var(--shadow-md);
+  max-width: 82%;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  position: relative;
+  animation: messageAppear 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: var(--transition);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(255, 255, 255, 0.8);
+  border-left: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.sucursales-chat-message:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 24px -2px rgba(0, 0, 0, 0.08), 
+              0 4px 12px -2px rgba(0, 0, 0, 0.04),
+              inset 0 1px 0 0 rgba(255, 255, 255, 0.8);
+}
+
+@keyframes messageAppear {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Chat bubble arrow */
+.sucursales-chat-message::before {
+  content: '';
+  position: absolute;
+  left: -8px;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 12px 12px 0;
+  border-color: transparent #ffffff transparent transparent;
+  filter: drop-shadow(-2px 1px 1px rgba(0, 0, 0, 0.05));
+}
+
+.sucursales-title {
+  color: var(--text-primary);
+  font-size: 0.78em;
+  font-weight: 600;
+  margin: 0;
+  padding: 18px 24px;
+  border-bottom: 1px solid var(--border-color);
+  background: linear-gradient(90deg, rgba(59, 130, 246, 0.05), rgba(99, 102, 241, 0.05), rgba(59, 130, 246, 0.05));
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  position: relative;
+  overflow: hidden;
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.sucursales-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+}
+
+.sucursales-title::before,
+.sucursales-title::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border-color));
+}
+
+.sucursales-title::after {
+  background: linear-gradient(90deg, var(--border-color), transparent);
+}
+
+.sucursal-card {
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--border-color);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+  background: white;
+  margin: 0 1px;
+}
+
+.sucursal-card:last-child {
+  border-bottom: none;
+}
+
+.sucursal-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 0;
+  background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+  transition: height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sucursal-card:hover {
+  background-color: var(--bg-hover);
+  transform: translateX(2px);
+}
+
+.sucursal-card:hover::before {
+  height: 100%;
+}
+
+.sucursal-nombre {
+  font-weight: 700;
+  color: var(--text-primary);
+  font-size: 1.1em;
+  margin: 0 0 14px 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+  padding-left: 36px;
+  letter-spacing: -0.01em;
+  line-height: 1.4;
+}
+
+.sucursal-nombre::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 12px;
+  transform: rotate(45deg);
+  box-shadow: 0 2px 8px -1px rgba(59, 130, 246, 0.3);
+  transition: var(--transition);
+}
+
+.sucursal-nombre::after {
+  content: '';
+  position: absolute;
+  left: 7px;
+  width: 2px;
+  height: 6px;
+  background: white;
+  transform: rotate(-45deg);
+  top: 5px;
+}
+
+.sucursal-nombre::before {
+  box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
+}
+
+.sucursal-dir, .sucursal-horario {
+  font-size: 0.94em;
+  margin-bottom: 10px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  padding-left: 36px;
+  position: relative;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+.sucursal-dir {
+  font-weight: 450;
+}
+
+.sucursal-horario {
+  color: var(--text-secondary);
+  font-size: 0.9em;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 16px 0 0 0;
+  padding: 16px 0 0 0;
+  border-top: 1px dashed var(--border-color);
+  position: relative;
+  padding-left: 36px;
+}
+
+.sucursal-horario::before {
+  content: '⏱';
+  font-size: 1em;
+  opacity: 0.8;
+}
+
+.sucursal-links {
+  display: flex;
+  gap: 14px;
+  margin-top: 20px;
+  padding-left: 36px;
+  flex-wrap: wrap;
+}
+
+.sucursal-mapa,
+.sucursal-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 0.86em;
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--transition);
+  gap: 10px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  box-shadow: var(--shadow-sm);
+  min-width: 120px;
+  text-align: center;
+}
+
+.sucursal-mapa {
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  color: white !important;
+  box-shadow: 0 2px 8px -1px rgba(59, 130, 246, 0.4);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.sucursal-mapa::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, var(--primary-hover), var(--accent-color));
+  opacity: 0;
+  transition: var(--transition);
+  z-index: -1;
+}
+
+.sucursal-mapa::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--primary-hover), var(--secondary-color));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.sucursal-mapa:hover::after {
+  opacity: 1;
+}
+
+.sucursal-mapa:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px -3px rgba(59, 130, 246, 0.3);
+  letter-spacing: 0.6px;
+}
+
+.sucursal-mapa:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px -1px rgba(59, 130, 246, 0.2);
+}
+
+.sucursal-whatsapp {
+  background: linear-gradient(135deg, #25D366, #10B981);
+  color: white !important;
+  box-shadow: 0 2px 8px -1px rgba(16, 185, 129, 0.4);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.sucursal-whatsapp::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #128C7E, #059669);
+  opacity: 0;
+  transition: var(--transition);
+  z-index: -1;
+}
+
+.sucursal-whatsapp::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #128C7E, #075E54);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.sucursal-whatsapp:hover::after {
+  opacity: 1;
+}
+
+.sucursal-whatsapp:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px -3px rgba(16, 185, 129, 0.3);
+  letter-spacing: 0.6px;
+}
+
+.sucursal-whatsapp:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px -1px rgba(16, 185, 129, 0.2);
+}
+
+/* Premium Typing Indicator */
+.typing-indicator {
+  display: flex;
+  align-items: center;
+  padding: 10px 16px;
+  background: linear-gradient(145deg, #f8fafc, #f1f5f9);
+  border-radius: 20px;
+  width: fit-content;
+  margin: 0;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--border-color);
+}
+
+.typing-dot {
+  width: 8px;
+  height: 8px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  border-radius: 50%;
+  margin: 0 3px;
+  animation: typingAnimation 1.6s infinite cubic-bezier(0.4, 0, 0.6, 1);
+  transform-origin: center;
+  box-shadow: 0 1px 2px rgba(37, 99, 235, 0.2);
+}
+
+.typing-dot:nth-child(1) { 
+  animation-delay: 0s;
+  background: var(--primary-color);
+}
+.typing-dot:nth-child(2) { 
+  animation-delay: 0.2s;
+}
+
+/* Estilos para la sección de horarios */
+.horarios-generales {
+  margin: 24px 24px 16px 24px;
+  padding: 0;
+  background: transparent;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.horarios-generales h3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 0 0 16px 0;
+  color: var(--text-primary);
+  font-size: 0.9em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 12px 0;
+  position: relative;
+}
+
+.horarios-generales h3::before,
+.horarios-generales h3::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border-color));
+}
+
+.horarios-generales h3::after {
+  background: linear-gradient(90deg, var(--border-color), transparent);
+}
+
+.horario-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.horario-item {
+  background: white;
+  padding: 16px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 1px solid var(--border-color);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+}
+
+.horario-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px -2px rgba(0, 0, 0, 0.06);
+  border-color: var(--primary-color);
+}
+
+.horario-item.destacado {
+  border-color: var(--primary-color);
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.05), rgba(99, 102, 241, 0.05));
+  position: relative;
+  z-index: 1;
+  border-top: 1px solid rgba(99, 102, 241, 0.2);
+  border-left: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+.horario-item.destacado::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+}
+
+.horario-item.cerrado {
+  opacity: 0.8;
+  background: #f9fafb;
+  position: relative;
+}
+
+.horario-item.cerrado::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #e5e7eb;
+  transform: rotate(-3deg);
+}
+
+.horario-item .dias {
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+  font-size: 0.9em;
+  letter-spacing: -0.01em;
+  display: block;
+}
+
+.horario-item .horas {
+  color: var(--text-secondary);
+  font-size: 1em;
+  font-weight: 500;
+  display: block;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 4px 8px;
+  border-radius: 20px;
+  margin-top: 2px;
+  font-feature-settings: 'tnum';
+  font-variant-numeric: tabular-nums;
+}
+
+.horario-item.destacado .horas {
+  color: var(--primary-color);
+  background: rgba(59, 130, 246, 0.1);
+  font-weight: 600;
+}
+
+.horario-item.cerrado .horas {
+  color: #9ca3af;
+  text-decoration: none;
+  background: transparent;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 640px) {
+  .horario-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .horario-item {
+    padding: 14px 12px;
+  }
+  
+  .sucursales-chat-message {
+    max-width: 90%;
+  }
+}
+
+.typing-dot:nth-child(3) { 
+  animation-delay: 0.4s;
+  background: var(--primary-color);
+}
+
+@keyframes typingAnimation {
+  0%, 100% { 
+    transform: translateY(0) scale(1);
+    opacity: 0.6;
+  }
+  50% { 
+    transform: translateY(-4px) scale(1.1);
+    opacity: 1;
+  }
+}
+
+/* iOS style scrollbar for webkit browsers */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.sucursal-mapa:hover {
+  color: #2541b2;
+}
+.sucursal-whatsapp {
+  color: #25d366;
+  font-weight: 600;
+  text-decoration: none;
+  margin-right: 6px;
+  transition: color 0.2s;
+}
+.sucursal-whatsapp:hover {
+  color: #128c4b;
+}
+.sucursal-icon {
+  margin-right: 6px;
+}

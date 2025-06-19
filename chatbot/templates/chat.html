@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang='es'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>EmBot</title>
+    <!-- Dependencias -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    
+    <!-- Estilos -->
+    <link href="{{ url_for('static', filename='css/chat.css') }}" rel="stylesheet">
+</head>
+<body>
+    <div class="chat-container">
+        <!-- Cabecera del chat -->
+        <div class="chat-header">
+            <div class="header-content">
+                <div class="bot-info">
+                    <h1>Asistente Virtual</h1>
+                    <div class="status">
+                        <span class="status-dot"></span>
+                        <span>En línea</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Área de mensajes -->
+        <div class="chat-messages" id="chat-messages">
+            <!-- Los mensajes se insertarán aquí dinámicamente -->
+        </div>
+        
+        <!-- Área de entrada de mensajes -->
+        <div class="chat-input">
+            <input type="text" class="message-input" id="user-input" placeholder="Escribe tu mensaje..." autofocus>
+            <button class="send-button" id="send-button">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>

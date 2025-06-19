@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<opencv_storage>
+<haarcascade_frontalface_default type_id="opencv-haar-classifier">
+  <size>24 24</size>
+  <stages>
+    <_>
+      <trees>
+        <_>
+          <_>
+            <feature>
+              <rects>
+                <_>3 7 14 4 -1.</_>
+                <_>3 9 14 2 2.</_></rects>
+              <tilted>0</tilted></feature>
+            <threshold>4.0144249498844147e-03</threshold>
+            <left_val>-0.1476584970951080</left_val>
+            <right_val>0.3476524949073792</right_val></_>
+          <_>
+            <feature>
+              <rects>
+                <_>13 9 4 10 -1.</_>
+                <_>13 14 4 5 2.</_></rects>
+              <tilted>0</tilted></feature>
+            <threshold>-0.0123239192068577</threshold>
+            <left_val>0.4662025868892670</left_val>
+            <right_val>-0.1343688964843750</right_val></_>
+          <_>
+            <feature>
+              <rects>
+                <_>0 6 4 12 -1.</_>
+                <_>0 10 4 4 3.</_></rects>
+              <tilted>0</tilted></feature>
+            <threshold>-0.0190280899405479</threshold>
+            <left_val>-0.7050781250000000</left_val>
+            <right_val>0.1402032971382141</right_val></_>
+          <_>
+            <feature>
+              <rects>
+                <_>2 0 20 24 -1.</_>
+                <_>12 0 10 24 2.</_></rects>
+              <tilted>0</tilted></feature>
+            <threshold>-0.2028916031122208</threshold>
+            <left_val>0.2832277119159699</left_val>
+            <right_val>-0.2194136977195740</right_val></_></_>
+      </trees>
+    </_>
+  </stages>
+  <features>
+    <_>
+      <rects>
+        <_>3 7 14 4 -1.</_>
+        <_>3 9 14 2 2.</_></rects>
+      <tilted>0</tilted></_>
+    <_>
+      <rects>
+        <_>13 9 4 10 -1.</_>
+        <_>13 14 4 5 2.</_></rects>
+      <tilted>0</tilted></_>
+    <_>
+      <rects>
+        <_>0 6 4 12 -1.</_>
+        <_>0 10 4 4 3.</_></rects>
+      <tilted>0</tilted></_>
+    <_>
+      <rects>
+        <_>2 0 20 24 -1.</_>
+        <_>12 0 10 24 2.</_></rects>
+      <tilted>0</tilted></_>
+  </features>
+</haarcascade_frontalface_default>
+</opencv_storage>

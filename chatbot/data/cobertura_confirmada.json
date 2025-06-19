@@ -1,0 +1,22 @@
+{
+  "tianguistenco santiago tilapa": {
+    "confirmado": true,
+    "fecha_confirmacion": 1747500944.0779362,
+    "detalles": "Cobertura confirmada por cliente el 2025-05-17"
+  },
+  "santiago": {
+    "confirmado": true,
+    "fecha_confirmacion": 1747763633.899925,
+    "detalles": "Cobertura confirmada por cliente el 2025-05-20"
+  },
+  "mexico": {
+    "confirmado": true,
+    "fecha_confirmacion": 1747765359.847386,
+    "detalles": "Cobertura confirmada por cliente el 2025-05-20"
+  },
+  "plan pro": {
+    "confirmado": true,
+    "fecha_confirmacion": 1747769957.386538,
+    "detalles": "Cobertura confirmada por cliente el 2025-05-20"
+  }
+}

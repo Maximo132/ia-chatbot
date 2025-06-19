@@ -1,0 +1,7470 @@
+{
+    "horario": [
+        "informacion_general",
+        "informacion_general",
+        "informacion_general",
+        "informacion_general",
+        "informacion_general",
+        "informacion_general",
+        "informacion_general",
+        "informacion_general",
+        "informacion_general",
+        "informacion_general",
+        "soporte_fin_semana",
+        "soporte_fin_semana",
+        "soporte_fin_semana"
+    ],
+    "cuales": [
+        "informacion_general",
+        "informacion_general",
+        "informacion_general",
+        "informacion_general",
+        "contratacion_facturacion",
+        "cuáles_requisitos_para",
+        "cuáles_requisitos_para",
+        "cuáles_requisitos_para"
+    ],
+    "horarios": [
+        "informacion_general",
+        "informacion_general",
+        "informacion_general",
+        "informacion_general",
+        "informacion_general",
+        "informacion_general",
+        "informacion_general",
+        "seguimiento_horarios"
+    ],
+    "atencion": [
+        "informacion_general",
+        "informacion_general",
+        "informacion_general",
+        "informacion_general",
+        "informacion_general",
+        "informacion_general",
+        "informacion_general",
+        "informacion_general",
+        "informacion_general",
+        "soporte_fin_semana",
+        "soporte_fin_semana",
+        "whatsapp_integration",
+        "whatsapp_integration",
+        "atencion_clientes",
+        "atencion_clientes"
+    ],
+    "hora": [
+        "informacion_general",
+        "informacion_general",
+        "informacion_general",
+        "informacion_general",
+        "informacion_general",
+        "informacion_general",
+        "fechas_pago"
+    ],
+    "abren": [
+        "informacion_general",
+        "informacion_general",
+        "informacion_general",
+        "informacion_general",
+        "informacion_general",
+        "informacion_general",
+        "informacion_general",
+        "horarios",
+        "horarios",
+        "horarios",
+        "horarios",
+        "horarios",
+        "horarios",
+        "horarios"
+    ],
+    "cierran": [
+        "informacion_general",
+        "informacion_general"
+    ],
+    "horas": [
+        "informacion_general",
+        "informacion_general",
+        "soporte_tecnico",
+        "sin_conexion",
+        "seguimiento_horarios",
+        "seguimiento_horarios",
+        "seguimiento_horarios"
+    ],
+    "atienden": [
+        "informacion_general",
+        "informacion_general",
+        "informacion_general",
+        "informacion_general",
+        "informacion_general"
+    ],
+    "apertura": [
+        "informacion_general"
+    ],
+    "cierre": [
+        "informacion_general"
+    ],
+    "dia": [
+        "informacion_general",
+        "informacion_general",
+        "informacion_general",
+        "informacion_general",
+        "interaccion_basica",
+        "interaccion_basica",
+        "interaccion_basica",
+        "interaccion_basica",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "reportar_internet",
+        "reportar_internet",
+        "corte_servicio",
+        "horarios",
+        "horarios",
+        "horarios",
+        "horarios",
+        "horarios",
+        "horarios",
+        "horarios",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto"
+    ],
+    "sabados": [
+        "informacion_general",
+        "informacion_general",
+        "informacion_general",
+        "informacion_general",
+        "informacion_general",
+        "informacion_general",
+        "informacion_general",
+        "informacion_general"
+    ],
+    "fin": [
+        "informacion_general",
+        "informacion_general",
+        "informacion_general",
+        "promociones_ofertas",
+        "soporte_fin_semana",
+        "soporte_fin_semana",
+        "soporte_fin_semana"
+    ],
+    "semana": [
+        "informacion_general",
+        "informacion_general",
+        "informacion_general",
+        "informacion_general",
+        "soporte_tecnico",
+        "soporte_fin_semana",
+        "soporte_fin_semana",
+        "soporte_fin_semana"
+    ],
+    "sabado": [
+        "informacion_general",
+        "informacion_general",
+        "soporte_fin_semana",
+        "soporte_fin_semana"
+    ],
+    "domingo": [
+        "informacion_general",
+        "informacion_general",
+        "informacion_general",
+        "soporte_fin_semana",
+        "soporte_fin_semana"
+    ],
+    "fine": [
+        "informacion_general"
+    ],
+    "estan": [
+        "informacion_general",
+        "informacion_general",
+        "informacion_general",
+        "informacion_general",
+        "dónde_están_ubicadas",
+        "dónde_están_ubicadas",
+        "dónde_están_ubicadas",
+        "fallas_servicio",
+        "fallas_servicio",
+        "fallas_servicio"
+    ],
+    "abiertos": [
+        "informacion_general",
+        "informacion_general",
+        "informacion_general",
+        "informacion_general"
+    ],
+    "what": [
+        "informacion_general",
+        "informacion_general",
+        "informacion_general",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes"
+    ],
+    "are": [
+        "informacion_general",
+        "informacion_general",
+        "informacion_general",
+        "informacion_general",
+        "informacion_general",
+        "informacion_general",
+        "informacion_general"
+    ],
+    "your": [
+        "informacion_general",
+        "informacion_general",
+        "informacion_general"
+    ],
+    "hour": [
+        "informacion_general",
+        "informacion_general",
+        "informacion_general",
+        "informacion_general",
+        "informacion_general",
+        "informacion_general"
+    ],
+    "when": [
+        "informacion_general"
+    ],
+    "you": [
+        "informacion_general",
+        "informacion_general",
+        "informacion_general",
+        "informacion_general",
+        "informacion_general",
+        "informacion_general",
+        "informacion_general",
+        "servicios_planes"
+    ],
+    "open": [
+        "informacion_general"
+    ],
+    "opening": [
+        "informacion_general"
+    ],
+    "business": [
+        "informacion_general",
+        "servicios_planes",
+        "servicios_planes"
+    ],
+    "weekend": [
+        "informacion_general"
+    ],
+    "saturday": [
+        "informacion_general"
+    ],
+    "sunday": [
+        "informacion_general"
+    ],
+    "nombre": [
+        "informacion_general",
+        "informacion_general",
+        "equipos_dispositivos",
+        "configuracion_router",
+        "configuracion_router"
+    ],
+    "llama": [
+        "informacion_general"
+    ],
+    "hablo": [
+        "informacion_general"
+    ],
+    "bot": [
+        "informacion_general",
+        "informacion_general",
+        "informacion_general"
+    ],
+    "hablando": [
+        "informacion_general",
+        "informacion_general",
+        "informacion_general"
+    ],
+    "persona": [
+        "informacion_general",
+        "informacion_general",
+        "contactar_soporte",
+        "seguimiento_personas_hogar",
+        "seguimiento_personas_hogar",
+        "seguimiento_personas_hogar",
+        "seguimiento_personas_hogar",
+        "seguimiento_personas_hogar"
+    ],
+    "humano": [
+        "informacion_general",
+        "informacion_general"
+    ],
+    "robot": [
+        "informacion_general"
+    ],
+    "asistente": [
+        "informacion_general"
+    ],
+    "virtual": [
+        "informacion_general",
+        "servicios_planes"
+    ],
+    "real": [
+        "informacion_general",
+        "informacion_general",
+        "servicios_planes",
+        "prueba_velocidad"
+    ],
+    "name": [
+        "informacion_general"
+    ],
+    "who": [
+        "informacion_general",
+        "informacion_general"
+    ],
+    "human": [
+        "informacion_general"
+    ],
+    "talking": [
+        "informacion_general"
+    ],
+    "person": [
+        "informacion_general"
+    ],
+    "diferencia": [
+        "informacion_general",
+        "informacion_general",
+        "informacion_general",
+        "comparativa_competencia",
+        "comparativa_competencia",
+        "comparativa_competencia",
+        "comparativa_competencia",
+        "comparativa_competencia",
+        "diferencia_servicio",
+        "diferencia_servicio",
+        "fibra_optica",
+        "comparacion_competencia",
+        "comparacion_competencia",
+        "comparacion_competencia"
+    ],
+    "emenet": [
+        "informacion_general",
+        "informacion_general",
+        "informacion_general",
+        "informacion_general",
+        "informacion_general",
+        "informacion_general",
+        "informacion_general",
+        "informacion_general",
+        "informacion_general",
+        "diferencia_servicio",
+        "diferencia_servicio",
+        "diferencia_servicio",
+        "diferencia_servicio",
+        "diferencia_servicio",
+        "diferencia_servicio",
+        "diferencia_servicio",
+        "diferencia_servicio",
+        "requisitos_contratacion",
+        "que_es_emenet",
+        "que_es_emenet",
+        "que_es_emenet",
+        "que_es_emenet",
+        "que_es_emenet",
+        "que_es_emenet",
+        "que_es_emenet",
+        "que_es_emenet",
+        "que_es_emenet",
+        "que_es_emenet",
+        "que_es_emenet",
+        "pagina_web_emenet",
+        "pagina_web_emenet",
+        "pagina_web_emenet",
+        "pagina_web_emenet",
+        "pagina_web_emenet",
+        "pagina_web_emenet",
+        "pagina_web_emenet",
+        "pagina_web_emenet",
+        "pagina_web_emenet",
+        "pagina_web_emenet",
+        "pagina_web_emenet",
+        "contrato_emenet",
+        "atencion_clientes",
+        "comparacion_competencia"
+    ],
+    "hace": [
+        "informacion_general",
+        "informacion_general",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "diferencia_servicio",
+        "diferencia_servicio",
+        "reportar_internet",
+        "reportar_internet",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto"
+    ],
+    "diferente": [
+        "informacion_general",
+        "diferencia_servicio"
+    ],
+    "elegir": [
+        "informacion_general",
+        "diferencia_servicio",
+        "recomendacion_plan",
+        "recomendacion_plan"
+    ],
+    "servicio": [
+        "informacion_general",
+        "servicios_planes",
+        "interaccion_basica",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cambio_domicilio",
+        "cambio_domicilio",
+        "cambio_domicilio",
+        "cambio_domicilio",
+        "cambio_domicilio",
+        "diferencia_servicio",
+        "diferencia_servicio",
+        "como_conectarse",
+        "fechas_pago",
+        "tiempo_activacion",
+        "tiempo_activacion",
+        "cortes_servicio",
+        "cortes_servicio",
+        "cortes_servicio",
+        "cortes_servicio",
+        "requisitos_contratacion",
+        "requisitos_contratacion",
+        "requisitos_contratacion",
+        "requisitos_contratacion",
+        "requisitos_contratacion",
+        "reportar_internet",
+        "reportar_internet",
+        "reportar_internet",
+        "reportar_internet",
+        "reportar_internet",
+        "reportar_internet",
+        "reportar_internet",
+        "sin_conexion",
+        "sin_conexion",
+        "sin_conexion",
+        "sin_conexion",
+        "problema_persiste",
+        "visita_tecnica",
+        "cambio_plan",
+        "cambio_plan",
+        "facturacion_electronica",
+        "reactivacion_servicio",
+        "reactivacion_servicio",
+        "reactivacion_servicio",
+        "reactivacion_servicio",
+        "reactivacion_servicio",
+        "cancelacion_servicio",
+        "cancelacion_servicio",
+        "cancelacion_servicio",
+        "contactar_soporte",
+        "cambio_domicilio",
+        "cambio_domicilio",
+        "cambio_domicilio",
+        "cambio_domicilio",
+        "cambio_domicilio",
+        "cambio_domicilio",
+        "cambio_domicilio",
+        "cambio_domicilio",
+        "interes_contratacion",
+        "interes_contratacion",
+        "cancelacion",
+        "cancelacion",
+        "cancelacion",
+        "cancelacion",
+        "cancelacion",
+        "cambio_plan",
+        "cambio_plan",
+        "cuáles_requisitos_para",
+        "cuáles_requisitos_para",
+        "cuáles_requisitos_para",
+        "whatsapp_integration",
+        "fallas_servicio",
+        "fallas_servicio",
+        "fallas_servicio",
+        "fallas_servicio",
+        "fallas_servicio",
+        "seguridad_internet",
+        "factura_electronica",
+        "mudanza_temporal",
+        "mudanza_temporal",
+        "mudanza_temporal",
+        "atencion_clientes",
+        "instalacion_tiempo",
+        "uso_datos",
+        "servicio_television",
+        "servicio_television",
+        "servicio_television",
+        "servicio_telefonia",
+        "servicio_telefonia",
+        "direccion_ip",
+        "area_cobertura",
+        "area_cobertura",
+        "area_cobertura",
+        "area_cobertura",
+        "area_cobertura",
+        "area_cobertura",
+        "reporte_fallas",
+        "reporte_fallas",
+        "cambio_domicilio_mismo",
+        "corte_servicio",
+        "corte_servicio"
+    ],
+    "convencional": [
+        "informacion_general",
+        "informacion_general",
+        "diferencia_servicio",
+        "diferencia_servicio"
+    ],
+    "ventajas": [
+        "informacion_general",
+        "informacion_general",
+        "informacion_general",
+        "informacion_general",
+        "informacion_general",
+        "servicios_planes",
+        "comparativa_competencia",
+        "comparativa_competencia",
+        "comparativa_competencia",
+        "comparativa_competencia",
+        "comparativa_competencia",
+        "diferencia_servicio",
+        "diferencia_servicio",
+        "fibra_optica",
+        "comparacion_competencia"
+    ],
+    "ofrece": [
+        "informacion_general",
+        "diferencia_servicio"
+    ],
+    "comparacion": [
+        "informacion_general",
+        "comparativa_competencia",
+        "comparativa_competencia",
+        "comparativa_competencia",
+        "comparativa_competencia",
+        "comparativa_competencia",
+        "diferencia_servicio",
+        "comparacion_competencia"
+    ],
+    "internet": [
+        "informacion_general",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cambio_domicilio",
+        "cambio_domicilio",
+        "cambio_domicilio",
+        "cambio_domicilio",
+        "cambio_domicilio",
+        "equipos_dispositivos",
+        "diferencia_servicio",
+        "llamadas_afectan",
+        "llamadas_afectan",
+        "llamadas_afectan",
+        "llamadas_afectan",
+        "como_conectarse",
+        "fechas_pago",
+        "fechas_pago",
+        "tiempo_activacion",
+        "tiempo_activacion",
+        "cortes_servicio",
+        "cortes_servicio",
+        "requisitos_contratacion",
+        "requisitos_contratacion",
+        "requisitos_contratacion",
+        "requisitos_contratacion",
+        "reportar_internet",
+        "reportar_internet",
+        "reportar_internet",
+        "reportar_internet",
+        "reportar_internet",
+        "reportar_internet",
+        "reportar_internet",
+        "reportar_internet",
+        "reportar_internet",
+        "reportar_internet",
+        "reportar_internet",
+        "reportar_internet",
+        "reportar_internet",
+        "sin_conexion",
+        "sin_conexion",
+        "sin_conexion",
+        "sin_conexion",
+        "sin_conexion",
+        "sin_conexion",
+        "sin_conexion",
+        "sin_conexion",
+        "sin_conexion",
+        "sin_conexion",
+        "sin_conexion",
+        "sin_conexion",
+        "sin_conexion",
+        "sin_conexion",
+        "sin_conexion",
+        "sin_conexion",
+        "sin_conexion",
+        "sin_conexion",
+        "sin_conexion",
+        "sin_conexion",
+        "sin_conexion",
+        "sin_conexion",
+        "sin_conexion",
+        "señal_wifi_debil",
+        "reactivacion_servicio",
+        "reactivacion_servicio",
+        "cancelacion_servicio",
+        "contactar_soporte",
+        "contactar_soporte",
+        "cambio_domicilio",
+        "cambio_domicilio",
+        "cambio_domicilio",
+        "cambio_domicilio",
+        "recomendacion_plan",
+        "hago_internet_está",
+        "hago_internet_está",
+        "hago_internet_está",
+        "fallas_servicio",
+        "fibra_optica",
+        "fibra_optica",
+        "fibra_optica",
+        "comparacion_competencia",
+        "servicio_television",
+        "servicio_television",
+        "servicio_telefonia",
+        "velocidad_gaming",
+        "velocidad_streaming",
+        "velocidad_streaming",
+        "velocidad_trabajo",
+        "velocidad_trabajo",
+        "velocidad_trabajo",
+        "velocidad_familia",
+        "velocidad_familia",
+        "velocidad_familia",
+        "prueba_velocidad",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto"
+    ],
+    "pagina": [
+        "informacion_general",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "pagina_web_emenet",
+        "pagina_web_emenet",
+        "pagina_web_emenet",
+        "pagina_web_emenet",
+        "pagina_web_emenet",
+        "pagina_web_emenet"
+    ],
+    "web": [
+        "informacion_general",
+        "pagina_web_emenet",
+        "pagina_web_emenet",
+        "pagina_web_emenet",
+        "pagina_web_emenet",
+        "pagina_web_emenet",
+        "pagina_web_emenet",
+        "pagina_web_emenet"
+    ],
+    "comparar": [
+        "informacion_general",
+        "servicios_planes",
+        "comparacion_competencia"
+    ],
+    "proveedores": [
+        "informacion_general",
+        "comparativa_competencia",
+        "comparacion_competencia",
+        "comparacion_competencia"
+    ],
+    "mejor": [
+        "informacion_general",
+        "informacion_general",
+        "informacion_general",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "equipos_dispositivos",
+        "equipos_dispositivos",
+        "comparativa_competencia",
+        "comparativa_competencia",
+        "comparativa_competencia",
+        "comparativa_competencia",
+        "comparativa_competencia",
+        "problema_solucionado",
+        "cambio_plan",
+        "recomendacion_plan",
+        "recomendacion_plan",
+        "fibra_optica",
+        "comparacion_competencia",
+        "velocidad_gaming",
+        "velocidad_gaming"
+    ],
+    "telmex": [
+        "informacion_general",
+        "informacion_general",
+        "comparativa_competencia",
+        "comparativa_competencia",
+        "comparativa_competencia",
+        "comparativa_competencia",
+        "comparativa_competencia",
+        "comparativa_competencia",
+        "comparacion_competencia"
+    ],
+    "totalplay": [
+        "informacion_general",
+        "informacion_general",
+        "comparativa_competencia",
+        "comparativa_competencia",
+        "comparativa_competencia",
+        "comparativa_competencia",
+        "comparativa_competencia",
+        "comparativa_competencia",
+        "comparacion_competencia"
+    ],
+    "competencia": [
+        "informacion_general",
+        "comparativa_competencia",
+        "comparacion_competencia"
+    ],
+    "elegirlos": [
+        "informacion_general",
+        "comparativa_competencia",
+        "comparativa_competencia",
+        "comparativa_competencia",
+        "comparativa_competencia",
+        "comparativa_competencia",
+        "comparacion_competencia"
+    ],
+    "ustedes": [
+        "informacion_general",
+        "diferencia_servicio",
+        "requisitos_contratacion",
+        "comparacion_competencia"
+    ],
+    "diferentes": [
+        "informacion_general",
+        "diferencia_servicio"
+    ],
+    "mejores": [
+        "informacion_general",
+        "comparativa_competencia",
+        "comparacion_competencia"
+    ],
+    "deberia": [
+        "informacion_general",
+        "velocidad_contratada"
+    ],
+    "contratarlos": [
+        "informacion_general"
+    ],
+    "izzi": [
+        "informacion_general",
+        "comparativa_competencia",
+        "comparativa_competencia",
+        "comparativa_competencia",
+        "comparativa_competencia",
+        "comparativa_competencia",
+        "comparativa_competencia",
+        "comparacion_competencia"
+    ],
+    "opcion": [
+        "informacion_general"
+    ],
+    "beneficios": [
+        "informacion_general",
+        "servicios_planes",
+        "promociones_ofertas",
+        "promociones_ofertas",
+        "diferencia_servicio",
+        "promociones_descuentos",
+        "fibra_optica"
+    ],
+    "ofrecen": [
+        "informacion_general",
+        "informacion_general",
+        "comparativa_competencia",
+        "comparativa_competencia",
+        "comparativa_competencia",
+        "comparativa_competencia",
+        "comparativa_competencia",
+        "promociones_descuentos",
+        "seguridad_internet",
+        "comparacion_competencia",
+        "servicio_television",
+        "servicio_telefonia",
+        "direccion_ip",
+        "direccion_ip"
+    ],
+    "cambiarme": [
+        "informacion_general",
+        "comparacion_competencia"
+    ],
+    "dejar": [
+        "informacion_general",
+        "cancelacion_servicio",
+        "cancelacion"
+    ],
+    "proveedor": [
+        "informacion_general",
+        "promociones_ofertas",
+        "comparacion_competencia"
+    ],
+    "actual": [
+        "informacion_general",
+        "cambio_plan",
+        "cambio_plan",
+        "cambio_plan",
+        "puedo_cambiar_plan",
+        "puedo_cambiar_plan",
+        "puedo_cambiar_plan"
+    ],
+    "why": [
+        "informacion_general",
+        "informacion_general"
+    ],
+    "choose": [
+        "informacion_general"
+    ],
+    "make": [
+        "informacion_general"
+    ],
+    "different": [
+        "informacion_general"
+    ],
+    "advantage": [
+        "informacion_general"
+    ],
+    "over": [
+        "informacion_general"
+    ],
+    "other": [
+        "informacion_general",
+        "informacion_general"
+    ],
+    "provider": [
+        "informacion_general"
+    ],
+    "better": [
+        "informacion_general"
+    ],
+    "than": [
+        "informacion_general"
+    ],
+    "company": [
+        "informacion_general"
+    ],
+    "should": [
+        "informacion_general"
+    ],
+    "switch": [
+        "informacion_general",
+        "equipos_compatibles"
+    ],
+    "benefit": [
+        "informacion_general"
+    ],
+    "service": [
+        "informacion_general"
+    ],
+    "plane": [
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "area_cobertura"
+    ],
+    "cuanto": [
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "fechas_pago",
+        "tiempo_activacion",
+        "visita_tecnica",
+        "cambio_plan",
+        "reactivacion_servicio",
+        "reactivacion_servicio",
+        "estado_cuenta",
+        "estado_cuenta",
+        "estado_cuenta",
+        "estado_cuenta",
+        "estado_cuenta",
+        "estado_cuenta",
+        "estado_cuenta",
+        "estado_cuenta",
+        "cuánto_tiempo_toma",
+        "cuánto_tiempo_toma",
+        "cuánto_tiempo_toma",
+        "instalacion_tiempo"
+    ],
+    "cuesta": [
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "visita_tecnica",
+        "cambio_plan",
+        "reactivacion_servicio"
+    ],
+    "precios": [
+        "servicios_planes"
+    ],
+    "paquetes": [
+        "servicios_planes",
+        "promociones_descuentos",
+        "servicio_television",
+        "servicio_television",
+        "servicio_telefonia"
+    ],
+    "promociones": [
+        "servicios_planes",
+        "servicios_planes",
+        "promociones_ofertas",
+        "promociones_ofertas",
+        "promociones_descuentos"
+    ],
+    "oferta": [
+        "servicios_planes",
+        "servicios_planes",
+        "promociones_ofertas",
+        "promociones_ofertas",
+        "promociones_ofertas",
+        "promociones_ofertas",
+        "promociones_ofertas",
+        "promociones_ofertas",
+        "promociones_ofertas",
+        "promociones_ofertas",
+        "promociones_descuentos"
+    ],
+    "plan": [
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "cambio_plan",
+        "cambio_plan",
+        "cambio_plan",
+        "cambio_plan",
+        "cambio_plan",
+        "cambio_plan",
+        "cambio_plan",
+        "cambio_plan",
+        "cambio_plan",
+        "cambio_plan",
+        "cambio_plan",
+        "cambio_plan",
+        "cambio_plan",
+        "cambio_plan",
+        "cambio_plan",
+        "cambio_plan",
+        "cambio_plan",
+        "cambio_plan",
+        "cambio_plan",
+        "cambio_plan",
+        "recomendacion_plan",
+        "recomendacion_plan",
+        "recomendacion_plan",
+        "recomendacion_plan",
+        "recomendacion_plan",
+        "recomendacion_plan",
+        "recomendacion_plan",
+        "recomendacion_plan",
+        "recomendacion_plan",
+        "recomendacion_plan",
+        "recomendacion_plan",
+        "recomendacion_plan",
+        "recomendacion_plan",
+        "recomendacion_plan",
+        "recomendacion_plan",
+        "recomendacion_plan",
+        "recomendacion_plan",
+        "recomendacion_plan",
+        "recomendacion_plan",
+        "interes_contratacion",
+        "interes_contratacion",
+        "cambio_plan",
+        "cambio_plan",
+        "cambio_plan",
+        "cambio_plan",
+        "cambio_plan",
+        "cambio_plan",
+        "cambio_plan",
+        "cambio_plan",
+        "cambio_plan",
+        "cambio_plan",
+        "cambio_plan",
+        "puedo_cambiar_plan",
+        "puedo_cambiar_plan",
+        "puedo_cambiar_plan",
+        "cuánto_tiempo_toma",
+        "cuánto_tiempo_toma",
+        "cuánto_tiempo_toma",
+        "velocidad_contratada",
+        "velocidad_contratada",
+        "velocidad_gaming",
+        "velocidad_gaming",
+        "velocidad_gaming",
+        "velocidad_streaming",
+        "velocidad_streaming",
+        "velocidad_streaming",
+        "velocidad_trabajo",
+        "velocidad_trabajo",
+        "velocidad_trabajo",
+        "velocidad_trabajo",
+        "velocidad_familia",
+        "velocidad_familia",
+        "velocidad_familia",
+        "velocidad_familia"
+    ],
+    "cambiar": [
+        "servicios_planes",
+        "servicios_planes",
+        "soporte_tecnico",
+        "cambio_domicilio",
+        "cambio_domicilio",
+        "cambio_domicilio",
+        "cambio_domicilio",
+        "cambio_domicilio",
+        "cambio_domicilio",
+        "cambio_domicilio",
+        "equipos_dispositivos",
+        "equipos_dispositivos",
+        "equipos_dispositivos",
+        "equipos_dispositivos",
+        "equipos_dispositivos",
+        "cambio_plan",
+        "cambio_plan",
+        "cambio_plan",
+        "cambio_plan",
+        "cambio_plan",
+        "cambio_plan",
+        "cambio_plan",
+        "cambio_plan",
+        "cambio_plan",
+        "cambio_domicilio",
+        "cambio_domicilio",
+        "cambio_domicilio",
+        "cambio_domicilio",
+        "cambio_domicilio",
+        "cambio_domicilio",
+        "cambio_domicilio",
+        "cambio_domicilio",
+        "cambio_domicilio",
+        "cambio_plan",
+        "cambio_plan",
+        "cambio_plan",
+        "cambio_plan",
+        "cambio_plan",
+        "cambio_plan",
+        "cambio_plan",
+        "configuracion_router",
+        "configuracion_router",
+        "configuracion_router",
+        "configuracion_router",
+        "configuracion_router",
+        "configuracion_router",
+        "puedo_cambiar_plan",
+        "puedo_cambiar_plan",
+        "puedo_cambiar_plan",
+        "cuánto_tiempo_toma",
+        "cuánto_tiempo_toma",
+        "cuánto_tiempo_toma",
+        "comparacion_competencia",
+        "direccion_ip"
+    ],
+    "aumentar": [
+        "servicios_planes",
+        "soporte_tecnico",
+        "señal_wifi_debil",
+        "cambio_plan",
+        "cambio_plan",
+        "cambio_plan",
+        "cambio_plan",
+        "cambio_plan"
+    ],
+    "velocidad": [
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "llamadas_afectan",
+        "llamadas_afectan",
+        "dispositivos_conectados",
+        "problema_solucionado",
+        "seguimiento_speedtest",
+        "seguimiento_speedtest",
+        "seguimiento_speedtest",
+        "seguimiento_speedtest",
+        "seguimiento_speedtest",
+        "seguimiento_speedtest",
+        "cambio_plan",
+        "cambio_plan",
+        "cambio_plan",
+        "cambio_plan",
+        "cambio_plan",
+        "seguimiento_speedtest_resultados",
+        "seguimiento_speedtest_resultados",
+        "seguimiento_speedtest_resultados",
+        "seguimiento_speedtest_resultados",
+        "recomendacion_plan",
+        "recomendacion_plan",
+        "cambio_plan",
+        "cambio_plan",
+        "cambio_plan",
+        "cambio_plan",
+        "cambio_plan",
+        "cambio_plan",
+        "cambio_plan",
+        "puedo_cambiar_plan",
+        "puedo_cambiar_plan",
+        "puedo_cambiar_plan",
+        "velocidad_contratada",
+        "velocidad_contratada",
+        "velocidad_contratada",
+        "velocidad_contratada",
+        "velocidad_contratada",
+        "velocidad_contratada",
+        "velocidad_contratada",
+        "velocidad_contratada",
+        "velocidad_contratada",
+        "velocidad_gaming",
+        "velocidad_streaming",
+        "velocidad_streaming",
+        "velocidad_trabajo",
+        "velocidad_trabajo",
+        "velocidad_familia",
+        "velocidad_familia",
+        "prueba_velocidad",
+        "prueba_velocidad",
+        "prueba_velocidad",
+        "prueba_velocidad",
+        "prueba_velocidad",
+        "prueba_velocidad",
+        "prueba_velocidad"
+    ],
+    "velocidades": [
+        "servicios_planes"
+    ],
+    "disponibles": [
+        "servicios_planes",
+        "promociones_ofertas",
+        "promociones_descuentos",
+        "servicio_television"
+    ],
+    "megas": [
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "seguimiento_speedtest",
+        "seguimiento_speedtest",
+        "cambio_plan",
+        "cambio_plan",
+        "cambio_plan",
+        "cambio_plan",
+        "recomendacion_plan",
+        "cambio_plan",
+        "cambio_plan",
+        "velocidad_contratada",
+        "velocidad_contratada"
+    ],
+    "garantizada": [
+        "servicios_planes"
+    ],
+    "simetrica": [
+        "servicios_planes"
+    ],
+    "subida": [
+        "servicios_planes",
+        "seguimiento_speedtest",
+        "seguimiento_speedtest",
+        "seguimiento_speedtest"
+    ],
+    "bajada": [
+        "servicios_planes",
+        "seguimiento_speedtest",
+        "seguimiento_speedtest",
+        "seguimiento_speedtest"
+    ],
+    "estable": [
+        "servicios_planes"
+    ],
+    "conexion": [
+        "servicios_planes",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "como_conectarse",
+        "reportar_internet",
+        "reportar_internet",
+        "reportar_internet",
+        "sin_conexion",
+        "sin_conexion",
+        "sin_conexion",
+        "sin_conexion",
+        "sin_conexion",
+        "sin_conexion",
+        "sin_conexion",
+        "sin_conexion",
+        "sin_conexion",
+        "sin_conexion",
+        "dispositivos_conectados",
+        "seguimiento_problema_internet",
+        "reactivacion_servicio",
+        "contactar_soporte",
+        "seguridad_internet",
+        "velocidad_gaming",
+        "velocidad_trabajo",
+        "velocidad_familia",
+        "prueba_velocidad"
+    ],
+    "tan": [
+        "servicios_planes",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico"
+    ],
+    "rapido": [
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "soporte_tecnico",
+        "problema_solucionado",
+        "cambio_plan",
+        "cambio_plan",
+        "cambio_plan"
+    ],
+    "prueba": [
+        "servicios_planes",
+        "soporte_tecnico",
+        "seguimiento_speedtest",
+        "seguimiento_speedtest_resultados",
+        "seguimiento_speedtest_resultados",
+        "prueba_velocidad"
+    ],
+    "actuales": [
+        "servicios_planes",
+        "promociones_ofertas",
+        "promociones_descuentos"
+    ],
+    "ofertas": [
+        "servicios_planes",
+        "promociones_ofertas",
+        "promociones_descuentos",
+        "promociones_descuentos"
+    ],
+    "descuentos": [
+        "servicios_planes",
+        "promociones_ofertas",
+        "promociones_ofertas",
+        "promociones_descuentos",
+        "promociones_descuentos",
+        "promociones_descuentos"
+    ],
+    "promocion": [
+        "servicios_planes",
+        "servicios_planes",
+        "promociones_ofertas",
+        "promociones_ofertas",
+        "promociones_ofertas",
+        "promociones_ofertas",
+        "promociones_ofertas",
+        "promociones_ofertas",
+        "promociones_ofertas",
+        "promociones_ofertas",
+        "promociones_descuentos",
+        "promociones_descuentos",
+        "promociones_descuentos",
+        "promociones_descuentos"
+    ],
+    "meses": [
+        "servicios_planes",
+        "promociones_ofertas",
+        "promociones_descuentos",
+        "promociones_descuentos",
+        "promociones_descuentos",
+        "puedo_pagar_varios",
+        "puedo_pagar_varios",
+        "puedo_pagar_varios"
+    ],
+    "gratis": [
+        "servicios_planes",
+        "promociones_ofertas",
+        "promociones_ofertas",
+        "visita_tecnica"
+    ],
+    "alguna": [
+        "servicios_planes",
+        "servicios_planes",
+        "promociones_ofertas",
+        "promociones_ofertas",
+        "promociones_descuentos",
+        "fallas_servicio",
+        "fallas_servicio",
+        "fallas_servicio",
+        "fallas_servicio",
+        "promociones_descuentos"
+    ],
+    "especial": [
+        "servicios_planes",
+        "servicios_planes",
+        "promociones_ofertas",
+        "diferencia_servicio",
+        "promociones_descuentos"
+    ],
+    "precio": [
+        "servicios_planes",
+        "servicios_planes",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "cambio_plan"
+    ],
+    "juegos": [
+        "servicios_planes",
+        "servicios_planes",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "problemas_especificos",
+        "problemas_especificos",
+        "problemas_especificos",
+        "problemas_especificos",
+        "problemas_especificos",
+        "problemas_especificos",
+        "problemas_especificos",
+        "problemas_especificos",
+        "problemas_especificos",
+        "seguimiento_problema_internet",
+        "velocidad_gaming",
+        "velocidad_gaming",
+        "velocidad_gaming",
+        "velocidad_gaming",
+        "velocidad_gaming"
+    ],
+    "linea": [
+        "servicios_planes",
+        "servicios_planes",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "problemas_especificos",
+        "atencion_clientes",
+        "servicio_telefonia",
+        "metodos_pago_adicionales"
+    ],
+    "gaming": [
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "equipos_dispositivos",
+        "cambio_plan",
+        "seguimiento_uso_internet",
+        "velocidad_gaming",
+        "velocidad_gaming"
+    ],
+    "ping": [
+        "servicios_planes",
+        "problemas_especificos",
+        "problemas_especificos",
+        "seguimiento_speedtest",
+        "seguimiento_speedtest_resultados",
+        "seguimiento_speedtest_resultados",
+        "velocidad_gaming"
+    ],
+    "latencia": [
+        "servicios_planes",
+        "seguimiento_speedtest",
+        "seguimiento_speedtest_resultados",
+        "seguimiento_speedtest_resultados",
+        "velocidad_gaming"
+    ],
+    "jugar": [
+        "servicios_planes",
+        "soporte_tecnico",
+        "problemas_especificos",
+        "seguimiento_uso_internet",
+        "velocidad_gaming",
+        "velocidad_gaming",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto"
+    ],
+    "online": [
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "problemas_especificos",
+        "problemas_especificos",
+        "velocidad_gaming",
+        "velocidad_gaming",
+        "velocidad_streaming"
+    ],
+    "videojuegos": [
+        "servicios_planes",
+        "recomendacion_plan",
+        "seguimiento_dispositivos_conectados",
+        "equipos_compatibles",
+        "velocidad_gaming"
+    ],
+    "streaming": [
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "problemas_especificos",
+        "problemas_especificos",
+        "problemas_especificos",
+        "problemas_especificos",
+        "equipos_dispositivos",
+        "cambio_plan",
+        "recomendacion_plan",
+        "seguimiento_uso_internet",
+        "servicio_television",
+        "velocidad_streaming",
+        "velocidad_streaming"
+    ],
+    "netflix": [
+        "servicios_planes",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "problemas_especificos",
+        "problemas_especificos",
+        "problemas_especificos",
+        "seguimiento_uso_internet",
+        "velocidad_streaming"
+    ],
+    "ver": [
+        "servicios_planes",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "problemas_especificos",
+        "problemas_especificos",
+        "problemas_especificos",
+        "seguimiento_uso_internet",
+        "estado_cuenta",
+        "estado_cuenta",
+        "estado_cuenta",
+        "estado_cuenta",
+        "estado_cuenta",
+        "pagina_web_emenet",
+        "pagina_web_emenet",
+        "velocidad_streaming",
+        "velocidad_streaming",
+        "velocidad_streaming",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto"
+    ],
+    "peliculas": [
+        "servicios_planes",
+        "problemas_especificos",
+        "velocidad_streaming"
+    ],
+    "amazon": [
+        "servicios_planes",
+        "problemas_especificos",
+        "equipos_compatibles",
+        "velocidad_streaming"
+    ],
+    "prime": [
+        "servicios_planes",
+        "problemas_especificos",
+        "velocidad_streaming"
+    ],
+    "disney": [
+        "servicios_planes",
+        "problemas_especificos",
+        "velocidad_streaming"
+    ],
+    "plus": [
+        "servicios_planes",
+        "problemas_especificos",
+        "velocidad_streaming"
+    ],
+    "hbo": [
+        "servicios_planes",
+        "problemas_especificos",
+        "velocidad_streaming"
+    ],
+    "youtube": [
+        "servicios_planes",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "problemas_especificos",
+        "problemas_especificos",
+        "seguimiento_uso_internet",
+        "velocidad_streaming"
+    ],
+    "contenido": [
+        "servicios_planes",
+        "seguridad_internet",
+        "velocidad_streaming"
+    ],
+    "trabajo": [
+        "servicios_planes",
+        "servicios_planes",
+        "soporte_tecnico",
+        "recomendacion_plan",
+        "velocidad_trabajo"
+    ],
+    "casa": [
+        "servicios_planes",
+        "soporte_tecnico",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cambio_domicilio",
+        "cambio_domicilio",
+        "cambio_domicilio",
+        "cambio_domicilio",
+        "cambio_domicilio",
+        "cambio_domicilio",
+        "equipos_dispositivos",
+        "visita_tecnica",
+        "visita_tecnica",
+        "cambio_domicilio",
+        "cambio_domicilio",
+        "cambio_domicilio",
+        "recomendacion_plan",
+        "seguimiento_personas_hogar",
+        "mudanza_temporal",
+        "velocidad_trabajo",
+        "velocidad_trabajo",
+        "velocidad_familia",
+        "velocidad_familia"
+    ],
+    "home": [
+        "servicios_planes",
+        "servicios_planes",
+        "recomendacion_plan",
+        "seguimiento_dispositivos_conectados",
+        "equipos_compatibles",
+        "velocidad_trabajo"
+    ],
+    "office": [
+        "servicios_planes",
+        "servicios_planes",
+        "recomendacion_plan",
+        "velocidad_trabajo"
+    ],
+    "teletrabajo": [
+        "servicios_planes",
+        "velocidad_trabajo"
+    ],
+    "videoconferencias": [
+        "servicios_planes",
+        "velocidad_trabajo"
+    ],
+    "zoom": [
+        "servicios_planes",
+        "soporte_tecnico",
+        "problemas_especificos",
+        "problemas_especificos",
+        "seguimiento_uso_internet",
+        "velocidad_trabajo"
+    ],
+    "team": [
+        "servicios_planes",
+        "problemas_especificos",
+        "problemas_especificos",
+        "velocidad_trabajo"
+    ],
+    "remoto": [
+        "servicios_planes",
+        "velocidad_trabajo"
+    ],
+    "clases": [
+        "servicios_planes",
+        "soporte_tecnico",
+        "soporte_tecnico"
+    ],
+    "reuniones": [
+        "servicios_planes",
+        "velocidad_trabajo"
+    ],
+    "virtuales": [
+        "servicios_planes",
+        "velocidad_trabajo"
+    ],
+    "puedo": [
+        "servicios_planes",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "problemas_especificos",
+        "problemas_especificos",
+        "problemas_especificos",
+        "problemas_especificos",
+        "problemas_especificos",
+        "problemas_especificos",
+        "problemas_especificos",
+        "problemas_especificos",
+        "problemas_especificos",
+        "requisitos_computadora",
+        "llamadas_afectan",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "tiempo_activacion",
+        "requisitos_contratacion",
+        "requisitos_contratacion",
+        "requisitos_contratacion",
+        "requisitos_contratacion",
+        "requisitos_contratacion",
+        "reportar_internet",
+        "reportar_internet",
+        "sin_conexion",
+        "sin_conexion",
+        "sin_conexion",
+        "sin_conexion",
+        "sin_conexion",
+        "dispositivos_conectados",
+        "seguimiento_problema_internet",
+        "facturacion_electronica",
+        "cancelacion_servicio",
+        "contactar_soporte",
+        "contactar_soporte",
+        "configuracion_router",
+        "configuracion_router",
+        "puedo_pagar_varios",
+        "puedo_pagar_varios",
+        "puedo_pagar_varios",
+        "puedo_cambiar_plan",
+        "puedo_cambiar_plan",
+        "puedo_cambiar_plan",
+        "pagina_web_emenet",
+        "pagina_web_emenet",
+        "contrato_emenet",
+        "equipos_compatibles",
+        "equipos_compatibles",
+        "equipos_compatibles",
+        "equipos_compatibles",
+        "equipos_compatibles",
+        "uso_datos",
+        "direccion_ip",
+        "metodos_pago_adicionales",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto"
+    ],
+    "sale": [
+        "servicios_planes"
+    ],
+    "costo": [
+        "servicios_planes",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "visita_tecnica",
+        "visita_tecnica",
+        "cambio_plan",
+        "reactivacion_servicio",
+        "cancelacion_servicio",
+        "direccion_ip",
+        "equipos_proporcionados",
+        "corte_servicio"
+    ],
+    "cobran": [
+        "servicios_planes",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "fechas_pago",
+        "visita_tecnica",
+        "algún_cargo_pago",
+        "uso_datos"
+    ],
+    "vale": [
+        "servicios_planes",
+        "contratacion_facturacion",
+        "contratacion_facturacion"
+    ],
+    "barato": [
+        "servicios_planes",
+        "cambio_plan"
+    ],
+    "economico": [
+        "servicios_planes",
+        "servicios_planes"
+    ],
+    "basico": [
+        "servicios_planes",
+        "servicios_planes",
+        "seguimiento_uso_internet"
+    ],
+    "caro": [
+        "servicios_planes"
+    ],
+    "familia": [
+        "servicios_planes",
+        "soporte_tecnico",
+        "recomendacion_plan",
+        "seguimiento_uso_internet",
+        "seguimiento_personas_hogar",
+        "seguimiento_personas_hogar",
+        "velocidad_familia",
+        "velocidad_familia"
+    ],
+    "recomiendan": [
+        "servicios_planes"
+    ],
+    "necesito": [
+        "servicios_planes",
+        "servicios_planes",
+        "interaccion_basica",
+        "contratacion_facturacion",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "cambio_domicilio",
+        "requisitos_contratacion",
+        "requisitos_contratacion",
+        "requisitos_contratacion",
+        "requisitos_contratacion",
+        "requisitos_contratacion",
+        "requisitos_contratacion",
+        "requisitos_contratacion",
+        "requisitos_contratacion",
+        "requisitos_contratacion",
+        "reportar_internet",
+        "reportar_internet",
+        "reportar_internet",
+        "sin_conexion",
+        "sin_conexion",
+        "visita_tecnica",
+        "visita_tecnica",
+        "visita_tecnica",
+        "cambio_plan",
+        "cambio_plan",
+        "facturacion_electronica",
+        "facturacion_electronica",
+        "facturacion_electronica",
+        "reactivacion_servicio",
+        "contactar_soporte",
+        "contactar_soporte",
+        "contactar_soporte",
+        "contactar_soporte",
+        "contactar_soporte",
+        "contactar_soporte",
+        "contactar_soporte",
+        "recomendacion_plan",
+        "recomendacion_plan",
+        "recomendacion_plan",
+        "recomendacion_plan",
+        "recomendacion_plan",
+        "cambio_plan",
+        "cambio_plan",
+        "contrato_emenet",
+        "factura_electronica",
+        "instalacion_tiempo",
+        "direccion_ip"
+    ],
+    "popular": [
+        "servicios_planes",
+        "servicios_planes"
+    ],
+    "vendido": [
+        "servicios_planes"
+    ],
+    "negocios": [
+        "servicios_planes",
+        "promociones_ofertas"
+    ],
+    "empresas": [
+        "servicios_planes",
+        "promociones_ofertas"
+    ],
+    "corporativos": [
+        "servicios_planes"
+    ],
+    "negocio": [
+        "servicios_planes",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "facturacion_electronica"
+    ],
+    "empresa": [
+        "servicios_planes",
+        "facturacion_electronica",
+        "whatsapp_integration",
+        "que_es_emenet"
+    ],
+    "oficina": [
+        "servicios_planes",
+        "cobertura_disponibilidad",
+        "atencion_clientes",
+        "velocidad_trabajo"
+    ],
+    "local": [
+        "servicios_planes",
+        "cobertura_disponibilidad"
+    ],
+    "comercial": [
+        "servicios_planes"
+    ],
+    "restaurante": [
+        "servicios_planes"
+    ],
+    "hotel": [
+        "servicios_planes"
+    ],
+    "escuela": [
+        "servicios_planes"
+    ],
+    "cibercafe": [
+        "servicios_planes"
+    ],
+    "hospital": [
+        "servicios_planes"
+    ],
+    "clinica": [
+        "servicios_planes"
+    ],
+    "consultorio": [
+        "servicios_planes"
+    ],
+    "tienda": [
+        "servicios_planes"
+    ],
+    "comercio": [
+        "servicios_planes"
+    ],
+    "pyme": [
+        "servicios_planes"
+    ],
+    "startup": [
+        "servicios_planes"
+    ],
+    "offer": [
+        "servicios_planes",
+        "servicios_planes"
+    ],
+    "how": [
+        "servicios_planes",
+        "servicios_planes"
+    ],
+    "much": [
+        "servicios_planes"
+    ],
+    "doe": [
+        "servicios_planes"
+    ],
+    "cost": [
+        "servicios_planes"
+    ],
+    "price": [
+        "servicios_planes"
+    ],
+    "package": [
+        "servicios_planes"
+    ],
+    "promotion": [
+        "servicios_planes",
+        "servicios_planes"
+    ],
+    "best": [
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes"
+    ],
+    "change": [
+        "servicios_planes"
+    ],
+    "increase": [
+        "servicios_planes"
+    ],
+    "speed": [
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes"
+    ],
+    "available": [
+        "servicios_planes"
+    ],
+    "the": [
+        "servicios_planes"
+    ],
+    "symmetric": [
+        "servicios_planes"
+    ],
+    "upload": [
+        "servicios_planes"
+    ],
+    "download": [
+        "servicios_planes"
+    ],
+    "fast": [
+        "servicios_planes"
+    ],
+    "test": [
+        "servicios_planes",
+        "seguimiento_speedtest",
+        "seguimiento_speedtest_resultados",
+        "seguimiento_speedtest_resultados",
+        "velocidad_contratada",
+        "prueba_velocidad"
+    ],
+    "current": [
+        "servicios_planes"
+    ],
+    "special": [
+        "servicios_planes"
+    ],
+    "discount": [
+        "servicios_planes"
+    ],
+    "free": [
+        "servicios_planes",
+        "problemas_especificos"
+    ],
+    "month": [
+        "servicios_planes"
+    ],
+    "for": [
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes",
+        "servicios_planes"
+    ],
+    "movie": [
+        "servicios_planes"
+    ],
+    "working": [
+        "servicios_planes"
+    ],
+    "from": [
+        "servicios_planes"
+    ],
+    "video": [
+        "servicios_planes",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "problemas_especificos",
+        "problemas_especificos",
+        "problemas_especificos",
+        "problemas_especificos",
+        "problemas_especificos",
+        "problemas_especificos",
+        "seguimiento_problema_internet",
+        "seguimiento_problema_internet",
+        "seguimiento_uso_internet",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto"
+    ],
+    "conference": [
+        "servicios_planes"
+    ],
+    "remote": [
+        "servicios_planes"
+    ],
+    "work": [
+        "servicios_planes"
+    ],
+    "class": [
+        "servicios_planes"
+    ],
+    "meeting": [
+        "servicios_planes"
+    ],
+    "corporate": [
+        "servicios_planes"
+    ],
+    "need": [
+        "servicios_planes",
+        "servicios_planes"
+    ],
+    "which": [
+        "servicios_planes"
+    ],
+    "most": [
+        "servicios_planes"
+    ],
+    "selling": [
+        "servicios_planes"
+    ],
+    "family": [
+        "servicios_planes"
+    ],
+    "comparison": [
+        "servicios_planes"
+    ],
+    "diferencias": [
+        "servicios_planes",
+        "comparativa_competencia"
+    ],
+    "tabla": [
+        "servicios_planes"
+    ],
+    "comparativa": [
+        "servicios_planes",
+        "comparativa_competencia",
+        "comparacion_competencia"
+    ],
+    "cada": [
+        "servicios_planes",
+        "servicios_planes",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico"
+    ],
+    "caracteristicas": [
+        "servicios_planes",
+        "soporte_tecnico",
+        "equipos_dispositivos",
+        "diferencia_servicio",
+        "equipos_proporcionados"
+    ],
+    "detalles": [
+        "servicios_planes"
+    ],
+    "limites": [
+        "servicios_planes"
+    ],
+    "restricciones": [
+        "servicios_planes",
+        "uso_datos",
+        "uso_datos"
+    ],
+    "potente": [
+        "servicios_planes",
+        "equipos_dispositivos",
+        "cambio_plan"
+    ],
+    "premium": [
+        "servicios_planes",
+        "cambio_plan"
+    ],
+    "avanzado": [
+        "servicios_planes"
+    ],
+    "estandar": [
+        "servicios_planes"
+    ],
+    "profesional": [
+        "servicios_planes"
+    ],
+    "empresarial": [
+        "servicios_planes",
+        "cambio_plan"
+    ],
+    "residencial": [
+        "servicios_planes"
+    ],
+    "familiar": [
+        "servicios_planes",
+        "velocidad_familia"
+    ],
+    "individual": [
+        "servicios_planes"
+    ],
+    "estudiantes": [
+        "servicios_planes",
+        "promociones_ofertas"
+    ],
+    "profesionales": [
+        "servicios_planes"
+    ],
+    "gamers": [
+        "servicios_planes"
+    ],
+    "hola": [
+        "interaccion_basica",
+        "interaccion_basica",
+        "interaccion_basica",
+        "interaccion_basica",
+        "interaccion_basica",
+        "interaccion_basica",
+        "interaccion_basica",
+        "interaccion_basica",
+        "interaccion_basica",
+        "interaccion_basica"
+    ],
+    "tal": [
+        "interaccion_basica",
+        "interaccion_basica",
+        "interaccion_basica"
+    ],
+    "saludos": [
+        "interaccion_basica"
+    ],
+    "buenos": [
+        "interaccion_basica",
+        "interaccion_basica"
+    ],
+    "buenas": [
+        "interaccion_basica",
+        "interaccion_basica",
+        "interaccion_basica",
+        "interaccion_basica",
+        "interaccion_basica"
+    ],
+    "tardes": [
+        "interaccion_basica",
+        "interaccion_basica",
+        "soporte_tecnico",
+        "soporte_tecnico"
+    ],
+    "noches": [
+        "interaccion_basica",
+        "interaccion_basica",
+        "soporte_tecnico"
+    ],
+    "hols": [
+        "interaccion_basica"
+    ],
+    "alo": [
+        "interaccion_basica"
+    ],
+    "hey": [
+        "interaccion_basica"
+    ],
+    "buen": [
+        "interaccion_basica",
+        "interaccion_basica",
+        "promociones_ofertas"
+    ],
+    "onda": [
+        "interaccion_basica"
+    ],
+    "pasa": [
+        "interaccion_basica",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "contactar_soporte"
+    ],
+    "hello": [
+        "interaccion_basica"
+    ],
+    "cuentas": [
+        "interaccion_basica"
+    ],
+    "saludando": [
+        "interaccion_basica"
+    ],
+    "saludo": [
+        "interaccion_basica"
+    ],
+    "ayuda": [
+        "interaccion_basica",
+        "interaccion_basica",
+        "interaccion_basica",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_fin_semana",
+        "soporte_fin_semana",
+        "contactar_soporte",
+        "contactar_soporte",
+        "whatsapp_integration",
+        "atencion_clientes",
+        "atencion_clientes"
+    ],
+    "problema": [
+        "interaccion_basica",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "reportar_internet",
+        "problema_solucionado",
+        "problema_persiste",
+        "problema_persiste",
+        "problema_persiste",
+        "contactar_soporte",
+        "contactar_soporte",
+        "contactar_soporte",
+        "fallas_servicio",
+        "reporte_fallas",
+        "reporte_fallas"
+    ],
+    "quiero": [
+        "interaccion_basica",
+        "contratacion_facturacion",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "reportar_internet",
+        "reportar_internet",
+        "reportar_internet",
+        "reportar_internet",
+        "reportar_internet",
+        "reportar_internet",
+        "reportar_internet",
+        "reportar_internet",
+        "reportar_internet",
+        "visita_tecnica",
+        "visita_tecnica",
+        "cambio_plan",
+        "cambio_plan",
+        "cambio_plan",
+        "cambio_plan",
+        "cambio_plan",
+        "cambio_plan",
+        "cambio_plan",
+        "cambio_plan",
+        "facturacion_electronica",
+        "facturacion_electronica",
+        "reactivacion_servicio",
+        "reactivacion_servicio",
+        "cancelacion_servicio",
+        "cancelacion_servicio",
+        "cancelacion_servicio",
+        "contactar_soporte",
+        "contactar_soporte",
+        "contactar_soporte",
+        "contactar_soporte",
+        "interes_contratacion",
+        "interes_contratacion",
+        "interes_contratacion",
+        "interes_contratacion",
+        "interes_contratacion",
+        "cancelacion",
+        "cancelacion",
+        "cancelacion",
+        "cancelacion",
+        "cancelacion",
+        "cancelacion",
+        "cambio_plan",
+        "cambio_plan",
+        "cambio_plan",
+        "cambio_plan",
+        "cambio_plan",
+        "cambio_plan",
+        "cambio_plan",
+        "factura_electronica",
+        "registro_notificacion",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto"
+    ],
+    "informacion": [
+        "interaccion_basica",
+        "interaccion_basica",
+        "whatsapp_integration",
+        "que_es_emenet",
+        "que_es_emenet"
+    ],
+    "quisiera": [
+        "interaccion_basica"
+    ],
+    "saber": [
+        "interaccion_basica",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "estado_cuenta",
+        "estado_cuenta",
+        "prueba_velocidad"
+    ],
+    "sta": [
+        "interaccion_basica"
+    ],
+    "stas": [
+        "interaccion_basica"
+    ],
+    "adios": [
+        "interaccion_basica"
+    ],
+    "luego": [
+        "interaccion_basica"
+    ],
+    "vemos": [
+        "interaccion_basica"
+    ],
+    "bye": [
+        "interaccion_basica"
+    ],
+    "chao": [
+        "interaccion_basica"
+    ],
+    "pronto": [
+        "interaccion_basica"
+    ],
+    "gracias": [
+        "interaccion_basica",
+        "interaccion_basica",
+        "interaccion_basica",
+        "interaccion_basica",
+        "interaccion_basica"
+    ],
+    "muchas": [
+        "interaccion_basica",
+        "interaccion_basica",
+        "seguimiento_dispositivos_conectados"
+    ],
+    "agradezco": [
+        "interaccion_basica",
+        "interaccion_basica"
+    ],
+    "thanks": [
+        "interaccion_basica"
+    ],
+    "agradecido": [
+        "interaccion_basica"
+    ],
+    "agradecida": [
+        "interaccion_basica"
+    ],
+    "sido": [
+        "interaccion_basica"
+    ],
+    "gran": [
+        "interaccion_basica"
+    ],
+    "excelente": [
+        "interaccion_basica"
+    ],
+    "amable": [
+        "interaccion_basica"
+    ],
+    "tiempo": [
+        "interaccion_basica",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "soporte_tecnico",
+        "promociones_ofertas",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "tiempo_activacion",
+        "seguimiento_horarios",
+        "reactivacion_servicio",
+        "cancelacion_servicio",
+        "cuánto_tiempo_toma",
+        "cuánto_tiempo_toma",
+        "cuánto_tiempo_toma",
+        "instalacion_tiempo",
+        "corte_servicio",
+        "corte_servicio"
+    ],
+    "pagar": [
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "visita_tecnica",
+        "reactivacion_servicio",
+        "cancelacion_servicio",
+        "promociones_descuentos",
+        "promociones_descuentos",
+        "estado_cuenta",
+        "estado_cuenta",
+        "estado_cuenta",
+        "puedo_pagar_varios",
+        "puedo_pagar_varios",
+        "puedo_pagar_varios",
+        "algún_cargo_pago",
+        "metodos_pago_adicionales"
+    ],
+    "pago": [
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "promociones_ofertas",
+        "promociones_ofertas",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "sin_conexion",
+        "reactivacion_servicio",
+        "reactivacion_servicio",
+        "reactivacion_servicio",
+        "cancelacion_servicio",
+        "promociones_descuentos",
+        "promociones_descuentos",
+        "promociones_descuentos",
+        "promociones_descuentos",
+        "promociones_descuentos",
+        "promociones_descuentos",
+        "estado_cuenta",
+        "estado_cuenta",
+        "algún_cargo_pago",
+        "algún_cargo_pago",
+        "algún_cargo_pago",
+        "algún_cargo_pago",
+        "algún_cargo_pago",
+        "algún_cargo_pago",
+        "algún_cargo_pago",
+        "algún_cargo_pago",
+        "velocidad_contratada",
+        "velocidad_contratada",
+        "velocidad_contratada",
+        "promociones_descuentos",
+        "metodos_pago_adicionales",
+        "metodos_pago_adicionales",
+        "metodos_pago_adicionales",
+        "metodos_pago_adicionales",
+        "metodos_pago_adicionales",
+        "metodos_pago_adicionales",
+        "metodos_pago_adicionales",
+        "metodos_pago_adicionales",
+        "corte_servicio",
+        "corte_servicio"
+    ],
+    "metodos": [
+        "contratacion_facturacion",
+        "contratacion_facturacion"
+    ],
+    "formas": [
+        "contratacion_facturacion"
+    ],
+    "opciones": [
+        "contratacion_facturacion",
+        "metodos_pago_adicionales"
+    ],
+    "realizar": [
+        "contratacion_facturacion"
+    ],
+    "hacer": [
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "problemas_especificos",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "reportar_internet",
+        "reportar_internet",
+        "debo_hacer_router",
+        "debo_hacer_router",
+        "debo_hacer_router",
+        "reporte_fallas",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto"
+    ],
+    "factura": [
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "facturacion_electronica",
+        "facturacion_electronica",
+        "facturacion_electronica",
+        "facturacion_electronica",
+        "facturacion_electronica",
+        "facturacion_electronica",
+        "facturacion_electronica",
+        "facturacion_electronica",
+        "facturacion_electronica",
+        "facturacion_electronica",
+        "facturacion_electronica",
+        "facturacion_electronica",
+        "facturacion_electronica",
+        "facturacion_electronica",
+        "facturacion_electronica",
+        "facturacion_electronica",
+        "facturacion_electronica",
+        "facturacion_electronica",
+        "facturacion_electronica",
+        "facturacion_electronica",
+        "facturacion_electronica",
+        "estado_cuenta",
+        "estado_cuenta",
+        "estado_cuenta",
+        "factura_electronica",
+        "factura_electronica",
+        "factura_electronica",
+        "factura_electronica",
+        "factura_electronica"
+    ],
+    "recibo": [
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "fechas_pago",
+        "cancelacion_servicio",
+        "estado_cuenta",
+        "estado_cuenta",
+        "velocidad_contratada",
+        "factura_electronica"
+    ],
+    "sucursales": [
+        "contratacion_facturacion"
+    ],
+    "transferencia": [
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "fechas_pago",
+        "uso_datos",
+        "metodos_pago_adicionales"
+    ],
+    "bancaria": [
+        "contratacion_facturacion"
+    ],
+    "deposito": [
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "fechas_pago"
+    ],
+    "bancario": [
+        "contratacion_facturacion",
+        "contratacion_facturacion"
+    ],
+    "oxxo": [
+        "contratacion_facturacion",
+        "contratacion_facturacion"
+    ],
+    "pagos": [
+        "contratacion_facturacion"
+    ],
+    "hago": [
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "requisitos_contratacion",
+        "requisitos_contratacion",
+        "requisitos_contratacion",
+        "hago_internet_está",
+        "hago_internet_está",
+        "hago_internet_está"
+    ],
+    "datos": [
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "facturacion_electronica",
+        "factura_electronica",
+        "uso_datos",
+        "uso_datos",
+        "uso_datos",
+        "uso_datos",
+        "uso_datos"
+    ],
+    "bancarios": [
+        "contratacion_facturacion"
+    ],
+    "cuenta": [
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "cancelacion_servicio",
+        "cancelacion",
+        "estado_cuenta",
+        "estado_cuenta",
+        "estado_cuenta",
+        "mudanza_temporal"
+    ],
+    "numero": [
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "numero_cliente",
+        "numero_cliente",
+        "numero_cliente",
+        "numero_cliente",
+        "numero_cliente",
+        "numero_cliente",
+        "soporte_fin_semana",
+        "consulta_de",
+        "whatsapp_integration",
+        "atencion_clientes",
+        "atencion_clientes",
+        "atencion_clientes",
+        "reporte_fallas"
+    ],
+    "clabe": [
+        "contratacion_facturacion"
+    ],
+    "tarjeta": [
+        "contratacion_facturacion",
+        "metodos_pago_adicionales",
+        "metodos_pago_adicionales",
+        "metodos_pago_adicionales"
+    ],
+    "cobro": [
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion"
+    ],
+    "incorrecto": [
+        "contratacion_facturacion",
+        "contratacion_facturacion"
+    ],
+    "error": [
+        "contratacion_facturacion",
+        "contratacion_facturacion"
+    ],
+    "facturacion": [
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "facturacion_electronica",
+        "facturacion_electronica",
+        "facturacion_electronica",
+        "facturacion_electronica",
+        "factura_electronica",
+        "factura_electronica"
+    ],
+    "monto": [
+        "contratacion_facturacion",
+        "estado_cuenta"
+    ],
+    "cobraron": [
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion"
+    ],
+    "mal": [
+        "contratacion_facturacion",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "problemas_especificos",
+        "problema_persiste"
+    ],
+    "excesivo": [
+        "contratacion_facturacion"
+    ],
+    "erroneo": [
+        "contratacion_facturacion",
+        "contratacion_facturacion"
+    ],
+    "revisar": [
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "soporte_tecnico",
+        "visita_tecnica",
+        "estado_cuenta",
+        "estado_cuenta"
+    ],
+    "verificar": [
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "area_cobertura",
+        "prueba_velocidad"
+    ],
+    "debo": [
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "requisitos_contratacion",
+        "requisitos_contratacion",
+        "recomendacion_plan",
+        "estado_cuenta",
+        "estado_cuenta",
+        "estado_cuenta",
+        "estado_cuenta",
+        "debo_hacer_router",
+        "debo_hacer_router",
+        "debo_hacer_router",
+        "equipos_proporcionados"
+    ],
+    "fecha": [
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago"
+    ],
+    "limite": [
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "soporte_tecnico",
+        "cobertura_disponibilidad",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "dispositivos_conectados",
+        "uso_datos",
+        "uso_datos",
+        "uso_datos",
+        "uso_datos"
+    ],
+    "plazo": [
+        "contratacion_facturacion",
+        "fechas_pago",
+        "cancelacion_servicio",
+        "cancelacion_servicio"
+    ],
+    "corte": [
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "reactivacion_servicio",
+        "fallas_servicio",
+        "corte_servicio",
+        "corte_servicio"
+    ],
+    "fechas": [
+        "contratacion_facturacion",
+        "fechas_pago"
+    ],
+    "paga": [
+        "contratacion_facturacion",
+        "fechas_pago"
+    ],
+    "ultimo": [
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "cancelacion_servicio"
+    ],
+    "suspenden": [
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "corte_servicio"
+    ],
+    "suspension": [
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "fechas_pago",
+        "fechas_pago",
+        "reactivacion_servicio",
+        "mudanza_temporal",
+        "corte_servicio",
+        "corte_servicio",
+        "corte_servicio"
+    ],
+    "cortan": [
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "soporte_tecnico",
+        "problemas_especificos",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago",
+        "corte_servicio"
+    ],
+    "contrato": [
+        "contratacion_facturacion",
+        "requisitos_contratacion",
+        "requisitos_contratacion",
+        "requisitos_contratacion",
+        "requisitos_contratacion",
+        "cancelacion_servicio",
+        "interes_contratacion",
+        "cancelacion",
+        "cancelacion",
+        "cancelacion",
+        "contrato_emenet",
+        "contrato_emenet",
+        "contrato_emenet",
+        "contrato_emenet",
+        "contrato_emenet",
+        "contrato_emenet",
+        "contrato_emenet",
+        "contrato_emenet"
+    ],
+    "permanencia": [
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "promociones_ofertas",
+        "promociones_descuentos",
+        "contrato_emenet",
+        "promociones_descuentos"
+    ],
+    "periodo": [
+        "contratacion_facturacion",
+        "cancelacion_servicio",
+        "cancelacion_servicio"
+    ],
+    "forzoso": [
+        "contratacion_facturacion",
+        "cancelacion_servicio",
+        "cancelacion_servicio"
+    ],
+    "cancelar": [
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "soporte_tecnico",
+        "cancelacion_servicio",
+        "cancelacion_servicio",
+        "cancelacion_servicio",
+        "cancelacion_servicio",
+        "cancelacion_servicio",
+        "cancelacion_servicio",
+        "cancelacion_servicio",
+        "cancelacion_servicio",
+        "cancelacion_servicio",
+        "cancelacion_servicio",
+        "cancelacion_servicio",
+        "cancelacion_servicio",
+        "cancelacion_servicio",
+        "cancelacion_servicio",
+        "cancelacion_servicio",
+        "cancelacion_servicio",
+        "cancelacion_servicio",
+        "cancelacion_servicio",
+        "cancelacion",
+        "cancelacion",
+        "cancelacion",
+        "cancelacion",
+        "cancelacion",
+        "cancelacion",
+        "cancelacion"
+    ],
+    "terminos": [
+        "contratacion_facturacion"
+    ],
+    "condiciones": [
+        "contratacion_facturacion"
+    ],
+    "compromiso": [
+        "contratacion_facturacion"
+    ],
+    "penalizacion": [
+        "contratacion_facturacion",
+        "cancelacion_servicio",
+        "cancelacion_servicio",
+        "algún_cargo_pago"
+    ],
+    "cliente": [
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "numero_cliente",
+        "numero_cliente",
+        "numero_cliente",
+        "numero_cliente",
+        "numero_cliente",
+        "numero_cliente",
+        "requisitos_contratacion",
+        "requisitos_contratacion",
+        "cancelacion_servicio",
+        "cancelacion",
+        "consulta_de",
+        "atencion_clientes"
+    ],
+    "encontrar": [
+        "contratacion_facturacion",
+        "numero_cliente"
+    ],
+    "localizar": [
+        "contratacion_facturacion",
+        "numero_cliente"
+    ],
+    "ubicar": [
+        "contratacion_facturacion",
+        "numero_cliente"
+    ],
+    "veo": [
+        "contratacion_facturacion",
+        "numero_cliente",
+        "problema_persiste"
+    ],
+    "pueden": [
+        "contratacion_facturacion",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "visita_tecnica",
+        "instalacion_tiempo",
+        "instalacion_tiempo"
+    ],
+    "instalar": [
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "requisitos_contratacion",
+        "requisitos_contratacion",
+        "interes_contratacion",
+        "interes_contratacion",
+        "instalacion_tiempo",
+        "instalacion_tiempo",
+        "instalacion_tiempo"
+    ],
+    "instalacion": [
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "soporte_tecnico",
+        "promociones_ofertas",
+        "promociones_ofertas",
+        "requisitos_contratacion",
+        "requisitos_contratacion",
+        "visita_tecnica",
+        "instalacion_tiempo",
+        "instalacion_tiempo",
+        "instalacion_tiempo",
+        "instalacion_tiempo",
+        "instalacion_tiempo",
+        "instalacion_tiempo",
+        "instalacion_tiempo",
+        "instalacion_tiempo",
+        "instalacion_tiempo"
+    ],
+    "contratar": [
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "diferencia_servicio",
+        "requisitos_contratacion",
+        "requisitos_contratacion",
+        "requisitos_contratacion",
+        "requisitos_contratacion",
+        "requisitos_contratacion",
+        "requisitos_contratacion",
+        "requisitos_contratacion",
+        "requisitos_contratacion",
+        "recomendacion_plan",
+        "interes_contratacion",
+        "interes_contratacion",
+        "cambio_plan",
+        "cuáles_requisitos_para",
+        "cuáles_requisitos_para",
+        "cuáles_requisitos_para",
+        "whatsapp_integration",
+        "contrato_emenet",
+        "contrato_emenet"
+    ],
+    "nuevo": [
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "cambio_domicilio"
+    ],
+    "disponibilidad": [
+        "contratacion_facturacion",
+        "cobertura_disponibilidad",
+        "area_cobertura",
+        "registro_notificacion"
+    ],
+    "zona": [
+        "contratacion_facturacion",
+        "soporte_tecnico",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "fallas_servicio",
+        "area_cobertura",
+        "area_cobertura",
+        "area_cobertura",
+        "area_cobertura",
+        "cambio_domicilio_mismo"
+    ],
+    "instalan": [
+        "contratacion_facturacion",
+        "contratacion_facturacion"
+    ],
+    "tardan": [
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "reactivacion_servicio",
+        "instalacion_tiempo"
+    ],
+    "valor": [
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "diferencia_servicio",
+        "diferencia_servicio"
+    ],
+    "requisitos": [
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "requisitos_computadora",
+        "requisitos_computadora",
+        "requisitos_contratacion",
+        "requisitos_contratacion",
+        "requisitos_contratacion",
+        "cancelacion_servicio",
+        "cancelacion",
+        "cuáles_requisitos_para",
+        "cuáles_requisitos_para",
+        "cuáles_requisitos_para"
+    ],
+    "documentos": [
+        "contratacion_facturacion",
+        "requisitos_contratacion",
+        "requisitos_contratacion",
+        "requisitos_contratacion",
+        "requisitos_contratacion",
+        "cancelacion_servicio"
+    ],
+    "papeles": [
+        "contratacion_facturacion",
+        "requisitos_contratacion",
+        "requisitos_contratacion",
+        "requisitos_contratacion"
+    ],
+    "contratacion": [
+        "contratacion_facturacion",
+        "requisitos_contratacion",
+        "requisitos_contratacion"
+    ],
+    "documentacion": [
+        "contratacion_facturacion",
+        "requisitos_contratacion"
+    ],
+    "necesaria": [
+        "contratacion_facturacion"
+    ],
+    "piden": [
+        "contratacion_facturacion",
+        "requisitos_contratacion",
+        "requisitos_contratacion",
+        "requisitos_contratacion"
+    ],
+    "tarda": [
+        "contratacion_facturacion",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "tiempo_activacion",
+        "seguimiento_problema_internet"
+    ],
+    "activarse": [
+        "contratacion_facturacion",
+        "tiempo_activacion"
+    ],
+    "activacion": [
+        "contratacion_facturacion",
+        "contratacion_facturacion",
+        "tiempo_activacion",
+        "tiempo_activacion"
+    ],
+    "activa": [
+        "contratacion_facturacion",
+        "tiempo_activacion"
+    ],
+    "usar": [
+        "contratacion_facturacion",
+        "cobertura_disponibilidad",
+        "llamadas_afectan",
+        "tiempo_activacion",
+        "equipos_compatibles",
+        "uso_datos",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto"
+    ],
+    "activo": [
+        "contratacion_facturacion",
+        "tiempo_activacion"
+    ],
+    "lento": [
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "problemas_especificos",
+        "reportar_internet",
+        "señal_wifi_debil",
+        "problema_persiste",
+        "hago_internet_está",
+        "hago_internet_está",
+        "hago_internet_está"
+    ],
+    "lenta": [
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "cobertura_disponibilidad",
+        "dispositivos_conectados"
+    ],
+    "baja": [
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "cobertura_disponibilidad",
+        "problemas_especificos",
+        "problemas_especificos",
+        "llamadas_afectan",
+        "cancelacion_servicio",
+        "cancelacion_servicio",
+        "cancelacion_servicio",
+        "cancelacion_servicio",
+        "cancelacion",
+        "cancelacion",
+        "cancelacion",
+        "cancelacion"
+    ],
+    "acceso": [
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "sin_conexion",
+        "sin_conexion"
+    ],
+    "navegar": [
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "reportar_internet",
+        "sin_conexion",
+        "sin_conexion",
+        "seguimiento_uso_internet",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto"
+    ],
+    "despacio": [
+        "soporte_tecnico"
+    ],
+    "cargar": [
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico"
+    ],
+    "carga": [
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "problemas_especificos",
+        "problemas_especificos",
+        "sin_conexion"
+    ],
+    "bien": [
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "problemas_especificos",
+        "problemas_especificos",
+        "problemas_especificos",
+        "reportar_internet",
+        "señal_wifi_debil",
+        "problema_solucionado"
+    ],
+    "reducida": [
+        "soporte_tecnico"
+    ],
+    "acelerar": [
+        "soporte_tecnico",
+        "soporte_tecnico"
+    ],
+    "mejorar": [
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "señal_wifi_debil",
+        "señal_wifi_debil",
+        "problema_persiste",
+        "cambio_plan",
+        "cambio_plan",
+        "cambio_plan"
+    ],
+    "paginas": [
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "seguimiento_problema_internet",
+        "seguimiento_problema_internet"
+    ],
+    "lentas": [
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "problemas_especificos",
+        "problemas_especificos",
+        "seguimiento_problema_internet"
+    ],
+    "lentos": [
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "problemas_especificos"
+    ],
+    "lentitud": [
+        "soporte_tecnico"
+    ],
+    "puso": [
+        "soporte_tecnico"
+    ],
+    "contratada": [
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "seguimiento_speedtest",
+        "seguimiento_speedtest",
+        "velocidad_contratada"
+    ],
+    "demasiado": [
+        "soporte_tecnico",
+        "soporte_tecnico"
+    ],
+    "traba": [
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico"
+    ],
+    "videollamadas": [
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "problemas_especificos",
+        "problemas_especificos",
+        "problemas_especificos",
+        "problemas_especificos",
+        "problemas_especificos",
+        "problemas_especificos",
+        "equipos_dispositivos",
+        "seguimiento_uso_internet",
+        "velocidad_trabajo",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto"
+    ],
+    "van": [
+        "soporte_tecnico",
+        "estado_cuenta",
+        "estado_cuenta"
+    ],
+    "lag": [
+        "soporte_tecnico",
+        "problemas_especificos",
+        "problemas_especificos",
+        "problemas_especificos",
+        "problemas_especificos",
+        "seguimiento_problema_internet",
+        "velocidad_gaming"
+    ],
+    "bajo": [
+        "soporte_tecnico"
+    ],
+    "iba": [
+        "soporte_tecnico"
+    ],
+    "buena": [
+        "soporte_tecnico"
+    ],
+    "speedtest": [
+        "soporte_tecnico",
+        "seguimiento_speedtest",
+        "seguimiento_speedtest_resultados",
+        "velocidad_contratada",
+        "prueba_velocidad"
+    ],
+    "marca": [
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "equipos_dispositivos",
+        "seguimiento_speedtest",
+        "seguimiento_speedtest",
+        "velocidad_contratada",
+        "equipos_proporcionados"
+    ],
+    "llega": [
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "señal_wifi_debil",
+        "velocidad_contratada"
+    ],
+    "fallando": [
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "reportar_internet",
+        "reportar_internet",
+        "problema_persiste",
+        "contactar_soporte",
+        "fallas_servicio"
+    ],
+    "lentisimo": [
+        "soporte_tecnico"
+    ],
+    "cayo": [
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "sin_conexion",
+        "sin_conexion"
+    ],
+    "red": [
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "cobertura_disponibilidad",
+        "reportar_internet",
+        "reportar_internet",
+        "reportar_internet",
+        "sin_conexion",
+        "sin_conexion",
+        "sin_conexion",
+        "sin_conexion",
+        "sin_conexion",
+        "sin_conexion",
+        "configuracion_router",
+        "fallas_servicio",
+        "fallas_servicio",
+        "seguridad_internet",
+        "seguridad_internet"
+    ],
+    "senal": [
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "equipos_dispositivos",
+        "equipos_dispositivos",
+        "reportar_internet",
+        "sin_conexion",
+        "sin_conexion",
+        "señal_wifi_debil",
+        "señal_wifi_debil",
+        "señal_wifi_debil",
+        "señal_wifi_debil",
+        "señal_wifi_debil",
+        "señal_wifi_debil"
+    ],
+    "funciona": [
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "problemas_especificos",
+        "problemas_especificos",
+        "problemas_especificos",
+        "reportar_internet",
+        "reportar_internet",
+        "reportar_internet",
+        "sin_conexion",
+        "sin_conexion",
+        "sin_conexion",
+        "sin_conexion",
+        "sin_conexion",
+        "problemas_modem",
+        "problema_solucionado",
+        "problema_solucionado",
+        "problema_persiste",
+        "problema_persiste",
+        "problema_persiste",
+        "visita_tecnica",
+        "contactar_soporte",
+        "equipos_compatibles",
+        "equipos_compatibles",
+        "equipos_compatibles",
+        "equipos_compatibles",
+        "fibra_optica",
+        "reporte_fallas",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto"
+    ],
+    "caido": [
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "sin_conexion",
+        "sin_conexion",
+        "fallas_servicio"
+    ],
+    "sirve": [
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "sin_conexion"
+    ],
+    "conecta": [
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "sin_conexion",
+        "sin_conexion"
+    ],
+    "conectarme": [
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "problemas_especificos",
+        "problemas_especificos",
+        "como_conectarse",
+        "como_conectarse",
+        "reportar_internet",
+        "sin_conexion",
+        "sin_conexion",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto"
+    ],
+    "corto": [
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "sin_conexion",
+        "sin_conexion"
+    ],
+    "intermitente": [
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "reportar_internet",
+        "sin_conexion"
+    ],
+    "corta": [
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "llamadas_afectan",
+        "cortes_servicio",
+        "sin_conexion",
+        "seguimiento_problema_internet"
+    ],
+    "inestable": [
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "cobertura_disponibilidad",
+        "cortes_servicio",
+        "sin_conexion",
+        "señal_wifi_debil"
+    ],
+    "viene": [
+        "soporte_tecnico",
+        "sin_conexion"
+    ],
+    "falla": [
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "cobertura_disponibilidad",
+        "cortes_servicio",
+        "reportar_internet",
+        "reportar_internet",
+        "reportar_internet",
+        "reportar_internet",
+        "sin_conexion",
+        "problema_persiste",
+        "contactar_soporte",
+        "fallas_servicio",
+        "fallas_servicio",
+        "fallas_servicio",
+        "reporte_fallas"
+    ],
+    "constantemente": [
+        "soporte_tecnico",
+        "sin_conexion",
+        "seguimiento_problema_internet",
+        "seguimiento_horarios"
+    ],
+    "desconecta": [
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "cobertura_disponibilidad",
+        "problemas_especificos",
+        "cortes_servicio",
+        "sin_conexion",
+        "seguimiento_problema_internet"
+    ],
+    "pierde": [
+        "soporte_tecnico",
+        "sin_conexion"
+    ],
+    "wifi": [
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "equipos_dispositivos",
+        "equipos_dispositivos",
+        "equipos_dispositivos",
+        "equipos_dispositivos",
+        "equipos_dispositivos",
+        "equipos_dispositivos",
+        "equipos_dispositivos",
+        "equipos_dispositivos",
+        "equipos_dispositivos",
+        "reportar_internet",
+        "reportar_internet",
+        "señal_wifi_debil",
+        "señal_wifi_debil",
+        "señal_wifi_debil",
+        "señal_wifi_debil",
+        "señal_wifi_debil",
+        "señal_wifi_debil",
+        "señal_wifi_debil",
+        "configuracion_router",
+        "configuracion_router",
+        "configuracion_router",
+        "configuracion_router",
+        "configuracion_router",
+        "seguridad_internet",
+        "seguridad_internet"
+    ],
+    "debil": [
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "señal_wifi_debil",
+        "señal_wifi_debil"
+    ],
+    "contrasena": [
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "equipos_dispositivos",
+        "equipos_dispositivos",
+        "configuracion_router",
+        "configuracion_router",
+        "configuracion_router",
+        "configuracion_router",
+        "configuracion_router"
+    ],
+    "extender": [
+        "soporte_tecnico",
+        "soporte_tecnico"
+    ],
+    "cobertura": [
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "area_cobertura",
+        "area_cobertura",
+        "area_cobertura",
+        "area_cobertura",
+        "area_cobertura"
+    ],
+    "soporte": [
+        "soporte_tecnico",
+        "reportar_internet",
+        "visita_tecnica",
+        "soporte_fin_semana",
+        "soporte_fin_semana",
+        "soporte_fin_semana",
+        "contactar_soporte",
+        "contactar_soporte",
+        "contactar_soporte",
+        "contactar_soporte",
+        "whatsapp_integration",
+        "whatsapp_integration",
+        "atencion_clientes",
+        "atencion_clientes"
+    ],
+    "tecnico": [
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "visita_tecnica",
+        "visita_tecnica",
+        "visita_tecnica",
+        "soporte_fin_semana",
+        "contactar_soporte",
+        "contactar_soporte",
+        "contactar_soporte",
+        "contactar_soporte",
+        "contactar_soporte",
+        "reporte_fallas"
+    ],
+    "tecnica": [
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "visita_tecnica",
+        "visita_tecnica",
+        "visita_tecnica",
+        "visita_tecnica",
+        "contactar_soporte",
+        "contactar_soporte",
+        "contactar_soporte"
+    ],
+    "visita": [
+        "soporte_tecnico",
+        "visita_tecnica",
+        "visita_tecnica",
+        "visita_tecnica",
+        "visita_tecnica",
+        "visita_tecnica",
+        "visita_tecnica",
+        "visita_tecnica",
+        "contactar_soporte",
+        "contactar_soporte"
+    ],
+    "reparacion": [
+        "soporte_tecnico"
+    ],
+    "mantenimiento": [
+        "soporte_tecnico",
+        "fallas_servicio"
+    ],
+    "router": [
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "equipos_dispositivos",
+        "equipos_dispositivos",
+        "equipos_dispositivos",
+        "equipos_dispositivos",
+        "equipos_dispositivos",
+        "equipos_dispositivos",
+        "equipos_dispositivos",
+        "equipos_dispositivos",
+        "equipos_dispositivos",
+        "equipos_dispositivos",
+        "equipos_dispositivos",
+        "equipos_dispositivos",
+        "equipos_dispositivos",
+        "equipos_dispositivos",
+        "equipos_dispositivos",
+        "equipos_dispositivos",
+        "equipos_dispositivos",
+        "equipos_dispositivos",
+        "equipos_dispositivos",
+        "equipos_dispositivos",
+        "equipos_dispositivos",
+        "equipos_dispositivos",
+        "equipos_dispositivos",
+        "equipos_dispositivos",
+        "equipos_dispositivos",
+        "equipos_dispositivos",
+        "equipos_dispositivos",
+        "equipos_dispositivos",
+        "equipos_dispositivos",
+        "equipos_dispositivos",
+        "equipos_dispositivos",
+        "reportar_internet",
+        "reportar_internet",
+        "problemas_modem",
+        "problemas_modem",
+        "configuracion_router",
+        "configuracion_router",
+        "configuracion_router",
+        "configuracion_router",
+        "configuracion_router",
+        "configuracion_router",
+        "configuracion_router",
+        "configuracion_router",
+        "configuracion_router",
+        "configuracion_router",
+        "configuracion_router",
+        "configuracion_router",
+        "configuracion_router",
+        "configuracion_router",
+        "configuracion_router",
+        "configuracion_router",
+        "cómo_reinicio_correctamente",
+        "cómo_reinicio_correctamente",
+        "cómo_reinicio_correctamente",
+        "debo_hacer_router",
+        "debo_hacer_router",
+        "debo_hacer_router",
+        "equipos_proporcionados",
+        "equipos_proporcionados"
+    ],
+    "enciende": [
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "equipos_dispositivos",
+        "problemas_modem",
+        "debo_hacer_router",
+        "debo_hacer_router",
+        "debo_hacer_router"
+    ],
+    "luce": [
+        "soporte_tecnico",
+        "equipos_dispositivos",
+        "problemas_modem"
+    ],
+    "modem": [
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "equipos_dispositivos",
+        "equipos_dispositivos",
+        "equipos_dispositivos",
+        "equipos_dispositivos",
+        "reportar_internet",
+        "reportar_internet",
+        "problemas_modem",
+        "problemas_modem",
+        "problemas_modem",
+        "problemas_modem",
+        "problemas_modem",
+        "problemas_modem",
+        "contactar_soporte",
+        "configuracion_router",
+        "configuracion_router",
+        "configuracion_router",
+        "configuracion_router",
+        "configuracion_router",
+        "configuracion_router",
+        "configuracion_router",
+        "configuracion_router",
+        "cómo_reinicio_correctamente",
+        "cómo_reinicio_correctamente",
+        "cómo_reinicio_correctamente",
+        "equipos_proporcionados",
+        "equipos_proporcionados",
+        "equipos_proporcionados"
+    ],
+    "prende": [
+        "soporte_tecnico"
+    ],
+    "apagado": [
+        "soporte_tecnico"
+    ],
+    "luz": [
+        "soporte_tecnico"
+    ],
+    "equipo": [
+        "soporte_tecnico",
+        "equipos_dispositivos"
+    ],
+    "energia": [
+        "soporte_tecnico"
+    ],
+    "electricidad": [
+        "soporte_tecnico"
+    ],
+    "interferencias": [
+        "soporte_tecnico"
+    ],
+    "toda": [
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "seguimiento_horarios",
+        "seguimiento_uso_internet",
+        "fallas_servicio",
+        "velocidad_familia",
+        "velocidad_familia"
+    ],
+    "partes": [
+        "soporte_tecnico"
+    ],
+    "ampliar": [
+        "soporte_tecnico"
+    ],
+    "cubre": [
+        "soporte_tecnico",
+        "visita_tecnica"
+    ],
+    "problemas": [
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "problemas_especificos",
+        "problemas_especificos",
+        "problemas_especificos",
+        "problemas_especificos",
+        "problemas_especificos",
+        "problemas_especificos",
+        "problemas_especificos",
+        "problemas_especificos",
+        "reportar_internet",
+        "reportar_internet",
+        "sin_conexion",
+        "problemas_modem",
+        "soporte_fin_semana",
+        "contactar_soporte",
+        "whatsapp_integration",
+        "fallas_servicio",
+        "fallas_servicio",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto"
+    ],
+    "optimizar": [
+        "soporte_tecnico"
+    ],
+    "poca": [
+        "soporte_tecnico",
+        "señal_wifi_debil"
+    ],
+    "alcance": [
+        "soporte_tecnico",
+        "equipos_dispositivos",
+        "señal_wifi_debil"
+    ],
+    "dispositivos": [
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "equipos_dispositivos",
+        "como_conectarse",
+        "dispositivos_conectados",
+        "dispositivos_conectados",
+        "dispositivos_conectados",
+        "dispositivos_conectados",
+        "dispositivos_conectados",
+        "dispositivos_conectados",
+        "dispositivos_conectados",
+        "seguimiento_dispositivos",
+        "seguimiento_dispositivos",
+        "seguimiento_dispositivos",
+        "recomendacion_plan",
+        "recomendacion_plan",
+        "seguimiento_dispositivos_conectados",
+        "seguimiento_dispositivos_conectados",
+        "equipos_compatibles",
+        "equipos_compatibles",
+        "equipos_compatibles",
+        "velocidad_familia",
+        "velocidad_familia"
+    ],
+    "conectados": [
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "dispositivos_conectados",
+        "dispositivos_conectados"
+    ],
+    "cuantos": [
+        "soporte_tecnico",
+        "cobertura_disponibilidad",
+        "dispositivos_conectados",
+        "recomendacion_plan",
+        "uso_datos"
+    ],
+    "conectar": [
+        "soporte_tecnico",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "requisitos_computadora",
+        "como_conectarse",
+        "como_conectarse",
+        "dispositivos_conectados",
+        "reactivacion_servicio",
+        "equipos_compatibles",
+        "equipos_compatibles",
+        "equipos_compatibles",
+        "equipos_compatibles"
+    ],
+    "demasiados": [
+        "soporte_tecnico",
+        "cobertura_disponibilidad",
+        "dispositivos_conectados"
+    ],
+    "varios": [
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "cobertura_disponibilidad",
+        "dispositivos_conectados",
+        "promociones_descuentos",
+        "promociones_descuentos",
+        "recomendacion_plan",
+        "seguimiento_dispositivos_conectados",
+        "puedo_pagar_varios",
+        "puedo_pagar_varios",
+        "puedo_pagar_varios",
+        "velocidad_familia"
+    ],
+    "afectan": [
+        "soporte_tecnico",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "llamadas_afectan",
+        "dispositivos_conectados"
+    ],
+    "razones": [
+        "soporte_tecnico",
+        "cobertura_disponibilidad",
+        "cortes_servicio"
+    ],
+    "cortes": [
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cortes_servicio",
+        "cortes_servicio"
+    ],
+    "interrupciones": [
+        "soporte_tecnico",
+        "cobertura_disponibilidad",
+        "cortes_servicio",
+        "velocidad_gaming",
+        "velocidad_streaming"
+    ],
+    "equipos": [
+        "soporte_tecnico",
+        "equipos_proporcionados",
+        "equipos_proporcionados",
+        "equipos_proporcionados",
+        "equipos_proporcionados",
+        "equipos_proporcionados",
+        "equipos_proporcionados",
+        "equipos_proporcionados"
+    ],
+    "mesh": [
+        "soporte_tecnico",
+        "equipos_dispositivos"
+    ],
+    "repetidor": [
+        "soporte_tecnico",
+        "equipos_dispositivos"
+    ],
+    "ayudaaa": [
+        "soporte_tecnico"
+    ],
+    "jala": [
+        "soporte_tecnico"
+    ],
+    "oye": [
+        "soporte_tecnico"
+    ],
+    "entrar": [
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "configuracion_router",
+        "configuracion_router",
+        "configuracion_router",
+        "configuracion_router",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto"
+    ],
+    "pone": [
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico"
+    ],
+    "google": [
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "seguimiento_dispositivos_conectados",
+        "equipos_compatibles"
+    ],
+    "reiniciar": [
+        "soporte_tecnico",
+        "equipos_dispositivos"
+    ],
+    "rato": [
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico"
+    ],
+    "tortuga": [
+        "soporte_tecnico",
+        "soporte_tecnico"
+    ],
+    "cuarto": [
+        "soporte_tecnico"
+    ],
+    "cae": [
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "problemas_especificos",
+        "reportar_internet",
+        "seguimiento_problema_internet"
+    ],
+    "congela": [
+        "soporte_tecnico",
+        "problemas_especificos",
+        "problemas_especificos",
+        "seguimiento_problema_internet"
+    ],
+    "horrible": [
+        "soporte_tecnico",
+        "soporte_tecnico"
+    ],
+    "cel": [
+        "soporte_tecnico"
+    ],
+    "nabo": [
+        "soporte_tecnico"
+    ],
+    "trabajar": [
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "sin_conexion",
+        "seguimiento_uso_internet",
+        "velocidad_trabajo",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto"
+    ],
+    "asi": [
+        "soporte_tecnico"
+    ],
+    "pesimo": [
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico"
+    ],
+    "carreta": [
+        "soporte_tecnico"
+    ],
+    "llueve": [
+        "soporte_tecnico"
+    ],
+    "murio": [
+        "soporte_tecnico"
+    ],
+    "vez": [
+        "soporte_tecnico",
+        "comparativa_competencia",
+        "comparativa_competencia",
+        "comparativa_competencia",
+        "comparativa_competencia",
+        "comparativa_competencia"
+    ],
+    "deja": [
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico"
+    ],
+    "mandar": [
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "visita_tecnica",
+        "whatsapp_integration"
+    ],
+    "mensajes": [
+        "soporte_tecnico"
+    ],
+    "ayer": [
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico"
+    ],
+    "abrir": [
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "reportar_internet",
+        "seguimiento_problema_internet"
+    ],
+    "paso": [
+        "soporte_tecnico"
+    ],
+    "whatsapp": [
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "whatsapp_integration",
+        "whatsapp_integration",
+        "whatsapp_integration",
+        "whatsapp_integration",
+        "whatsapp_integration",
+        "whatsapp_integration",
+        "whatsapp_integration",
+        "whatsapp_integration",
+        "whatsapp_integration",
+        "whatsapp_integration",
+        "whatsapp_integration",
+        "whatsapp_integration",
+        "whatsapp_integration",
+        "whatsapp_integration",
+        "whatsapp_integration",
+        "whatsapp_integration",
+        "whatsapp_integration",
+        "whatsapp_integration"
+    ],
+    "fatal": [
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico"
+    ],
+    "videollamada": [
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "problemas_especificos",
+        "seguimiento_problema_internet"
+    ],
+    "peor": [
+        "soporte_tecnico",
+        "soporte_tecnico"
+    ],
+    "nunca": [
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico"
+    ],
+    "minutos": [
+        "soporte_tecnico"
+    ],
+    "correo": [
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "facturacion_electronica",
+        "facturacion_electronica",
+        "atencion_clientes"
+    ],
+    "facebook": [
+        "soporte_tecnico"
+    ],
+    "instagram": [
+        "soporte_tecnico"
+    ],
+    "asco": [
+        "soporte_tecnico",
+        "soporte_tecnico"
+    ],
+    "serie": [
+        "soporte_tecnico"
+    ],
+    "mucha": [
+        "soporte_tecnico"
+    ],
+    "gente": [
+        "soporte_tecnico",
+        "seguimiento_horarios"
+    ],
+    "busqueda": [
+        "soporte_tecnico"
+    ],
+    "tiktok": [
+        "soporte_tecnico"
+    ],
+    "muere": [
+        "soporte_tecnico",
+        "soporte_tecnico"
+    ],
+    "super": [
+        "soporte_tecnico"
+    ],
+    "twitter": [
+        "soporte_tecnico"
+    ],
+    "inservible": [
+        "soporte_tecnico",
+        "soporte_tecnico"
+    ],
+    "usan": [
+        "soporte_tecnico"
+    ],
+    "pare": [
+        "soporte_tecnico"
+    ],
+    "llamada": [
+        "soporte_tecnico",
+        "cobertura_disponibilidad",
+        "llamadas_afectan"
+    ],
+    "congele": [
+        "soporte_tecnico"
+    ],
+    "app": [
+        "soporte_tecnico"
+    ],
+    "trabe": [
+        "soporte_tecnico"
+    ],
+    "foto": [
+        "soporte_tecnico"
+    ],
+    "reportar": [
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "reportar_internet",
+        "reportar_internet",
+        "reportar_internet",
+        "reportar_internet",
+        "reportar_internet",
+        "reportar_internet",
+        "reportar_internet",
+        "reportar_internet",
+        "reportar_internet",
+        "reportar_internet",
+        "reportar_internet",
+        "reportar_internet",
+        "reportar_internet",
+        "reportar_internet",
+        "reportar_internet",
+        "reportar_internet",
+        "reportar_internet",
+        "reportar_internet",
+        "reportar_internet",
+        "reportar_internet",
+        "reportar_internet",
+        "reportar_internet",
+        "reportar_internet",
+        "reportar_internet",
+        "reportar_internet",
+        "reportar_internet",
+        "reportar_internet",
+        "reportar_internet",
+        "reportar_internet",
+        "reportar_internet",
+        "reportar_internet",
+        "reportar_internet",
+        "reportar_internet",
+        "contactar_soporte",
+        "reporte_fallas",
+        "reporte_fallas",
+        "reporte_fallas",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto"
+    ],
+    "reporte": [
+        "soporte_tecnico",
+        "reportar_internet",
+        "reportar_internet",
+        "reportar_internet",
+        "reportar_internet",
+        "reporte_fallas",
+        "reporte_fallas",
+        "reporte_fallas",
+        "reporte_fallas"
+    ],
+    "furioso": [
+        "soporte_tecnico",
+        "sin_conexion"
+    ],
+    "llevo": [
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "sin_conexion",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto"
+    ],
+    "nadie": [
+        "soporte_tecnico",
+        "soporte_tecnico"
+    ],
+    "harto": [
+        "soporte_tecnico",
+        "sin_conexion"
+    ],
+    "falle": [
+        "soporte_tecnico"
+    ],
+    "arreglen": [
+        "soporte_tecnico",
+        "soporte_tecnico"
+    ],
+    "inaceptable": [
+        "soporte_tecnico",
+        "sin_conexion"
+    ],
+    "exijo": [
+        "soporte_tecnico",
+        "sin_conexion"
+    ],
+    "solucionen": [
+        "soporte_tecnico"
+    ],
+    "molesto": [
+        "soporte_tecnico"
+    ],
+    "puntual": [
+        "soporte_tecnico"
+    ],
+    "cansado": [
+        "soporte_tecnico"
+    ],
+    "soluciona": [
+        "soporte_tecnico"
+    ],
+    "increible": [
+        "soporte_tecnico"
+    ],
+    "siga": [
+        "soporte_tecnico",
+        "soporte_tecnico",
+        "sin_conexion"
+    ],
+    "intentando": [
+        "soporte_tecnico"
+    ],
+    "exito": [
+        "soporte_tecnico"
+    ],
+    "enojado": [
+        "soporte_tecnico"
+    ],
+    "urge": [
+        "soporte_tecnico"
+    ],
+    "hoy": [
+        "soporte_tecnico",
+        "reactivacion_servicio"
+    ],
+    "mismo": [
+        "soporte_tecnico",
+        "reactivacion_servicio",
+        "cambio_domicilio_mismo",
+        "cambio_domicilio_mismo"
+    ],
+    "semanas": [
+        "soporte_tecnico"
+    ],
+    "creer": [
+        "soporte_tecnico",
+        "sin_conexion"
+    ],
+    "burla": [
+        "soporte_tecnico"
+    ],
+    "sigo": [
+        "soporte_tecnico",
+        "reactivacion_servicio"
+    ],
+    "hablar": [
+        "soporte_tecnico",
+        "contactar_soporte",
+        "contactar_soporte",
+        "contactar_soporte",
+        "atencion_clientes"
+    ],
+    "supervisor": [
+        "soporte_tecnico"
+    ],
+    "colonia": [
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "fallas_servicio",
+        "area_cobertura",
+        "seguimiento_direccion"
+    ],
+    "dan": [
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "equipos_dispositivos",
+        "area_cobertura",
+        "area_cobertura"
+    ],
+    "ubicacion": [
+        "cobertura_disponibilidad",
+        "cambio_domicilio",
+        "cambio_domicilio",
+        "cambio_domicilio",
+        "cambio_domicilio",
+        "seguimiento_direccion",
+        "cambio_domicilio_mismo"
+    ],
+    "llamadas": [
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "problemas_especificos",
+        "problemas_especificos",
+        "llamadas_afectan",
+        "llamadas_afectan",
+        "llamadas_afectan",
+        "llamadas_afectan",
+        "servicio_telefonia"
+    ],
+    "telefonica": [
+        "cobertura_disponibilidad",
+        "llamadas_afectan",
+        "servicio_telefonia"
+    ],
+    "afecta": [
+        "cobertura_disponibilidad",
+        "llamadas_afectan"
+    ],
+    "llamar": [
+        "cobertura_disponibilidad",
+        "llamadas_afectan"
+    ],
+    "conecto": [
+        "cobertura_disponibilidad",
+        "como_conectarse"
+    ],
+    "pasos": [
+        "cobertura_disponibilidad",
+        "como_conectarse",
+        "requisitos_contratacion",
+        "cancelacion",
+        "instalacion_tiempo"
+    ],
+    "instrucciones": [
+        "cobertura_disponibilidad",
+        "como_conectarse"
+    ],
+    "calle": [
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "seguimiento_direccion"
+    ],
+    "llegan": [
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "velocidad_contratada",
+        "area_cobertura",
+        "area_cobertura"
+    ],
+    "vivo": [
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "seguimiento_personas_hogar",
+        "seguimiento_personas_hogar",
+        "seguimiento_personas_hogar",
+        "seguimiento_direccion"
+    ],
+    "domicilio": [
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cambio_domicilio",
+        "cambio_domicilio",
+        "cambio_domicilio",
+        "visita_tecnica",
+        "cambio_domicilio",
+        "cambio_domicilio",
+        "seguimiento_direccion",
+        "cambio_domicilio_mismo",
+        "cambio_domicilio_mismo"
+    ],
+    "fibra": [
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cambio_plan",
+        "fibra_optica",
+        "fibra_optica",
+        "fibra_optica",
+        "fibra_optica",
+        "fibra_optica",
+        "fibra_optica",
+        "fibra_optica",
+        "fibra_optica",
+        "fibra_optica",
+        "fibra_optica"
+    ],
+    "barrio": [
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad"
+    ],
+    "fraccionamiento": [
+        "cobertura_disponibilidad"
+    ],
+    "edificio": [
+        "cobertura_disponibilidad",
+        "cambio_domicilio_mismo",
+        "cambio_domicilio_mismo"
+    ],
+    "poner": [
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "requisitos_contratacion"
+    ],
+    "direccion": [
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad",
+        "cambio_domicilio",
+        "cambio_domicilio",
+        "cambio_domicilio",
+        "cambio_domicilio",
+        "cambio_domicilio",
+        "cambio_domicilio",
+        "cambio_domicilio",
+        "configuracion_router",
+        "configuracion_router",
+        "pagina_web_emenet",
+        "pagina_web_emenet",
+        "direccion_ip",
+        "seguimiento_direccion",
+        "seguimiento_direccion"
+    ],
+    "rancho": [
+        "cobertura_disponibilidad"
+    ],
+    "unidad": [
+        "cobertura_disponibilidad"
+    ],
+    "pueblo": [
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad"
+    ],
+    "depa": [
+        "cobertura_disponibilidad",
+        "cobertura_disponibilidad"
+    ],
+    "localidad": [
+        "cobertura_disponibilidad"
+    ],
+    "aqui": [
+        "cobertura_disponibilidad"
+    ],
+    "area": [
+        "cobertura_disponibilidad"
+    ],
+    "comunidad": [
+        "cobertura_disponibilidad"
+    ],
+    "region": [
+        "cobertura_disponibilidad"
+    ],
+    "traban": [
+        "problemas_especificos"
+    ],
+    "max": [
+        "problemas_especificos",
+        "velocidad_streaming"
+    ],
+    "detiene": [
+        "problemas_especificos"
+    ],
+    "pausa": [
+        "problemas_especificos",
+        "mudanza_temporal"
+    ],
+    "constante": [
+        "problemas_especificos"
+    ],
+    "series": [
+        "problemas_especificos",
+        "velocidad_streaming"
+    ],
+    "detienen": [
+        "problemas_especificos",
+        "seguimiento_problema_internet"
+    ],
+    "tirones": [
+        "problemas_especificos"
+    ],
+    "pixelado": [
+        "problemas_especificos"
+    ],
+    "calidad": [
+        "problemas_especificos",
+        "problemas_especificos"
+    ],
+    "resolucion": [
+        "problemas_especificos"
+    ],
+    "mala": [
+        "problemas_especificos"
+    ],
+    "ven": [
+        "problemas_especificos",
+        "problemas_especificos"
+    ],
+    "meet": [
+        "problemas_especificos"
+    ],
+    "entrecortadas": [
+        "problemas_especificos"
+    ],
+    "escuchan": [
+        "problemas_especificos"
+    ],
+    "audio": [
+        "problemas_especificos",
+        "seguimiento_problema_internet"
+    ],
+    "entrecortado": [
+        "problemas_especificos"
+    ],
+    "congelado": [
+        "problemas_especificos"
+    ],
+    "compartir": [
+        "problemas_especificos",
+        "problemas_especificos"
+    ],
+    "pantalla": [
+        "problemas_especificos",
+        "problemas_especificos"
+    ],
+    "alto": [
+        "problemas_especificos",
+        "problemas_especificos",
+        "seguimiento_speedtest_resultados"
+    ],
+    "desconexiones": [
+        "problemas_especificos",
+        "problemas_especificos",
+        "problemas_especificos"
+    ],
+    "servidores": [
+        "problemas_especificos"
+    ],
+    "fortnite": [
+        "problemas_especificos"
+    ],
+    "call": [
+        "problemas_especificos"
+    ],
+    "duty": [
+        "problemas_especificos"
+    ],
+    "fifa": [
+        "problemas_especificos"
+    ],
+    "fire": [
+        "problemas_especificos",
+        "equipos_compatibles"
+    ],
+    "warzone": [
+        "problemas_especificos"
+    ],
+    "apex": [
+        "problemas_especificos"
+    ],
+    "legend": [
+        "problemas_especificos",
+        "problemas_especificos"
+    ],
+    "valorant": [
+        "problemas_especificos"
+    ],
+    "league": [
+        "problemas_especificos"
+    ],
+    "dota": [
+        "problemas_especificos"
+    ],
+    "steam": [
+        "problemas_especificos"
+    ],
+    "congelan": [
+        "problemas_especificos"
+    ],
+    "descargar": [
+        "problemas_especificos",
+        "seguimiento_problema_internet",
+        "facturacion_electronica",
+        "seguimiento_uso_internet",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto"
+    ],
+    "descargas": [
+        "problemas_especificos",
+        "seguimiento_problema_internet"
+    ],
+    "actualizaciones": [
+        "problemas_especificos"
+    ],
+    "voy": [
+        "cambio_domicilio",
+        "cambio_domicilio",
+        "cambio_domicilio",
+        "mudanza_temporal"
+    ],
+    "mudar": [
+        "cambio_domicilio",
+        "cambio_domicilio"
+    ],
+    "cambio": [
+        "cambio_domicilio",
+        "cambio_domicilio",
+        "cambio_domicilio",
+        "cambio_domicilio",
+        "cambio_domicilio",
+        "promociones_ofertas",
+        "problema_persiste",
+        "problema_persiste",
+        "cambio_plan",
+        "cambio_domicilio",
+        "cambio_domicilio",
+        "cambio_plan",
+        "cambio_domicilio_mismo",
+        "cambio_domicilio_mismo",
+        "cambio_domicilio_mismo"
+    ],
+    "trasladar": [
+        "cambio_domicilio",
+        "cambio_domicilio",
+        "cambio_domicilio"
+    ],
+    "mover": [
+        "cambio_domicilio",
+        "cambio_domicilio",
+        "cambio_domicilio",
+        "cambio_domicilio",
+        "cambio_domicilio_mismo"
+    ],
+    "llevar": [
+        "cambio_domicilio",
+        "cambio_domicilio",
+        "cambio_domicilio",
+        "requisitos_contratacion",
+        "cambio_domicilio",
+        "cambio_domicilio",
+        "cambio_domicilio"
+    ],
+    "nueva": [
+        "cambio_domicilio",
+        "cambio_domicilio",
+        "cambio_domicilio",
+        "cambio_domicilio",
+        "cambio_domicilio",
+        "cambio_domicilio"
+    ],
+    "traslado": [
+        "cambio_domicilio",
+        "cambio_domicilio",
+        "cambio_domicilio",
+        "cambio_domicilio"
+    ],
+    "mudarme": [
+        "cambio_domicilio",
+        "cambio_domicilio",
+        "cambio_domicilio"
+    ],
+    "lugar": [
+        "cambio_domicilio",
+        "cambio_domicilio",
+        "cambio_domicilio",
+        "cambio_domicilio"
+    ],
+    "residencia": [
+        "cambio_domicilio",
+        "cambio_domicilio"
+    ],
+    "hogar": [
+        "cambio_domicilio",
+        "seguimiento_personas_hogar",
+        "velocidad_familia"
+    ],
+    "departamento": [
+        "cambio_domicilio",
+        "cambio_domicilio_mismo",
+        "cambio_domicilio_mismo",
+        "cambio_domicilio_mismo"
+    ],
+    "vivienda": [
+        "cambio_domicilio",
+        "cambio_domicilio"
+    ],
+    "mudando": [
+        "cambio_domicilio",
+        "cambio_domicilio"
+    ],
+    "cambiare": [
+        "cambio_domicilio"
+    ],
+    "especificaciones": [
+        "equipos_dispositivos",
+        "requisitos_computadora"
+    ],
+    "tipo": [
+        "equipos_dispositivos",
+        "direccion_ip",
+        "equipos_proporcionados"
+    ],
+    "incluido": [
+        "equipos_dispositivos",
+        "seguridad_internet"
+    ],
+    "amplificador": [
+        "equipos_dispositivos"
+    ],
+    "extensor": [
+        "equipos_dispositivos"
+    ],
+    "actualizar": [
+        "equipos_dispositivos",
+        "cambio_plan",
+        "cambio_plan",
+        "cambio_plan",
+        "cambio_plan"
+    ],
+    "grande": [
+        "equipos_dispositivos"
+    ],
+    "dual": [
+        "equipos_dispositivos"
+    ],
+    "band": [
+        "equipos_dispositivos"
+    ],
+    "ghz": [
+        "equipos_dispositivos"
+    ],
+    "antenas": [
+        "equipos_dispositivos"
+    ],
+    "puertos": [
+        "equipos_dispositivos",
+        "equipos_dispositivos"
+    ],
+    "usb": [
+        "equipos_dispositivos"
+    ],
+    "control": [
+        "equipos_dispositivos",
+        "seguridad_internet"
+    ],
+    "parental": [
+        "equipos_dispositivos",
+        "seguridad_internet"
+    ],
+    "configurar": [
+        "equipos_dispositivos",
+        "configuracion_router",
+        "configuracion_router",
+        "configuracion_router",
+        "configuracion_router"
+    ],
+    "configuracion": [
+        "equipos_dispositivos",
+        "problemas_modem",
+        "configuracion_router",
+        "configuracion_router",
+        "configuracion_router",
+        "configuracion_router",
+        "configuracion_router",
+        "configuracion_router"
+    ],
+    "ssid": [
+        "equipos_dispositivos"
+    ],
+    "clave": [
+        "equipos_dispositivos",
+        "configuracion_router"
+    ],
+    "olvide": [
+        "equipos_dispositivos",
+        "configuracion_router",
+        "configuracion_router"
+    ],
+    "resetear": [
+        "equipos_dispositivos"
+    ],
+    "indicadores": [
+        "equipos_dispositivos"
+    ],
+    "especiales": [
+        "promociones_ofertas",
+        "diferencia_servicio",
+        "promociones_descuentos",
+        "promociones_descuentos"
+    ],
+    "nuevos": [
+        "promociones_ofertas",
+        "promociones_descuentos"
+    ],
+    "clientes": [
+        "promociones_ofertas",
+        "promociones_descuentos"
+    ],
+    "descuento": [
+        "promociones_ofertas",
+        "promociones_ofertas",
+        "promociones_ofertas",
+        "promociones_ofertas",
+        "promociones_ofertas",
+        "promociones_ofertas",
+        "promociones_ofertas",
+        "promociones_ofertas",
+        "promociones_descuentos",
+        "promociones_descuentos",
+        "promociones_descuentos",
+        "promociones_descuentos",
+        "promociones_descuentos"
+    ],
+    "referir": [
+        "promociones_ofertas",
+        "promociones_descuentos"
+    ],
+    "programa": [
+        "promociones_ofertas",
+        "promociones_descuentos"
+    ],
+    "referidos": [
+        "promociones_ofertas",
+        "promociones_descuentos"
+    ],
+    "recomendar": [
+        "promociones_ofertas"
+    ],
+    "temporada": [
+        "promociones_ofertas",
+        "promociones_descuentos"
+    ],
+    "limitado": [
+        "promociones_ofertas"
+    ],
+    "anual": [
+        "promociones_ofertas",
+        "promociones_descuentos",
+        "promociones_descuentos",
+        "promociones_descuentos"
+    ],
+    "anticipado": [
+        "promociones_ofertas",
+        "promociones_descuentos",
+        "promociones_descuentos"
+    ],
+    "navidena": [
+        "promociones_ofertas"
+    ],
+    "verano": [
+        "promociones_ofertas"
+    ],
+    "aniversario": [
+        "promociones_ofertas"
+    ],
+    "adultos": [
+        "promociones_ofertas"
+    ],
+    "mayores": [
+        "promociones_ofertas"
+    ],
+    "portabilidad": [
+        "promociones_ofertas"
+    ],
+    "vengo": [
+        "promociones_ofertas"
+    ],
+    "compania": [
+        "promociones_ofertas"
+    ],
+    "renovacion": [
+        "promociones_ofertas",
+        "cancelacion_servicio"
+    ],
+    "lealtad": [
+        "promociones_ofertas"
+    ],
+    "antiguedad": [
+        "promociones_ofertas"
+    ],
+    "vigentes": [
+        "promociones_ofertas"
+    ],
+    "momento": [
+        "promociones_ofertas",
+        "seguimiento_horarios",
+        "cancelacion_servicio"
+    ],
+    "megacable": [
+        "comparativa_competencia",
+        "comparativa_competencia",
+        "comparativa_competencia",
+        "comparativa_competencia",
+        "comparativa_competencia",
+        "comparativa_competencia"
+    ],
+    "infinitum": [
+        "comparativa_competencia",
+        "comparativa_competencia",
+        "comparativa_competencia",
+        "comparativa_competencia",
+        "comparativa_competencia",
+        "comparativa_competencia"
+    ],
+    "grandes": [
+        "comparativa_competencia"
+    ],
+    "companias": [
+        "comparativa_competencia"
+    ],
+    "unicas": [
+        "diferencia_servicio"
+    ],
+    "agregado": [
+        "diferencia_servicio"
+    ],
+    "propuesta": [
+        "diferencia_servicio"
+    ],
+    "distingue": [
+        "diferencia_servicio"
+    ],
+    "competitivas": [
+        "diferencia_servicio"
+    ],
+    "diferenciadores": [
+        "diferencia_servicio"
+    ],
+    "minimos": [
+        "requisitos_computadora"
+    ],
+    "necesita": [
+        "requisitos_computadora",
+        "requisitos_contratacion"
+    ],
+    "computadora": [
+        "requisitos_computadora",
+        "requisitos_computadora",
+        "requisitos_computadora",
+        "seguimiento_dispositivos"
+    ],
+    "compatible": [
+        "requisitos_computadora",
+        "requisitos_computadora",
+        "equipos_compatibles",
+        "equipos_compatibles",
+        "equipos_compatibles",
+        "equipos_compatibles"
+    ],
+    "sistema": [
+        "requisitos_computadora",
+        "facturacion_electronica",
+        "reporte_fallas"
+    ],
+    "minimas": [
+        "requisitos_computadora"
+    ],
+    "atraso": [
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago"
+    ],
+    "vence": [
+        "fechas_pago",
+        "fechas_pago",
+        "fechas_pago"
+    ],
+    "depositar": [
+        "fechas_pago"
+    ],
+    "sucede": [
+        "fechas_pago"
+    ],
+    "aceptan": [
+        "fechas_pago",
+        "metodos_pago_adicionales"
+    ],
+    "consecuencias": [
+        "fechas_pago",
+        "algún_cargo_pago"
+    ],
+    "quitan": [
+        "fechas_pago"
+    ],
+    "transferir": [
+        "fechas_pago",
+        "cambio_domicilio"
+    ],
+    "chance": [
+        "fechas_pago"
+    ],
+    "considera": [
+        "fechas_pago"
+    ],
+    "atrasado": [
+        "fechas_pago",
+        "algún_cargo_pago"
+    ],
+    "proceso": [
+        "requisitos_contratacion",
+        "requisitos_contratacion",
+        "cancelacion_servicio",
+        "cancelacion",
+        "cancelacion",
+        "factura_electronica",
+        "instalacion_tiempo"
+    ],
+    "suscribo": [
+        "requisitos_contratacion"
+    ],
+    "ser": [
+        "requisitos_contratacion",
+        "requisitos_contratacion",
+        "cancelacion_servicio",
+        "cancelacion"
+    ],
+    "tener": [
+        "requisitos_contratacion",
+        "requisitos_contratacion",
+        "requisitos_contratacion",
+        "sin_conexion",
+        "direccion_ip"
+    ],
+    "doy": [
+        "requisitos_contratacion",
+        "cancelacion",
+        "cancelacion"
+    ],
+    "alta": [
+        "requisitos_contratacion",
+        "seguimiento_speedtest_resultados",
+        "seguimiento_speedtest_resultados"
+    ],
+    "solicitar": [
+        "requisitos_contratacion",
+        "facturacion_electronica"
+    ],
+    "presentar": [
+        "requisitos_contratacion"
+    ],
+    "inicio": [
+        "requisitos_contratacion"
+    ],
+    "tramite": [
+        "requisitos_contratacion",
+        "requisitos_contratacion"
+    ],
+    "empiezo": [
+        "requisitos_contratacion"
+    ],
+    "solicitan": [
+        "requisitos_contratacion"
+    ],
+    "adquirir": [
+        "requisitos_contratacion",
+        "interes_contratacion",
+        "interes_contratacion"
+    ],
+    "registro": [
+        "requisitos_contratacion"
+    ],
+    "iniciar": [
+        "requisitos_contratacion"
+    ],
+    "solicito": [
+        "requisitos_contratacion",
+        "facturacion_electronica",
+        "factura_electronica"
+    ],
+    "mostrar": [
+        "requisitos_contratacion"
+    ],
+    "ocupo": [
+        "requisitos_contratacion"
+    ],
+    "empezar": [
+        "requisitos_contratacion"
+    ],
+    "levantar": [
+        "reportar_internet",
+        "reportar_internet",
+        "reporte_fallas"
+    ],
+    "generar": [
+        "reportar_internet",
+        "facturacion_electronica"
+    ],
+    "ticket": [
+        "reportar_internet",
+        "reportar_internet",
+        "reportar_internet",
+        "reporte_fallas"
+    ],
+    "crear": [
+        "reportar_internet"
+    ],
+    "pague": [
+        "reportar_internet",
+        "reportar_internet",
+        "reactivacion_servicio",
+        "reactivacion_servicio",
+        "reactivacion_servicio"
+    ],
+    "incidencia": [
+        "reportar_internet"
+    ],
+    "desesperado": [
+        "sin_conexion"
+    ],
+    "urgente": [
+        "sin_conexion",
+        "reactivacion_servicio"
+    ],
+    "restablezcan": [
+        "sin_conexion"
+    ],
+    "reinicia": [
+        "problemas_modem"
+    ],
+    "solo": [
+        "problemas_modem",
+        "seguimiento_dispositivos",
+        "seguimiento_speedtest",
+        "seguimiento_personas_hogar"
+    ],
+    "calienta": [
+        "problemas_modem"
+    ],
+    "responde": [
+        "problemas_modem"
+    ],
+    "soluciono": [
+        "problema_solucionado",
+        "problema_persiste"
+    ],
+    "resuelto": [
+        "problema_solucionado",
+        "problema_persiste"
+    ],
+    "quedo": [
+        "problema_solucionado"
+    ],
+    "ahora": [
+        "problema_solucionado"
+    ],
+    "funcionando": [
+        "problema_solucionado"
+    ],
+    "mejoro": [
+        "problema_solucionado",
+        "problema_persiste",
+        "problema_persiste"
+    ],
+    "sigue": [
+        "problema_persiste",
+        "problema_persiste",
+        "problema_persiste",
+        "problema_persiste",
+        "problema_persiste",
+        "problema_persiste",
+        "problema_persiste",
+        "problema_persiste",
+        "problema_persiste",
+        "problema_persiste",
+        "problema_persiste",
+        "contactar_soporte"
+    ],
+    "igual": [
+        "problema_persiste",
+        "problema_persiste",
+        "problema_persiste"
+    ],
+    "continuum": [
+        "problema_persiste",
+        "problema_persiste"
+    ],
+    "persiste": [
+        "problema_persiste"
+    ],
+    "todavia": [
+        "problema_persiste"
+    ],
+    "funcionar": [
+        "problema_persiste"
+    ],
+    "mejora": [
+        "problema_persiste"
+    ],
+    "cambiado": [
+        "problema_persiste"
+    ],
+    "resolverse": [
+        "problema_persiste"
+    ],
+    "arreglo": [
+        "problema_persiste"
+    ],
+    "correctamente": [
+        "problema_persiste",
+        "cómo_reinicio_correctamente",
+        "cómo_reinicio_correctamente",
+        "cómo_reinicio_correctamente"
+    ],
+    "solucion": [
+        "problema_persiste"
+    ],
+    "exactamente": [
+        "problema_persiste"
+    ],
+    "soluciones": [
+        "problema_persiste"
+    ],
+    "funcionaron": [
+        "problema_persiste"
+    ],
+    "intente": [
+        "problema_persiste",
+        "visita_tecnica",
+        "contactar_soporte"
+    ],
+    "cargan": [
+        "seguimiento_problema_internet"
+    ],
+    "pixela": [
+        "seguimiento_problema_internet"
+    ],
+    "imagen": [
+        "seguimiento_problema_internet"
+    ],
+    "entrecorta": [
+        "seguimiento_problema_internet"
+    ],
+    "delay": [
+        "seguimiento_problema_internet"
+    ],
+    "celular": [
+        "seguimiento_dispositivos"
+    ],
+    "telefono": [
+        "seguimiento_dispositivos",
+        "soporte_fin_semana",
+        "atencion_clientes",
+        "atencion_clientes",
+        "servicio_telefonia",
+        "servicio_telefonia",
+        "servicio_telefonia"
+    ],
+    "laptop": [
+        "seguimiento_dispositivos"
+    ],
+    "tablet": [
+        "seguimiento_dispositivos",
+        "seguimiento_dispositivos_conectados"
+    ],
+    "smart": [
+        "seguimiento_dispositivos",
+        "seguimiento_dispositivos_conectados",
+        "equipos_compatibles"
+    ],
+    "television": [
+        "seguimiento_dispositivos",
+        "servicio_television",
+        "servicio_television",
+        "servicio_television",
+        "servicio_television"
+    ],
+    "consola": [
+        "seguimiento_dispositivos"
+    ],
+    "playstation": [
+        "seguimiento_dispositivos",
+        "equipos_compatibles"
+    ],
+    "xbox": [
+        "seguimiento_dispositivos",
+        "equipos_compatibles"
+    ],
+    "especificos": [
+        "seguimiento_dispositivos",
+        "seguimiento_horarios"
+    ],
+    "siempre": [
+        "seguimiento_horarios"
+    ],
+    "manana": [
+        "seguimiento_horarios",
+        "seguimiento_horarios"
+    ],
+    "tarde": [
+        "seguimiento_horarios",
+        "seguimiento_horarios",
+        "algún_cargo_pago",
+        "algún_cargo_pago"
+    ],
+    "noche": [
+        "seguimiento_horarios",
+        "seguimiento_horarios"
+    ],
+    "ciertas": [
+        "seguimiento_horarios"
+    ],
+    "pico": [
+        "seguimiento_horarios"
+    ],
+    "muestra": [
+        "seguimiento_speedtest",
+        "seguimiento_speedtest_resultados",
+        "seguimiento_speedtest_resultados",
+        "velocidad_contratada"
+    ],
+    "indica": [
+        "seguimiento_speedtest",
+        "seguimiento_speedtest_resultados"
+    ],
+    "resultado": [
+        "seguimiento_speedtest",
+        "seguimiento_speedtest_resultados"
+    ],
+    "mbps": [
+        "seguimiento_speedtest",
+        "seguimiento_speedtest"
+    ],
+    "menos": [
+        "seguimiento_speedtest",
+        "cambio_plan",
+        "cambio_plan",
+        "velocidad_contratada",
+        "velocidad_contratada",
+        "velocidad_contratada"
+    ],
+    "menor": [
+        "seguimiento_speedtest",
+        "velocidad_contratada"
+    ],
+    "debajo": [
+        "seguimiento_speedtest",
+        "velocidad_contratada"
+    ],
+    "normal": [
+        "seguimiento_speedtest"
+    ],
+    "vengan": [
+        "visita_tecnica",
+        "visita_tecnica"
+    ],
+    "incluida": [
+        "visita_tecnica"
+    ],
+    "garantia": [
+        "visita_tecnica",
+        "equipos_proporcionados"
+    ],
+    "revisen": [
+        "visita_tecnica",
+        "contactar_soporte"
+    ],
+    "subir": [
+        "cambio_plan",
+        "cambio_plan",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto"
+    ],
+    "superior": [
+        "cambio_plan",
+        "cambio_plan"
+    ],
+    "optica": [
+        "cambio_plan",
+        "fibra_optica",
+        "fibra_optica",
+        "fibra_optica",
+        "fibra_optica",
+        "fibra_optica"
+    ],
+    "paquete": [
+        "cambio_plan",
+        "cambio_plan",
+        "cambio_plan",
+        "cambio_plan"
+    ],
+    "ancho": [
+        "cambio_plan",
+        "prueba_velocidad"
+    ],
+    "banda": [
+        "cambio_plan",
+        "prueba_velocidad"
+    ],
+    "gigabit": [
+        "cambio_plan"
+    ],
+    "ilimitado": [
+        "cambio_plan",
+        "uso_datos"
+    ],
+    "capacidad": [
+        "cambio_plan"
+    ],
+    "mayor": [
+        "cambio_plan"
+    ],
+    "electronica": [
+        "facturacion_electronica",
+        "facturacion_electronica",
+        "factura_electronica",
+        "factura_electronica"
+    ],
+    "facturar": [
+        "facturacion_electronica",
+        "facturacion_electronica",
+        "facturacion_electronica",
+        "factura_electronica",
+        "factura_electronica"
+    ],
+    "fiscal": [
+        "facturacion_electronica",
+        "facturacion_electronica",
+        "facturacion_electronica",
+        "factura_electronica",
+        "factura_electronica"
+    ],
+    "comprobante": [
+        "facturacion_electronica",
+        "facturacion_electronica",
+        "factura_electronica"
+    ],
+    "cfdi": [
+        "facturacion_electronica",
+        "factura_electronica"
+    ],
+    "rfc": [
+        "facturacion_electronica",
+        "factura_electronica"
+    ],
+    "deducir": [
+        "facturacion_electronica",
+        "facturacion_electronica",
+        "factura_electronica"
+    ],
+    "impuestos": [
+        "facturacion_electronica",
+        "factura_electronica"
+    ],
+    "declaracion": [
+        "facturacion_electronica"
+    ],
+    "contabilidad": [
+        "facturacion_electronica"
+    ],
+    "contador": [
+        "facturacion_electronica"
+    ],
+    "iva": [
+        "facturacion_electronica"
+    ],
+    "desglosado": [
+        "facturacion_electronica"
+    ],
+    "obtengo": [
+        "facturacion_electronica"
+    ],
+    "portal": [
+        "facturacion_electronica"
+    ],
+    "emitir": [
+        "facturacion_electronica"
+    ],
+    "enviar": [
+        "facturacion_electronica",
+        "contactar_soporte",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto"
+    ],
+    "digital": [
+        "facturacion_electronica",
+        "metodos_pago_adicionales"
+    ],
+    "pdf": [
+        "facturacion_electronica"
+    ],
+    "xml": [
+        "facturacion_electronica"
+    ],
+    "reactivar": [
+        "reactivacion_servicio",
+        "reactivacion_servicio",
+        "reactivacion_servicio",
+        "reactivacion_servicio",
+        "reactivacion_servicio"
+    ],
+    "reconexion": [
+        "reactivacion_servicio",
+        "reactivacion_servicio",
+        "reactivacion_servicio",
+        "reactivacion_servicio",
+        "reactivacion_servicio",
+        "reactivacion_servicio",
+        "reactivacion_servicio",
+        "corte_servicio",
+        "corte_servicio",
+        "corte_servicio"
+    ],
+    "volver": [
+        "reactivacion_servicio",
+        "reactivacion_servicio"
+    ],
+    "activar": [
+        "reactivacion_servicio"
+    ],
+    "reconectar": [
+        "reactivacion_servicio",
+        "reactivacion_servicio"
+    ],
+    "reanudar": [
+        "reactivacion_servicio"
+    ],
+    "restablecer": [
+        "reactivacion_servicio"
+    ],
+    "despues": [
+        "reactivacion_servicio",
+        "reactivacion_servicio",
+        "reactivacion_servicio",
+        "algún_cargo_pago",
+        "corte_servicio"
+    ],
+    "falta": [
+        "reactivacion_servicio",
+        "corte_servicio",
+        "corte_servicio"
+    ],
+    "cargo": [
+        "reactivacion_servicio",
+        "cancelacion_servicio",
+        "algún_cargo_pago",
+        "algún_cargo_pago",
+        "algún_cargo_pago"
+    ],
+    "reactivacion": [
+        "reactivacion_servicio",
+        "reactivacion_servicio"
+    ],
+    "reactiven": [
+        "reactivacion_servicio"
+    ],
+    "hice": [
+        "reactivacion_servicio"
+    ],
+    "reactivan": [
+        "reactivacion_servicio"
+    ],
+    "reactivado": [
+        "reactivacion_servicio"
+    ],
+    "reconecten": [
+        "reactivacion_servicio"
+    ],
+    "inmediata": [
+        "reactivacion_servicio",
+        "cancelacion_servicio"
+    ],
+    "express": [
+        "reactivacion_servicio"
+    ],
+    "prioritaria": [
+        "reactivacion_servicio"
+    ],
+    "dar": [
+        "cancelacion_servicio",
+        "cancelacion"
+    ],
+    "terminar": [
+        "cancelacion_servicio",
+        "cancelacion",
+        "cancelacion",
+        "cancelacion"
+    ],
+    "suscripcion": [
+        "cancelacion_servicio",
+        "cancelacion",
+        "cancelacion"
+    ],
+    "cancelacion": [
+        "cancelacion_servicio",
+        "cancelacion_servicio",
+        "cancelacion_servicio",
+        "cancelacion_servicio",
+        "cancelacion_servicio",
+        "cancelacion_servicio",
+        "cancelacion_servicio",
+        "cancelacion",
+        "cancelacion",
+        "cancelacion",
+        "cancelacion"
+    ],
+    "cancelo": [
+        "cancelacion_servicio",
+        "cancelacion_servicio",
+        "cancelacion",
+        "cancelacion"
+    ],
+    "darme": [
+        "cancelacion_servicio",
+        "cancelacion"
+    ],
+    "definitivamente": [
+        "cancelacion_servicio"
+    ],
+    "renovar": [
+        "cancelacion_servicio"
+    ],
+    "anticipada": [
+        "cancelacion_servicio"
+    ],
+    "multa": [
+        "cancelacion_servicio",
+        "algún_cargo_pago",
+        "algún_cargo_pago"
+    ],
+    "cualquier": [
+        "cancelacion_servicio"
+    ],
+    "cumplir": [
+        "cancelacion_servicio"
+    ],
+    "carta": [
+        "cancelacion_servicio"
+    ],
+    "formato": [
+        "cancelacion_servicio"
+    ],
+    "solicitud": [
+        "cancelacion_servicio"
+    ],
+    "aviso": [
+        "cancelacion_servicio",
+        "corte_servicio"
+    ],
+    "previo": [
+        "cancelacion_servicio"
+    ],
+    "final": [
+        "cancelacion_servicio"
+    ],
+    "reembolso": [
+        "cancelacion_servicio"
+    ],
+    "devolucion": [
+        "cancelacion_servicio"
+    ],
+    "adelantado": [
+        "promociones_descuentos",
+        "puedo_pagar_varios",
+        "puedo_pagar_varios",
+        "puedo_pagar_varios"
+    ],
+    "junto": [
+        "promociones_descuentos"
+    ],
+    "semestral": [
+        "promociones_descuentos"
+    ],
+    "beneficio": [
+        "promociones_descuentos"
+    ],
+    "ventaja": [
+        "promociones_descuentos"
+    ],
+    "emergencia": [
+        "soporte_fin_semana"
+    ],
+    "contacto": [
+        "soporte_fin_semana",
+        "soporte_fin_semana",
+        "whatsapp_integration",
+        "atencion_clientes",
+        "atencion_clientes"
+    ],
+    "asistencia": [
+        "soporte_fin_semana",
+        "contactar_soporte"
+    ],
+    "emergencias": [
+        "soporte_fin_semana"
+    ],
+    "guardia": [
+        "soporte_fin_semana"
+    ],
+    "laboral": [
+        "soporte_fin_semana"
+    ],
+    "segun": [
+        "seguimiento_speedtest_resultados"
+    ],
+    "medida": [
+        "seguimiento_speedtest_resultados"
+    ],
+    "dice": [
+        "seguimiento_speedtest_resultados"
+    ],
+    "medicion": [
+        "seguimiento_speedtest_resultados"
+    ],
+    "contactar": [
+        "contactar_soporte"
+    ],
+    "especialista": [
+        "contactar_soporte",
+        "contactar_soporte"
+    ],
+    "solucionarlo": [
+        "contactar_soporte"
+    ],
+    "grave": [
+        "contactar_soporte"
+    ],
+    "venga": [
+        "contactar_soporte"
+    ],
+    "resolver": [
+        "contactar_soporte"
+    ],
+    "requiero": [
+        "contactar_soporte",
+        "contrato_emenet"
+    ],
+    "presencial": [
+        "contactar_soporte"
+    ],
+    "complicado": [
+        "contactar_soporte"
+    ],
+    "entiendo": [
+        "contactar_soporte"
+    ],
+    "alguien": [
+        "contactar_soporte",
+        "contactar_soporte"
+    ],
+    "revise": [
+        "contactar_soporte"
+    ],
+    "agendar": [
+        "contactar_soporte"
+    ],
+    "graf": [
+        "contactar_soporte"
+    ],
+    "recomiendas": [
+        "recomendacion_plan"
+    ],
+    "ayudame": [
+        "recomendacion_plan"
+    ],
+    "recomendado": [
+        "recomendacion_plan"
+    ],
+    "sugerencia": [
+        "recomendacion_plan"
+    ],
+    "conviene": [
+        "recomendacion_plan",
+        "comparacion_competencia"
+    ],
+    "recomiendame": [
+        "recomendacion_plan"
+    ],
+    "cuanta": [
+        "recomendacion_plan"
+    ],
+    "usamos": [
+        "recomendacion_plan"
+    ],
+    "adecuado": [
+        "recomendacion_plan"
+    ],
+    "redes": [
+        "seguimiento_uso_internet",
+        "atencion_clientes"
+    ],
+    "sociales": [
+        "seguimiento_uso_internet",
+        "atencion_clientes"
+    ],
+    "estudiar": [
+        "seguimiento_uso_internet",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto"
+    ],
+    "archivos": [
+        "seguimiento_uso_internet"
+    ],
+    "uso": [
+        "seguimiento_uso_internet",
+        "seguimiento_uso_internet",
+        "uso_datos",
+        "uso_datos",
+        "velocidad_familia",
+        "velocidad_familia"
+    ],
+    "intensivo": [
+        "seguimiento_uso_internet"
+    ],
+    "tres": [
+        "seguimiento_personas_hogar"
+    ],
+    "cuatro": [
+        "seguimiento_personas_hogar"
+    ],
+    "cinco": [
+        "seguimiento_personas_hogar"
+    ],
+    "pareja": [
+        "seguimiento_personas_hogar"
+    ],
+    "vivimos": [
+        "seguimiento_personas_hogar"
+    ],
+    "varias": [
+        "seguimiento_personas_hogar",
+        "seguimiento_dispositivos_conectados"
+    ],
+    "celulares": [
+        "seguimiento_dispositivos_conectados"
+    ],
+    "computadoras": [
+        "seguimiento_dispositivos_conectados"
+    ],
+    "consolas": [
+        "seguimiento_dispositivos_conectados",
+        "equipos_compatibles"
+    ],
+    "inteligentes": [
+        "seguimiento_dispositivos_conectados",
+        "seguimiento_dispositivos_conectados",
+        "equipos_compatibles"
+    ],
+    "alexa": [
+        "seguimiento_dispositivos_conectados",
+        "equipos_compatibles"
+    ],
+    "camaras": [
+        "seguimiento_dispositivos_conectados"
+    ],
+    "seguridad": [
+        "seguimiento_dispositivos_conectados",
+        "seguridad_internet",
+        "seguridad_internet",
+        "seguridad_internet"
+    ],
+    "electrodomesticos": [
+        "seguimiento_dispositivos_conectados"
+    ],
+    "interesa": [
+        "interes_contratacion",
+        "interes_contratacion",
+        "interes_contratacion",
+        "registro_notificacion",
+        "registro_notificacion"
+    ],
+    "gustaria": [
+        "interes_contratacion",
+        "interes_contratacion"
+    ],
+    "adquiero": [
+        "interes_contratacion"
+    ],
+    "seguir": [
+        "cancelacion"
+    ],
+    "finalizar": [
+        "cancelacion"
+    ],
+    "desconectar": [
+        "cancelacion"
+    ],
+    "reducir": [
+        "cambio_plan",
+        "cambio_plan"
+    ],
+    "inferior": [
+        "cambio_plan"
+    ],
+    "modificar": [
+        "cambio_plan"
+    ],
+    "bajar": [
+        "cambio_plan"
+    ],
+    "consultar": [
+        "estado_cuenta",
+        "estado_cuenta",
+        "estado_cuenta",
+        "estado_cuenta",
+        "estado_cuenta",
+        "estado_cuenta",
+        "estado_cuenta"
+    ],
+    "saldo": [
+        "estado_cuenta",
+        "estado_cuenta",
+        "estado_cuenta"
+    ],
+    "consulta": [
+        "estado_cuenta",
+        "consulta_de"
+    ],
+    "cobrar": [
+        "estado_cuenta",
+        "estado_cuenta"
+    ],
+    "deuda": [
+        "estado_cuenta",
+        "estado_cuenta"
+    ],
+    "pendiente": [
+        "estado_cuenta",
+        "estado_cuenta"
+    ],
+    "adeudo": [
+        "estado_cuenta"
+    ],
+    "acceder": [
+        "configuracion_router",
+        "configuracion_router",
+        "configuracion_router",
+        "reportar_internet_contexto",
+        "reportar_internet_contexto"
+    ],
+    "entro": [
+        "configuracion_router",
+        "configuracion_router"
+    ],
+    "administrador": [
+        "configuracion_router",
+        "configuracion_router"
+    ],
+    "usuario": [
+        "configuracion_router",
+        "configuracion_router"
+    ],
+    "reinicio": [
+        "cómo_reinicio_correctamente",
+        "cómo_reinicio_correctamente",
+        "cómo_reinicio_correctamente"
+    ],
+    "ubicadas": [
+        "dónde_están_ubicadas",
+        "dónde_están_ubicadas",
+        "dónde_están_ubicadas"
+    ],
+    "oficinas": [
+        "dónde_están_ubicadas",
+        "dónde_están_ubicadas",
+        "dónde_están_ubicadas"
+    ],
+    "toma": [
+        "cuánto_tiempo_toma",
+        "cuánto_tiempo_toma",
+        "cuánto_tiempo_toma"
+    ],
+    "reportes": [
+        "whatsapp_integration",
+        "reporte_fallas",
+        "reporte_fallas"
+    ],
+    "comunicarme": [
+        "whatsapp_integration"
+    ],
+    "dudas": [
+        "whatsapp_integration"
+    ],
+    "quejas": [
+        "whatsapp_integration"
+    ],
+    "algun": [
+        "algún_cargo_pago",
+        "algún_cargo_pago",
+        "algún_cargo_pago",
+        "fallas_servicio"
+    ],
+    "tardio": [
+        "algún_cargo_pago",
+        "algún_cargo_pago",
+        "algún_cargo_pago",
+        "algún_cargo_pago",
+        "algún_cargo_pago"
+    ],
+    "recargo": [
+        "algún_cargo_pago"
+    ],
+    "extra": [
+        "algún_cargo_pago"
+    ],
+    "cuentame": [
+        "que_es_emenet",
+        "que_es_emenet"
+    ],
+    "hablame": [
+        "que_es_emenet",
+        "que_es_emenet"
+    ],
+    "oficial": [
+        "pagina_web_emenet",
+        "pagina_web_emenet"
+    ],
+    "sitio": [
+        "pagina_web_emenet"
+    ],
+    "url": [
+        "pagina_web_emenet"
+    ],
+    "necesario": [
+        "contrato_emenet",
+        "contrato_emenet"
+    ],
+    "firmar": [
+        "contrato_emenet",
+        "contrato_emenet",
+        "contrato_emenet",
+        "contrato_emenet"
+    ],
+    "servicios": [
+        "contrato_emenet",
+        "comparacion_competencia",
+        "comparacion_competencia"
+    ],
+    "obligatorio": [
+        "contrato_emenet"
+    ],
+    "contratos": [
+        "contrato_emenet",
+        "contrato_emenet"
+    ],
+    "forzosos": [
+        "contrato_emenet",
+        "contrato_emenet"
+    ],
+    "exigen": [
+        "contrato_emenet"
+    ],
+    "obligatoria": [
+        "contrato_emenet"
+    ],
+    "tecnicos": [
+        "fallas_servicio"
+    ],
+    "general": [
+        "fallas_servicio"
+    ],
+    "trabajando": [
+        "fallas_servicio"
+    ],
+    "programado": [
+        "fallas_servicio"
+    ],
+    "restablecera": [
+        "fallas_servicio"
+    ],
+    "reportaron": [
+        "fallas_servicio"
+    ],
+    "interrupcion": [
+        "fallas_servicio"
+    ],
+    "haciendo": [
+        "fallas_servicio"
+    ],
+    "reparaciones": [
+        "fallas_servicio"
+    ],
+    "contrate": [
+        "velocidad_contratada"
+    ],
+    "recibiendo": [
+        "velocidad_contratada"
+    ],
+    "corresponde": [
+        "velocidad_contratada"
+    ],
+    "completa": [
+        "velocidad_contratada"
+    ],
+    "contratado": [
+        "velocidad_contratada"
+    ],
+    "compatibles": [
+        "equipos_compatibles"
+    ],
+    "roku": [
+        "equipos_compatibles"
+    ],
+    "chromecast": [
+        "equipos_compatibles"
+    ],
+    "stick": [
+        "equipos_compatibles"
+    ],
+    "apple": [
+        "equipos_compatibles"
+    ],
+    "nintendo": [
+        "equipos_compatibles"
+    ],
+    "iot": [
+        "equipos_compatibles"
+    ],
+    "segura": [
+        "seguridad_internet",
+        "seguridad_internet"
+    ],
+    "proteccion": [
+        "seguridad_internet",
+        "seguridad_internet"
+    ],
+    "hacker": [
+        "seguridad_internet"
+    ],
+    "proteger": [
+        "seguridad_internet"
+    ],
+    "evitar": [
+        "seguridad_internet"
+    ],
+    "roben": [
+        "seguridad_internet"
+    ],
+    "recomendaciones": [
+        "seguridad_internet"
+    ],
+    "virus": [
+        "seguridad_internet"
+    ],
+    "firewall": [
+        "seguridad_internet"
+    ],
+    "ninos": [
+        "seguridad_internet",
+        "velocidad_familia"
+    ],
+    "filtro": [
+        "seguridad_internet"
+    ],
+    "bloquear": [
+        "seguridad_internet"
+    ],
+    "sitios": [
+        "seguridad_internet"
+    ],
+    "inapropiados": [
+        "seguridad_internet"
+    ],
+    "deducible": [
+        "factura_electronica"
+    ],
+    "promocionales": [
+        "promociones_descuentos"
+    ],
+    "cable": [
+        "fibra_optica",
+        "servicio_television"
+    ],
+    "coaxial": [
+        "fibra_optica"
+    ],
+    "cobre": [
+        "fibra_optica"
+    ],
+    "tradicional": [
+        "fibra_optica"
+    ],
+    "tecnologia": [
+        "fibra_optica"
+    ],
+    "vacaciones": [
+        "mudanza_temporal",
+        "mudanza_temporal"
+    ],
+    "estare": [
+        "mudanza_temporal",
+        "mudanza_temporal"
+    ],
+    "temporalmente": [
+        "mudanza_temporal",
+        "mudanza_temporal"
+    ],
+    "suspender": [
+        "mudanza_temporal"
+    ],
+    "pausar": [
+        "mudanza_temporal"
+    ],
+    "congelar": [
+        "mudanza_temporal"
+    ],
+    "temporal": [
+        "mudanza_temporal",
+        "mudanza_temporal"
+    ],
+    "ausencia": [
+        "mudanza_temporal"
+    ],
+    "viaje": [
+        "mudanza_temporal"
+    ],
+    "contactarlos": [
+        "atencion_clientes"
+    ],
+    "directo": [
+        "atencion_clientes"
+    ],
+    "representante": [
+        "atencion_clientes"
+    ],
+    "email": [
+        "atencion_clientes"
+    ],
+    "chat": [
+        "atencion_clientes"
+    ],
+    "incluye": [
+        "instalacion_tiempo",
+        "equipos_proporcionados",
+        "equipos_proporcionados"
+    ],
+    "duracion": [
+        "instalacion_tiempo"
+    ],
+    "venir": [
+        "instalacion_tiempo"
+    ],
+    "agenda": [
+        "instalacion_tiempo"
+    ],
+    "descarga": [
+        "uso_datos",
+        "uso_datos"
+    ],
+    "exceso": [
+        "uso_datos"
+    ],
+    "politica": [
+        "uso_datos"
+    ],
+    "justo": [
+        "uso_datos"
+    ],
+    "consumo": [
+        "uso_datos"
+    ],
+    "ilimitados": [
+        "uso_datos"
+    ],
+    "cap": [
+        "uso_datos"
+    ],
+    "incluyen": [
+        "servicio_television",
+        "servicio_telefonia"
+    ],
+    "canales": [
+        "servicio_television",
+        "servicio_television",
+        "servicio_television"
+    ],
+    "iptv": [
+        "servicio_television"
+    ],
+    "telefonia": [
+        "servicio_telefonia",
+        "servicio_telefonia",
+        "servicio_telefonia"
+    ],
+    "fijo": [
+        "servicio_telefonia"
+    ],
+    "fija": [
+        "servicio_telefonia",
+        "direccion_ip",
+        "direccion_ip",
+        "direccion_ip"
+    ],
+    "incluidas": [
+        "servicio_telefonia"
+    ],
+    "voz": [
+        "servicio_telefonia"
+    ],
+    "voip": [
+        "servicio_telefonia"
+    ],
+    "estatica": [
+        "direccion_ip",
+        "direccion_ip",
+        "direccion_ip",
+        "direccion_ip"
+    ],
+    "dedicada": [
+        "direccion_ip"
+    ],
+    "publica": [
+        "direccion_ip"
+    ],
+    "dinamica": [
+        "direccion_ip"
+    ],
+    "colonias": [
+        "area_cobertura"
+    ],
+    "municipios": [
+        "area_cobertura"
+    ],
+    "operan": [
+        "area_cobertura"
+    ],
+    "ciudades": [
+        "area_cobertura"
+    ],
+    "expansion": [
+        "area_cobertura",
+        "area_cobertura"
+    ],
+    "nuevas": [
+        "area_cobertura"
+    ],
+    "santiago": [
+        "verificacion_cobertura_santiago",
+        "verificacion_cobertura_santiago"
+    ],
+    "tianguistenco": [
+        "verificacion_cobertura_santiago",
+        "verificacion_cobertura_santiago"
+    ],
+    "codigo": [
+        "verificacion_cobertura_santiago",
+        "verificacion_cobertura_santa_monica",
+        "verificacion_cobertura_cholula",
+        "seguimiento_direccion"
+    ],
+    "postal": [
+        "verificacion_cobertura_santiago",
+        "verificacion_cobertura_santa_monica",
+        "verificacion_cobertura_cholula",
+        "seguimiento_direccion"
+    ],
+    "santa": [
+        "verificacion_cobertura_santa_monica",
+        "verificacion_cobertura_santa_monica"
+    ],
+    "monica": [
+        "verificacion_cobertura_santa_monica",
+        "verificacion_cobertura_santa_monica"
+    ],
+    "cholula": [
+        "verificacion_cobertura_cholula",
+        "verificacion_cobertura_cholula",
+        "verificacion_cobertura_cholula"
+    ],
+    "san": [
+        "verificacion_cobertura_cholula",
+        "verificacion_cobertura_cholula"
+    ],
+    "pedro": [
+        "verificacion_cobertura_cholula"
+    ],
+    "andres": [
+        "verificacion_cobertura_cholula"
+    ],
+    "toluca": [
+        "verificacion_cobertura_negativa"
+    ],
+    "ciudad": [
+        "verificacion_cobertura_negativa"
+    ],
+    "mexico": [
+        "verificacion_cobertura_negativa"
+    ],
+    "cdmx": [
+        "verificacion_cobertura_negativa"
+    ],
+    "metepec": [
+        "verificacion_cobertura_negativa"
+    ],
+    "lerma": [
+        "verificacion_cobertura_negativa"
+    ],
+    "ocoyoacac": [
+        "verificacion_cobertura_negativa"
+    ],
+    "xonacatlan": [
+        "verificacion_cobertura_negativa"
+    ],
+    "zinacantepec": [
+        "verificacion_cobertura_negativa"
+    ],
+    "puebla": [
+        "verificacion_cobertura_negativa"
+    ],
+    "tlaxcala": [
+        "verificacion_cobertura_negativa"
+    ],
+    "ubicado": [
+        "seguimiento_direccion"
+    ],
+    "avisenme": [
+        "registro_notificacion",
+        "registro_notificacion"
+    ],
+    "registrenme": [
+        "registro_notificacion",
+        "registro_notificacion",
+        "registro_notificacion"
+    ],
+    "notifiquenme": [
+        "registro_notificacion",
+        "registro_notificacion"
+    ],
+    "avisen": [
+        "registro_notificacion"
+    ],
+    "notifiquen": [
+        "registro_notificacion"
+    ],
+    "avisos": [
+        "registro_notificacion",
+        "registro_notificacion"
+    ],
+    "lleguen": [
+        "registro_notificacion"
+    ],
+    "notificacion": [
+        "registro_notificacion"
+    ],
+    "caida": [
+        "reporte_fallas"
+    ],
+    "notificar": [
+        "reporte_fallas"
+    ],
+    "canal": [
+        "reporte_fallas"
+    ],
+    "seguimiento": [
+        "reporte_fallas"
+    ],
+    "estatus": [
+        "reporte_fallas"
+    ],
+    "proporcionan": [
+        "equipos_proporcionados"
+    ],
+    "incluidos": [
+        "equipos_proporcionados"
+    ],
+    "comodato": [
+        "equipos_proporcionados"
+    ],
+    "comprar": [
+        "equipos_proporcionados"
+    ],
+    "devolver": [
+        "equipos_proporcionados"
+    ],
+    "mude": [
+        "cambio_domicilio_mismo",
+        "cambio_domicilio_mismo"
+    ],
+    "dentro": [
+        "cambio_domicilio_mismo"
+    ],
+    "cambie": [
+        "cambio_domicilio_mismo",
+        "cambio_domicilio_mismo"
+    ],
+    "lado": [
+        "cambio_domicilio_mismo"
+    ],
+    "piso": [
+        "cambio_domicilio_mismo"
+    ],
+    "misma": [
+        "cambio_domicilio_mismo"
+    ],
+    "cercano": [
+        "cambio_domicilio_mismo"
+    ],
+    "streamear": [
+        "velocidad_gaming"
+    ],
+    "buffering": [
+        "velocidad_streaming"
+    ],
+    "usuarios": [
+        "velocidad_familia"
+    ],
+    "multiple": [
+        "velocidad_familia"
+    ],
+    "domestico": [
+        "velocidad_familia"
+    ],
+    "credito": [
+        "metodos_pago_adicionales"
+    ],
+    "debito": [
+        "metodos_pago_adicionales"
+    ],
+    "pagan": [
+        "metodos_pago_adicionales"
+    ],
+    "aplicacion": [
+        "metodos_pago_adicionales"
+    ],
+    "paypal": [
+        "metodos_pago_adicionales"
+    ],
+    "mercado": [
+        "metodos_pago_adicionales"
+    ],
+    "cortar": [
+        "corte_servicio"
+    ],
+    "medir": [
+        "prueba_velocidad",
+        "prueba_velocidad"
+    ],
+    "probar": [
+        "prueba_velocidad"
+    ],
+    "comprobar": [
+        "prueba_velocidad"
+    ],
+    "medidor": [
+        "prueba_velocidad"
+    ],
+    "festivos": [
+        "horarios",
+        "horarios",
+        "horarios",
+        "horarios",
+        "horarios",
+        "horarios",
+        "horarios"
+    ],
+    "bren": [
+        "horarios",
+        "horarios"
+    ],
+    "dios": [
+        "horarios",
+        "horarios"
+    ],
+    "festivo": [
+        "horarios",
+        "horarios"
+    ],
+    "recibir": [
+        "reportar_internet_contexto",
+        "reportar_internet_contexto"
+    ]
+}

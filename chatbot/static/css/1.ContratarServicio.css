@@ -1,0 +1,966 @@
+/* --- Contratar Servicio: Estilo Premium estilo Apple --- */
+@import url('https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #0071e3;
+    --primary-hover: #0077ed;
+    --primary-active: #0062c4;
+    --bg-color: #f5f5f7;
+    --card-bg: #ffffff;
+    --text-primary: #1d1d1f;
+    --text-secondary: #86868b;
+    --border-radius: 14px;
+    --shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Estilos base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: var(--text-primary);
+    line-height: 1.5;
+}
+
+/* Contenedor de mensajes */
+.chat-messages {
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: calc(100vh - 200px); /* Ajustar según sea necesario */
+    max-width: 900px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #f5f5f7;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Asegurar que el contenedor principal ocupe todo el espacio disponible */
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    max-width: 100%;
+    margin: 0 auto;
+    background: white;
+}
+
+/* Contenedor de mensajes del bot */
+.bot-message-container {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+/* Contenedor de mensajes del usuario */
+.user-message-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+/* Mensaje del bot */
+.bot-message {
+    background: #f5f5f7;
+    border-radius: 18px 18px 18px 4px;
+    padding: 12px 16px;
+    max-width: 85%;
+    margin: 4px 0;
+    position: relative;
+    color: #1d1d1f;
+    font-size: 16px;
+    line-height: 1.4;
+    text-align: left;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Mensaje del usuario */
+.user-message {
+    background: #0071e3;
+    color: white;
+    border-radius: 18px 18px 4px 18px;
+    padding: 12px 16px;
+    max-width: 85%;
+    margin: 4px 0;
+    font-size: 16px;
+    line-height: 1.4;
+    text-align: right;
+    margin-left: auto;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenedor de mensajes */
+.chat-messages {
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    height: calc(100vh - 200px);
+    max-width: 900px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Estilos para formularios */
+.form-container {
+    background: white;
+    border-radius: 18px;
+    padding: 25px;
+    margin-top: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.form-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1d1d1f;
+    margin: 0 0 25px 0;
+    text-align: center;
+    letter-spacing: -0.2px;
+}
+
+.form-subtitle {
+    font-size: 15px;
+    color: #86868b;
+    margin: -15px 0 20px 0;
+    text-align: center;
+    font-weight: 400;
+}
+
+.form-group {
+    margin-bottom: 22px;
+    position: relative;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #1d1d1f;
+    letter-spacing: -0.08px;
+}
+
+.form-label span {
+    color: #ff3b30;
+    margin-left: 2px;
+}
+
+.form-input,
+.form-textarea,
+.form-select,
+.form-datetime {
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 16px;
+    line-height: 1.4;
+    color: #1d1d1f;
+    background-color: #f5f5f7;
+    border: 1px solid #d2d2d7;
+    border-radius: 12px;
+    transition: all 0.2s ease;
+    -webkit-appearance: none;
+    appearance: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus,
+.form-datetime:focus {
+    outline: none;
+    border-color: #0071e3;
+    background-color: #fff;
+    box-shadow: 0 0 0 4px rgba(0, 125, 250, 0.1);
+}
+
+.form-textarea {
+    min-height: 100px;
+    resize: vertical;
+    line-height: 1.5;
+}
+
+/* Estilos para el selector de fecha y hora */
+.form-datetime {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%2386868b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='4' width='18' height='18' rx='2' ry='2'%3E%3C/rect%3E%3Cline x1='16' y1='2' x2='16' y2='6'%3E%3C/line%3E%3Cline x1='8' y1='2' x2='8' y2='6'%3E%3C/line%3E%3Cline x1='3' y1='10' x2='21' y2='10'%3E%3C/line%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    background-size: 20px;
+    padding-right: 45px;
+}
+
+/* Estilos para el selector de hora */
+.form-time {
+    margin-top: 5px;
+    width: 100%;
+}
+
+.time-slots {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.time-slot {
+    background: #f5f5f7;
+    border: 1px solid #d2d2d7;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.time-slot:hover {
+    background: #e5e5ea;
+}
+
+.time-slot.selected {
+    background: #0071e3;
+    color: white;
+    border-color: #0071e3;
+}
+
+.time-slot.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background: #f5f5f7;
+    color: #86868b;
+}
+
+.form-button {
+    width: 100%;
+    padding: 16px;
+    font-size: 17px;
+    font-weight: 600;
+    color: white;
+    background: #0071e3;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    -webkit-tap-highlight-color: transparent;
+    margin-top: 10px;
+    letter-spacing: -0.2px;
+}
+
+.form-button:hover {
+    background: #0077ed;
+    transform: translateY(-1px);
+}
+
+.form-button:active {
+    transform: translateY(0);
+    background: #0062c4;
+}
+
+/* Estilo para grupos de formulario con íconos */
+.form-group.has-icon {
+    position: relative;
+}
+
+.form-group.has-icon .form-input,
+.form-group.has-icon .form-select {
+    padding-left: 48px;
+}
+
+.form-icon {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #86868b;
+    pointer-events: none;
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilos para mensajes de confirmación */
+.confirmation-message {
+    background: white;
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    max-width: 500px;
+    margin: 15px auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.confirmation-header {
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.confirmation-header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #0071e3, #7dc8f8);
+    border-radius: 3px;
+}
+
+.confirmation-icon {
+    width: 70px;
+    height: 70px;
+    background: #34c759;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    box-shadow: 0 5px 15px rgba(52, 199, 89, 0.3);
+}
+
+.confirmation-icon svg {
+    width: 40px;
+    height: 40px;
+    fill: white;
+}
+
+.confirmation-title {
+    font-size: 22px;
+    font-weight: 600;
+    color: #1d1d1f;
+    margin-bottom: 5px;
+    letter-spacing: -0.2px;
+}
+
+.confirmation-subtitle {
+    font-size: 16px;
+    color: #86868b;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.confirmation-details {
+    background: #f8f8fa;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.confirmation-detail {
+    display: flex;
+    margin-bottom: 12px;
+    align-items: flex-start;
+}
+
+.confirmation-detail:last-child {
+    margin-bottom: 0;
+}
+
+.confirmation-detail-icon {
+    color: #0071e3;
+    margin-right: 12px;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.confirmation-detail-text {
+    font-size: 15px;
+    color: #1d1d1f;
+    line-height: 1.5;
+}
+
+.confirmation-detail-text strong {
+    color: #1d1d1f;
+    font-weight: 600;
+}
+
+.confirmation-footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #86868b;
+    line-height: 1.5;
+}
+
+.confirmation-divider {
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    background: #d2d2d7;
+    border-radius: 50%;
+    margin: 0 8px;
+    vertical-align: middle;
+}
+
+/* Estilos para mensajes de advertencia tipo Apple */
+.alert-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+    backdrop-filter: blur(4px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.alert-container.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.alert-dialog {
+    background: white;
+    border-radius: 14px;
+    width: 90%;
+    max-width: 400px;
+    overflow: hidden;
+    transform: scale(0.9);
+    opacity: 0;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+                opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.alert-container.visible .alert-dialog {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.alert-header {
+    padding: 24px 24px 16px;
+    text-align: center;
+}
+
+.alert-icon {
+    width: 60px;
+    height: 60px;
+    background: #ff3b30;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+}
+
+.alert-icon svg {
+    width: 30px;
+    height: 30px;
+    fill: white;
+}
+
+.alert-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1d1d1f;
+    margin-bottom: 8px;
+    letter-spacing: -0.2px;
+}
+
+.alert-message {
+    font-size: 15px;
+    color: #86868b;
+    line-height: 1.4;
+    margin-bottom: 0;
+}
+
+.alert-actions {
+    display: flex;
+    border-top: 0.5px solid #e5e5ea;
+}
+
+.alert-button {
+    flex: 1;
+    padding: 16px;
+    font-size: 17px;
+    font-weight: 500;
+    text-align: center;
+    color: #0071e3;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.alert-button:active {
+    background-color: #f5f5f7;
+}
+
+.alert-button + .alert-button {
+    border-left: 0.5px solid #e5e5ea;
+}
+
+.alert-button.primary {
+    font-weight: 600;
+}
+
+/* Estilos para el selector de fecha personalizado */
+.flatpickr-calendar {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.flatpickr-day.selected, 
+.flatpickr-day.selected:hover {
+    background: #0071e3;
+    border-color: #0071e3;
+}
+
+.flatpickr-day.today {
+    border-color: #0071e3;
+}
+
+.flatpickr-day.flatpickr-disabled,
+.flatpickr-day.flatpickr-disabled:hover {
+    color: #d2d2d7;
+    cursor: not-allowed;
+}
+
+.bot-message p {
+    margin: 0 0 16px 0;
+    font-size: 17px;
+    color: var(--text-primary);
+    line-height: 1.5;
+    letter-spacing: -0.2px;
+}
+
+/* Estilos para los mensajes del usuario */
+.user-message {
+    background: #0071e3;
+    color: white;
+    border-radius: 18px;
+    padding: 12px 16px;
+    max-width: 85%;
+    margin: 10px 0 10px auto;
+    font-size: 16px;
+    line-height: 1.4;
+    text-align: left;
+    display: inline-block;
+    word-wrap: break-word;
+}
+
+/* Estilos para las tarjetas de planes */
+.plan-card {
+    border: 1px solid #d2d2d7;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.plan-card h3 {
+    font-size: 20px;
+    margin: 0 0 10px 0;
+    color: #1d1d1f;
+}
+
+.plan-card p {
+    margin: 5px 0;
+    color: #86868b;
+    font-size: 15px;
+}
+
+.plan-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 0 0;
+}
+
+.plan-card li {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.plan-card li span:first-child {
+    color: #0071e3;
+    margin-right: 8px;
+}
+
+.plan-card .contratar-btn {
+    width: 100%;
+    margin-top: 15px;
+    padding: 12px;
+    background: #0071e3;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.plan-card .contratar-btn:hover {
+    background: #0062c4;
+}
+
+/* Botones de servicio */
+.service-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 24px 0 8px;
+}
+
+.service-btn {
+    background: var(--card-bg);
+    color: var(--primary-color);
+    border: 1px solid #d2d2d7;
+    border-radius: 12px;
+    padding: 16px 20px;
+    font-size: 17px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.service-btn:hover {
+    background: rgba(0, 113, 227, 0.05);
+    border-color: var(--primary-color);
+    transform: translateY(-1px);
+}
+
+.service-btn:active {
+    transform: translateY(0);
+    background: rgba(0, 113, 227, 0.1);
+}
+
+.service-btn:after {
+    content: '→';
+    font-size: 20px;
+    opacity: 0.8;
+    transition: transform 0.3s ease;
+}
+
+.service-btn:hover:after {
+    transform: translateX(4px);
+}
+
+/* Mensaje de bienvenida */
+.welcome-message {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.welcome-message h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--text-primary);
+    letter-spacing: -0.5px;
+}
+
+.welcome-message p {
+    font-size: 17px;
+    color: var(--text-secondary);
+    max-width: 80%;
+    margin: 0 auto 24px;
+    line-height: 1.5;
+}
+
+/* Efectos de hover y focus */
+button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 113, 227, 0.3);
+}
+
+/* Animación de entrada */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.bot-message {
+    animation: fadeInUp 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+}
+
+/* Estilos para la verificación de cobertura */
+.cobertura-loading {
+    text-align: center;
+    padding: 20px;
+}
+
+.cobertura-loading .spinner {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto 15px;
+    border: 4px solid rgba(0, 113, 227, 0.2);
+    border-radius: 50%;
+    border-top-color: #0071e3;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.cobertura-confirmada {
+    text-align: center;
+    padding: 20px;
+}
+
+.cobertura-confirmada .cobertura-icon {
+    width: 60px;
+    height: 60px;
+    background: #34c759;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    margin: 0 auto 15px;
+    box-shadow: 0 4px 12px rgba(52, 199, 89, 0.3);
+}
+
+.cobertura-confirmada h3 {
+    color: #1d1d1f;
+    margin: 15px 0 10px;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.cobertura-confirmada p {
+    color: #86868b;
+    margin-bottom: 8px;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.sin-cobertura {
+    text-align: center;
+    padding: 20px;
+}
+
+.sin-cobertura .cobertura-icon {
+    width: 60px;
+    height: 60px;
+    background: #ff3b30;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    margin: 0 auto 15px;
+    box-shadow: 0 4px 12px rgba(255, 59, 48, 0.3);
+}
+
+.sin-cobertura h3 {
+    color: #1d1d1f;
+    margin: 15px 0 10px;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.sin-cobertura p {
+    color: #86868b;
+    margin-bottom: 15px;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.btn-volver {
+    background: #0071e3;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-top: 10px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.btn-volver:hover {
+    background: #0077ed;
+    transform: translateY(-1px);
+}
+
+.btn-volver:active {
+    background: #0062c4;
+    transform: translateY(0);
+}
+
+.contratar-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px #4a6bff18;
+  padding: 18px 14px 14px 14px;
+  margin: 0 auto;
+  max-width: 420px;
+}
+
+.contratar-steps-bar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 22px;
+  gap: 6px;
+}
+.contratar-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+.contratar-step .step-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #eaf0ff;
+  color: #4a6bff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  margin-bottom: 5px;
+  border: 2px solid #e2e8fc;
+  font-size: 1.05em;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+}
+.contratar-step.active .step-circle {
+  background: #4a6bff;
+  color: #fff;
+  border-color: #4a6bff;
+}
+.contratar-step .step-label {
+  font-size: 0.92em;
+  color: #26326a;
+  text-align: center;
+}
+
+.categorias-servicio {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px 10px;
+  justify-content: center;
+  margin: 18px 0 18px 0;
+}
+.categoria-item {
+  background: #f7faff;
+  border: 2.5px solid #e2e8fc;
+  border-radius: 16px;
+  color: #26326a;
+  font-weight: 600;
+  font-size: 1.07em;
+  min-width: 145px;
+  min-height: 90px;
+  padding: 18px 12px 10px 12px;
+  box-shadow: 0 2px 8px #4a6bff0a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.18s, border 0.18s, color 0.18s, box-shadow 0.18s;
+  cursor: pointer;
+  pointer-events: auto;
+  position: relative;
+  z-index: 10;
+  user-select: none;
+  outline: none;
+}
+.categoria-item i {
+  font-size: 2em;
+  margin-bottom: 6px;
+  color: #4a6bff;
+}
+.categoria-item:hover, .categoria-item:focus {
+  background: #eaf0ff;
+  border-color: #4a6bff;
+  color: #26326a;
+  box-shadow: 0 2px 16px #4a6bff22;
+}
+.categoria-item.active {
+  background: linear-gradient(90deg, #4a6bff 60%, #6f8cff 100%) !important;
+  color: #fff !important;
+  border: 3px solid #4a6bff !important;
+  box-shadow: 0 0 0 2px #4a6bff33, 0 4px 18px 0 rgba(80,112,255,0.22) !important;
+  z-index: 20 !important;
+}
+
+.btn-contratar {
+  background: linear-gradient(90deg, #4a6bff 60%, #6f8cff 100%);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1em;
+  font-weight: 600;
+  padding: 14px 28px;
+  margin: 18px 0 0 0;
+  cursor: pointer;
+  box-shadow: 0 2px 10px #4a6bff22;
+  transition: background 0.18s, box-shadow 0.18s;
+}
+.btn-contratar:hover,
+.btn-contratar:focus {
+  background: linear-gradient(90deg, #6f8cff 60%, #4a6bff 100%);
+  box-shadow: 0 4px 18px #4a6bff33;
+}
+
+@media (max-width: 600px) {
+  .bot-message {
+    padding: 10px 2vw 16px 2vw;
+    max-width: 98vw;
+  }
+  .contratar-card {
+    padding: 10px 2vw 16px 2vw;
+    max-width: 98vw;
+  }
+  .contratar-step .step-label {
+    font-size: 0.82em;
+  }
+  .btn-contratar {
+    font-size: 1em;
+    padding: 10px 16px;
+  }
+  .categorias-servicio {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
